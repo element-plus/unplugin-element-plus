@@ -1,6 +1,12 @@
 {
   "name": "vite-plugin-element-plus",
   "version": "0.0.1",
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "scripts": {
+    "lint": "eslint src",
+    "build": "rm -rf es lib && tsc && npx tsc -m es2015 --outDir es"
+  },
   "keywords": [
     "vite",
     "element-plus",
@@ -25,34 +31,34 @@
     "vite": ">=2.0.0"
   },
   "devDependencies": {
+    "@commitlint/cli": "^12.1.4",
+    "@commitlint/config-conventional": "^12.1.4",
     "@rollup/plugin-node-resolve": "^13.0.4",
+    "@types/debug": "^4.1.5",
     "@types/jest": "^26.0.24",
+    "@types/node": "^15.12.4",
     "@typescript-eslint/eslint-plugin": "^4.28.3",
     "@typescript-eslint/parser": "^4.28.3",
     "babel-jest": "^27.0.6",
-    "eslint": "^7.30.0",
-    "jest": "^27.0.6",
-    "rollup": "^2.55.0",
-    "rollup-plugin-terser": "^7.0.2",
-    "rollup-plugin-typescript2": "^0.30.0",
-    "ts-jest": "^27.0.3",
-    "typescript": "^4.3.5",
-    "@commitlint/cli": "^12.1.4",
-    "@commitlint/config-conventional": "^12.1.4",
-    "@types/debug": "^4.1.5",
-    "@types/node": "^15.12.4",
     "commitizen": "^4.2.4",
     "conventional-changelog-cli": "^2.1.1",
+    "eslint": "^7.30.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-jest": "^24.3.6",
     "husky": "^6.0.0",
     "ini": "^2.0.0",
+    "jest": "^27.0.6",
     "lint-staged": "^11.0.0",
     "pinst": "^2.1.6",
     "prettier": "^2.3.1",
     "pretty-quick": "^3.1.1",
     "rimraf": "^3.0.2",
+    "rollup": "^2.55.0",
+    "rollup-plugin-terser": "^7.0.2",
+    "rollup-plugin-typescript2": "^0.30.0",
+    "ts-jest": "^27.0.3",
     "tsup": "^4.11.2",
+    "typescript": "^4.3.5",
     "vite": "^2.3.8"
   }
 }
