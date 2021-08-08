@@ -7,12 +7,7 @@
     "serve": "vite preview"
   },
   "dependencies": {
-    "@element-plus/components": "latest",
-    "@element-plus/directives": "latest",
-    "@element-plus/hooks": "latest",
-    "@element-plus/locale": "latest",
-    "@element-plus/theme-chalk": "latest",
-    "@element-plus/utils": "latest",
+    "@element-plus/components": "^0.0.4",
     "vue": "^3.1.x"
   },
   "devDependencies": {
