@@ -20,33 +20,39 @@
     "@babel/helper-validator-identifier" "^7.14.9"
     to-fast-properties "^2.0.0"
 
-"@element-plus/components@latest":
-  version "0.0.1-beta.1"
-  resolved "https://registry.yarnpkg.com/@element-plus/components/-/components-0.0.1-beta.1.tgz#b9122759806e4d12d1e372e09f6002d792632fcf"
-  integrity sha512-J44+2Iy8Frhued/2lKLL9twoCChRVSXoTRPXjaNjkiToXMiv3VDxGJjnG/SB1TTClQQnT/hScqEiXBgUH39aGA==
+"@element-plus/components@^0.0.4":
+  version "0.0.4"
+  resolved "https://registry.npmjs.org/@element-plus/components/-/components-0.0.4.tgz#02c7a7a540f9458e1d54557a1361573ee7be03ae"
+  integrity sha512-792dj05/vul6M+VFB0cWo8yN3MA3Xc0vagbQWQClbnkbrbDqkG9oSXZw8ynor1gxp3sjPpWpbf0RxMILkTqxHg==
   dependencies:
+    "@element-plus/directives" "^0.0.4"
+    "@element-plus/hooks" "^0.0.4"
     "@element-plus/icons" "^0.0.11"
+    "@element-plus/theme-chalk" "^0.0.4"
+    "@element-plus/tokens" "^0.0.4"
+    "@element-plus/utils" "^0.0.4"
     "@popperjs/core" "^2.4.4"
     async-validator "^3.4.0"
     dayjs "1.x"
     lodash "^4.17.20"
     mitt "^2.1.0"
 
-"@element-plus/directives@^0.0.1", "@element-plus/directives@latest":
-  version "0.0.1-beta.1"
-  resolved "https://registry.yarnpkg.com/@element-plus/directives/-/directives-0.0.1-beta.1.tgz#1851140441bab0de9bb465bf70e0e7439706e538"
-  integrity sha512-f4fiQJZ2SDWkD2xgcegb8nIDRYJfGBbTI/vBQAWhVyu1pFi1lKuxT7dqRoFSmiQEpTwPs/kB20hj3QYJ6OHkoA==
+"@element-plus/directives@^0.0.4":
+  version "0.0.4"
+  resolved "https://registry.npmjs.org/@element-plus/directives/-/directives-0.0.4.tgz#d6e1ec81ea942f7cabeb5bb18d2bdb65642ca3e1"
+  integrity sha512-40z1TPquR3QzLi1RSniXaMe16Z/ILhu75y8VFn6F5zTCMDDr2FjhIW9MEJXi7DIoh7U/e6JRcY5vDUd6E/CvGg==
   dependencies:
-    "@element-plus/utils" "^0.0.1"
+    "@element-plus/utils" "^0.0.4"
     normalize-wheel "^1.0.1"
 
-"@element-plus/hooks@latest":
-  version "0.0.1-beta.1"
-  resolved "https://registry.yarnpkg.com/@element-plus/hooks/-/hooks-0.0.1-beta.1.tgz#95c0eb6310c5fa54cd889c71037f485204a69e29"
-  integrity sha512-l+o9zyvlCENK3NS4t+kfl3TVTh6zR6p7l3E8BR1edx8vZmcqm5Ep9THm3cwnwAX5V2+DpTyUIonIuDhqOWpDBw==
+"@element-plus/hooks@^0.0.4":
+  version "0.0.4"
+  resolved "https://registry.npmjs.org/@element-plus/hooks/-/hooks-0.0.4.tgz#6da44cc5ae55674da5c49387463708173f6a1fe3"
+  integrity sha512-uPptCBnu4rMSwTmYFxgGVlDGt4jHI03fC7p7dXJpWpS5PxDhnP5GP4guog1kh/YC4phFNDn332eIhDHx0mARpA==
   dependencies:
-    "@element-plus/directives" "^0.0.1"
-    "@element-plus/utils" "^0.0.1"
+    "@element-plus/directives" "^0.0.4"
+    "@element-plus/locale" "^0.0.4"
+    "@element-plus/utils" "^0.0.4"
     "@popperjs/core" "^2.4.4"
 
 "@element-plus/icons@^0.0.11":
@@ -54,22 +60,33 @@
   resolved "https://registry.yarnpkg.com/@element-plus/icons/-/icons-0.0.11.tgz#9b187c002774548b911850d17fa5fc2f9a515f57"
   integrity sha512-iKQXSxXu131Ai+I9Ymtcof9WId7kaXvB1+WRfAfpQCW7UiAMYgdNDqb/u0hgTo2Yq3MwC4MWJnNuTBEpG8r7+A==
 
-"@element-plus/locale@latest":
-  version "0.0.1-beta.1"
-  resolved "https://registry.yarnpkg.com/@element-plus/locale/-/locale-0.0.1-beta.1.tgz#b2adcf2756d8f4809687a58d9ce392dec49f8ea2"
-  integrity sha512-kj0CRL7rUkAHAxYE8xKKd9i9uBUnTblh9+oBL0jPkvDDLjsILOT/FwCIHIucQE17TjQOi2cLMpZ5Yk6RUZ14cg==
+"@element-plus/locale@^0.0.4":
+  version "0.0.4"
+  resolved "https://registry.npmjs.org/@element-plus/locale/-/locale-0.0.4.tgz#060729d662a2c78801fb89ada2d0cfd661c2d452"
+  integrity sha512-A+M7fkc3D4/wzqbLLgurDt7X3QA5/EsdIxmClv6j5QX6Qu99afbFfXSZz2l0gAOuMS0sQRtnj+xeGJ0npQyt6g==
   dependencies:
     dayjs "1.x"
 
-"@element-plus/theme-chalk@latest":
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/@element-plus/theme-chalk/-/theme-chalk-0.0.1.tgz#c83ca1191fbba139ccb6ef9a4fadaf579b954895"
-  integrity sha512-MPUvHfxx0bOfsgUMfz1XQ5E8DhSqYog3N1+NQy6YEn1RR+Wl+DM9Rt1X09ZBF4Q0Cr4be3iWHakmkT1cnIAX0A==
+"@element-plus/theme-chalk@^0.0.4":
+  version "0.0.4"
+  resolved "https://registry.npmjs.org/@element-plus/theme-chalk/-/theme-chalk-0.0.4.tgz#0d878bd394a6391bd7fab77858bcf2b2a78858e7"
+  integrity sha512-zc2h4qjYCj8RBCleK9Ct+J56+IITy76/TbeVyOc+ABxb/8MAMj8j61ah/UUlJoLg21YtY2FdLG9JVlXZjqvstg==
 
-"@element-plus/utils@^0.0.1", "@element-plus/utils@latest":
-  version "0.0.1-beta.1"
-  resolved "https://registry.yarnpkg.com/@element-plus/utils/-/utils-0.0.1-beta.1.tgz#f1fc836769a9b9ecf96d38200c5291d3dbbcec1e"
-  integrity sha512-ZdCfuuABsWHGsuBAZWNJnF4NcTNNU9cZMJo/74JAAi055ouCfj3afr+bsO0nLj3IZQSbFBmNU/17XXA8wvo/eg==
+"@element-plus/tokens@^0.0.4":
+  version "0.0.4"
+  resolved "https://registry.npmjs.org/@element-plus/tokens/-/tokens-0.0.4.tgz#30388459916e65da6de5323eb33990d8819f7e04"
+  integrity sha512-TKXsxm/1L2qjwh2CfOuiYSxj6sUkgVIMPQlcK3tWzE3wsG0GFdElN6kBjXw3AN4mBRppdMne7ds7oXJIXIsBFQ==
+  dependencies:
+    async-validator "^3.4.0"
+    lodash "^4.17.20"
+    mitt "^2.1.0"
+    normalize-wheel "^1.0.1"
+    resize-observer-polyfill "^1.5.1"
+
+"@element-plus/utils@^0.0.4":
+  version "0.0.4"
+  resolved "https://registry.npmjs.org/@element-plus/utils/-/utils-0.0.4.tgz#0947a790767818c827be90d92028d8ed9efe96b8"
+  integrity sha512-/yoM4nhl+fM16wF/MDvt1vqHEM3wjzae1ZUDHmImGTf+nFqr2KD2tUCxYWUqdyoxqZnU9vBtmZQmbZSYIq21dw==
   dependencies:
     lodash "^4.17.20"
     normalize-wheel "^1.0.1"
@@ -708,7 +725,7 @@ normalize-path@^3.0.0, normalize-path@~3.0.0:
 
 normalize-wheel@^1.0.1:
   version "1.0.1"
-  resolved "https://registry.yarnpkg.com/normalize-wheel/-/normalize-wheel-1.0.1.tgz#aec886affdb045070d856447df62ecf86146ec45"
+  resolved "https://registry.npmjs.org/normalize-wheel/-/normalize-wheel-1.0.1.tgz#aec886affdb045070d856447df62ecf86146ec45"
   integrity sha1-rsiGr/2wRQcNhWRH32Ls+GFG7EU=
 
 object-assign@^4.1.1:
@@ -914,7 +931,7 @@ request-light@^0.5.4:
 
 resize-observer-polyfill@^1.5.1:
   version "1.5.1"
-  resolved "https://registry.yarnpkg.com/resize-observer-polyfill/-/resize-observer-polyfill-1.5.1.tgz#0e9020dd3d21024458d4ebd27e23e40269810464"
+  resolved "https://registry.npmjs.org/resize-observer-polyfill/-/resize-observer-polyfill-1.5.1.tgz#0e9020dd3d21024458d4ebd27e23e40269810464"
   integrity sha512-LwZrotdHOo12nQuZlHEmtuXdqGoOD0OhaxopaNFxWzInpEgaLWoVuAMbTzixuosCx2nEG58ngzW3vxdWoxIgdg==
 
 resolve@^1.15.1, resolve@^1.20.0:

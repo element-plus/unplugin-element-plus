@@ -1,16 +1,23 @@
 {
   "name": "vite-plugin-element-plus",
-  "version": "0.0.1",
-  "main": "lib/index.js",
-  "module": "es/index.js",
+  "version": "0.0.2",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "unpkg": "dist/index.js",
+  "jsdelivr": "dist/index.js",
   "scripts": {
     "lint": "eslint src",
-    "build": "rm -rf es lib && tsc && npx tsc -m es2015 --outDir es"
+    "build": "rm -rf dist && gulp build",
+    "dev": "cd examples && yarn dev"
   },
   "keywords": [
     "vite",
     "element-plus",
     "plugin"
+  ],
+  "files": [
+    "dist"
   ],
   "repository": {
     "type": "git",
@@ -22,10 +29,7 @@
   "homepage": "https://github.com/element-plus/vite-plugin-element-plus/tree/main/#readme",
   "dependencies": {
     "@rollup/pluginutils": "^4.1.0",
-    "change-case": "^4.1.2",
-    "debug": "^4.3.2",
-    "es-module-lexer": "^0.6.0",
-    "magic-string": "^0.25.7"
+    "es-module-lexer": "^0.6.0"
   },
   "peerDependencies": {
     "vite": ">=2.0.0"
@@ -35,16 +39,20 @@
     "@commitlint/config-conventional": "^12.1.4",
     "@rollup/plugin-node-resolve": "^13.0.4",
     "@types/debug": "^4.1.5",
+    "@types/gulp": "^4.0.9",
     "@types/jest": "^26.0.24",
     "@types/node": "^15.12.4",
     "@typescript-eslint/eslint-plugin": "^4.28.3",
     "@typescript-eslint/parser": "^4.28.3",
     "babel-jest": "^27.0.6",
+    "chalk": "^4.1.2",
     "commitizen": "^4.2.4",
     "conventional-changelog-cli": "^2.1.1",
     "eslint": "^7.30.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-jest": "^24.3.6",
+    "gulp": "^4.0.2",
+    "gulp-typescript": "^6.0.0-alpha.1",
     "husky": "^6.0.0",
     "ini": "^2.0.0",
     "jest": "^27.0.6",
@@ -56,7 +64,9 @@
     "rollup": "^2.55.0",
     "rollup-plugin-terser": "^7.0.2",
     "rollup-plugin-typescript2": "^0.30.0",
+    "sass": "^1.37.0",
     "ts-jest": "^27.0.3",
+    "ts-node": "^10.1.0",
     "tsup": "^4.11.2",
     "typescript": "^4.3.5",
     "vite": "^2.3.8"

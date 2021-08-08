@@ -1,25 +1,86 @@
-import { Plugin, normalizePath } from 'vite'
+import { Plugin } from 'vite'
+import { init, parse } from 'es-module-lexer'
 
-const originPath = normalizePath('@element-plus/theme-chalk/el-')
-const newPath = normalizePath('@element-plus/theme-chalk/src/')
+import type { ImportSpecifier } from 'es-module-lexer'
 
-const replaceComps = (src: string): string => {
-  if (src.includes(originPath)) {
-    const [, comp] = (/@element-plus\/theme-chalk\/el-([a-zA-Z\-]+).css/).exec(src) || []
-    if (comp) {
-      return replaceComps(src.replace(`${originPath}${comp}.css`, `${newPath}${comp}.scss`))
-    }
+
+const prefix = 'El'
+const transform = (
+  specifier: ImportSpecifier,
+  source: string,
+  useSource = false
+) => {
+  const statement = source.substring(specifier.ss, specifier.se)
+  const leftBracket = statement.indexOf('{')
+  if (leftBracket > -1) {
+    // remove { } to get raw imported items. Maybe this will fail since there could be
+    // special cases
+    const identifiers = statement.slice(
+      leftBracket + 1,
+      statement.indexOf('}')
+    )
+    const components = identifiers.split(',')
+    const styleImports = []
+    components.forEach(c => {
+      const trimmed = c.trim()
+      if (trimmed.startsWith(prefix)) {
+        const component = trimmed.slice(prefix.length)
+        if (useSource) {
+          styleImports.push(
+            `import '@element-plus/theme-chalk/src/${component.toLowerCase()}.scss'`
+          )
+        } else {
+          styleImports.push(
+            `import '@element-plus/theme-chalk/${prefix.toLowerCase()}-${component.toLowerCase()}.css'`
+          )
+        }
+      }
+    })
+    return styleImports.join('\n')
   }
-  return src
 }
 
-export default () => {
-  const plugin: Plugin = {
-    name: 'element-plus-scss-import',
+export type VitePluginElementPlusOptions = {
+  useSource?: boolean
+  defaultLocale?: string
+}
 
-    transform(src) {
-      return {
-        code: replaceComps(src),
+export default (options?: VitePluginElementPlusOptions) => {
+  const {
+    useSource = false,
+    defaultLocale = '', // for replacing locale,
+  } = options
+
+  const plugin: Plugin = {
+    name: 'vite-plugin-element-plus',
+    enforce: 'post',
+
+    async transform(source) {
+      await init
+      const specifiers = parse(source)[0].filter(({ n }) => {
+        return n === 'element-plus' || n === '@element-plus/components'
+      })
+      if (!specifiers.length) return
+      const styleImports = specifiers
+        .map(s => {
+          const ret = transform(s, source, useSource)
+          return ret
+        })
+        .filter(s => s)
+        .join('\n')
+
+      const lastSpecifier = specifiers[specifiers.length - 1]
+      try {
+        const ret = `${source.slice(
+          0,
+          lastSpecifier.se
+        )}\n${styleImports}\n${source.slice(lastSpecifier.se + 1)}`
+        return ret
+      } catch (e) {
+        if (process.env.NODE_ENV !== 'production') {
+          console.error(e.message)
+        }
+        return source
       }
     },
   }
