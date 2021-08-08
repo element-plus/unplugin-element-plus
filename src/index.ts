@@ -1,8 +1,8 @@
-import { Plugin } from 'vite'
+import { createFilter } from '@rollup/pluginutils'
 import { init, parse } from 'es-module-lexer'
 
+import type { Plugin } from 'vite'
 import type { ImportSpecifier } from 'es-module-lexer'
-
 
 const prefix = 'El'
 const transform = (
@@ -43,20 +43,31 @@ const transform = (
 export type VitePluginElementPlusOptions = {
   useSource?: boolean
   defaultLocale?: string
-}
+};
 
-export default (options?: VitePluginElementPlusOptions) => {
-  const {
-    useSource = false,
-    defaultLocale = '', // for replacing locale,
-  } = options
+export default (
+  options: VitePluginElementPlusOptions = {
+    useSource: false,
+    defaultLocale: '', // for replacing locale,
+  }
+) => {
+  const exclude = 'node_modules/**'
+  const include = ['**/*.vue', '**/*.ts', '**/*.js', '**/*.tsx', '**/*.jsx']
+
+  const filter = createFilter(include, exclude)
+
+  const { useSource } = options
 
   const plugin: Plugin = {
     name: 'vite-plugin-element-plus',
     enforce: 'post',
 
-    async transform(source) {
+    async transform(source, id) {
+      if (!source) return
+      if (!filter(id)) return
+
       await init
+
       const specifiers = parse(source)[0].filter(({ n }) => {
         return n === 'element-plus' || n === '@element-plus/components'
       })

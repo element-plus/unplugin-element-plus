@@ -6,15 +6,15 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import { ElAffix, ElAvatar } from '@element-plus/components'
+// import { ElAffix, ElAvatar } from '@element-plus/components'
 import { ElButton } from '@element-plus/components'
 
 export default defineComponent({
   name: 'App',
   components: {
     ElButton,
-    ElAffix,
-    ElAvatar
+    // ElAffix,
+    // ElAvatar
   }
 })
 </script>

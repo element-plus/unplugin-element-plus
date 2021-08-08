@@ -1,6 +1,6 @@
 {
   "name": "vite-plugin-element-plus",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "main": "dist/index.js",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -64,7 +64,7 @@
     "rollup": "^2.55.0",
     "rollup-plugin-terser": "^7.0.2",
     "rollup-plugin-typescript2": "^0.30.0",
-    "sass": "^1.37.0",
+    "sass": "^1.37.5",
     "ts-jest": "^27.0.3",
     "ts-node": "^10.1.0",
     "tsup": "^4.11.2",
