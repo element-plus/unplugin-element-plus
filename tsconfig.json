@@ -5,7 +5,7 @@
     "declaration": true,
     "lib": ["ES2020", "DOM"],
     "skipLibCheck": true,
-    "target": "ESNEXT",
+    "target": "es5",
     "moduleResolution": "node",
     // "noEmitHelpers": true,
   },

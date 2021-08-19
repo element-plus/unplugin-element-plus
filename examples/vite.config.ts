@@ -6,6 +6,8 @@ import importElementPlus from '../dist'
 export default defineConfig({
   plugins: [
     vue(),
-    importElementPlus(),
+    importElementPlus({
+      lib: 'element-plus',
+    }),
   ],
 })

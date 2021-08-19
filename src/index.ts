@@ -4,11 +4,12 @@ import { init, parse } from 'es-module-lexer'
 import type { Plugin } from 'vite'
 import type { ImportSpecifier } from 'es-module-lexer'
 
-const prefix = 'El'
 const transform = (
   specifier: ImportSpecifier,
   source: string,
-  useSource = false
+  useSource = false,
+  lib = 'element-plus',
+  prefix = 'El',
 ) => {
   const statement = source.substring(specifier.ss, specifier.se)
   const leftBracket = statement.indexOf('{')
@@ -27,11 +28,11 @@ const transform = (
         const component = trimmed.slice(prefix.length)
         if (useSource) {
           styleImports.push(
-            `import '@element-plus/theme-chalk/src/${component.toLowerCase()}.scss'`
+            `import '${lib}/es/components/${component.toLowerCase()}/style'`
           )
         } else {
           styleImports.push(
-            `import '@element-plus/theme-chalk/${prefix.toLowerCase()}-${component.toLowerCase()}.css'`
+            `import '${lib}/es/components/${component.toLowerCase()}/style/css'`,
           )
         }
       }
@@ -43,6 +44,8 @@ const transform = (
 export type VitePluginElementPlusOptions = {
   useSource?: boolean
   defaultLocale?: string
+  lib?: string
+  prefix?: string
 };
 
 export default (
@@ -56,7 +59,7 @@ export default (
 
   const filter = createFilter(include, exclude)
 
-  const { useSource } = options
+  const { useSource, lib, prefix } = options
 
   const plugin: Plugin = {
     name: 'vite-plugin-element-plus',
@@ -69,12 +72,12 @@ export default (
       await init
 
       const specifiers = parse(source)[0].filter(({ n }) => {
-        return n === 'element-plus' || n === '@element-plus/components'
+        return n === lib || n === `${lib}/es/components` || n === `${lib}/lib/components`
       })
       if (!specifiers.length) return
       const styleImports = specifiers
         .map(s => {
-          const ret = transform(s, source, useSource)
+          const ret = transform(s, source, useSource, lib, prefix)
           return ret
         })
         .filter(s => s)

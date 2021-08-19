@@ -1,6 +1,6 @@
 {
   "name": "vite-plugin-element-plus",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "main": "dist/index.js",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -37,6 +37,7 @@
   "devDependencies": {
     "@commitlint/cli": "^12.1.4",
     "@commitlint/config-conventional": "^12.1.4",
+    "@element-plus/publish-tester": "^0.0.4",
     "@rollup/plugin-node-resolve": "^13.0.4",
     "@types/debug": "^4.1.5",
     "@types/gulp": "^4.0.9",
