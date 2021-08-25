@@ -48,17 +48,20 @@ export type VitePluginElementPlusOptions = {
   prefix?: string
 };
 
+const defaultOptions = {
+  lib: 'element-plus',
+  useSource: false,
+  defaultLocale: '', // for replacing locale,
+}
+
 export default (
-  options: VitePluginElementPlusOptions = {
-    useSource: false,
-    defaultLocale: '', // for replacing locale,
-  }
+  options: VitePluginElementPlusOptions
 ) => {
   const exclude = 'node_modules/**'
   const include = ['**/*.vue', '**/*.ts', '**/*.js', '**/*.tsx', '**/*.jsx']
 
   const filter = createFilter(include, exclude)
-
+  options = Object.assign(defaultOptions, options)
   const { useSource, lib, prefix } = options
 
   const plugin: Plugin = {
