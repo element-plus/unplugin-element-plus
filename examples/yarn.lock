@@ -574,10 +574,10 @@ domutils@^2.5.2:
     domelementtype "^2.2.0"
     domhandler "^4.2.0"
 
-element-plus@^1.1.0-beta.4:
-  version "1.1.0-beta.4"
-  resolved "https://registry.npmjs.org/element-plus/-/element-plus-1.1.0-beta.4.tgz#c82afb73ad5e35fc0ee99274783c1bbcfd8493f1"
-  integrity sha512-wtef1yfLX4IKysspX18s5bsGU3IG6YbkueBorsXi0L/5ykFANoui8QTverAKMQ5ulBcE/jcR7wegfmXGnK9iOA==
+element-plus@^1.1.0-beta.6:
+  version "1.1.0-beta.6"
+  resolved "https://registry.npmjs.org/element-plus/-/element-plus-1.1.0-beta.6.tgz#ba47b09b3ca434b17c6e21cc88934657d6b42ff8"
+  integrity sha512-tcDveAyOxWuombFrR3F5TlqLB0nU1XsULPWNs2ja0hGjDWJNx/Vc06JGeMfHpoXLFZV2VNroJtMjCjTALjWxxg==
   dependencies:
     "@element-plus/icons" "^0.0.11"
     "@popperjs/core" "^2.4.4"

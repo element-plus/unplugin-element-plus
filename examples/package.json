@@ -7,7 +7,7 @@
     "serve": "vite preview"
   },
   "dependencies": {
-    "element-plus": "^1.1.0-beta.4",
+    "element-plus": "^1.1.0-beta.6",
     "naive-ui": "^2.16.4",
     "vue": "^3.2.x"
   },

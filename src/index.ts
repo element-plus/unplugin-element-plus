@@ -4,13 +4,27 @@ import { init, parse } from 'es-module-lexer'
 import type { Plugin } from 'vite'
 import type { ImportSpecifier } from 'es-module-lexer'
 
+const hyphenateRE = /\B([A-Z])/g
+const hyphenate = (str: string) =>
+  str.replace(hyphenateRE, '-$1').toLowerCase()
+
+const formatMap = {
+  cjs: 'lib',
+  esm: 'es',
+}
+
+type FormatType = 'cjs' | 'esm';
 const transform = (
   specifier: ImportSpecifier,
   source: string,
   useSource = false,
-  lib = 'element-plus',
-  prefix = 'El',
+  options: {
+    prefix: string
+    lib: string
+    format: FormatType
+  }
 ) => {
+  const { prefix, lib, format } = options
   const statement = source.substring(specifier.ss, specifier.se)
   const leftBracket = statement.indexOf('{')
   if (leftBracket > -1) {
@@ -28,11 +42,15 @@ const transform = (
         const component = trimmed.slice(prefix.length)
         if (useSource) {
           styleImports.push(
-            `import '${lib}/es/components/${component.toLowerCase()}/style'`
+            `import '${lib}/${formatMap[format]}/components/${hyphenate(
+              component
+            )}/style'`
           )
         } else {
           styleImports.push(
-            `import '${lib}/es/components/${component.toLowerCase()}/style/css'`,
+            `import '${lib}/${formatMap[format]}/components/${hyphenate(
+              component
+            )}/style/css'`
           )
         }
       }
@@ -46,23 +64,23 @@ export type VitePluginElementPlusOptions = {
   defaultLocale?: string
   lib?: string
   prefix?: string
+  format?: 'cjs' | 'esm'
 };
 
 const defaultOptions = {
   lib: 'element-plus',
   useSource: false,
   defaultLocale: '', // for replacing locale,
+  format: 'esm',
 }
 
-export default (
-  options: VitePluginElementPlusOptions
-) => {
+export default (options: VitePluginElementPlusOptions) => {
   const exclude = 'node_modules/**'
   const include = ['**/*.vue', '**/*.ts', '**/*.js', '**/*.tsx', '**/*.jsx']
 
   const filter = createFilter(include, exclude)
   options = Object.assign(defaultOptions, options)
-  const { useSource, lib, prefix } = options
+  const { useSource, lib, prefix, format } = options
 
   const plugin: Plugin = {
     name: 'vite-plugin-element-plus',
@@ -75,12 +93,16 @@ export default (
       await init
 
       const specifiers = parse(source)[0].filter(({ n }) => {
-        return n === lib || n === `${lib}/es/components` || n === `${lib}/lib/components`
+        return (
+          n === lib ||
+          n === `${lib}/es/components` ||
+          n === `${lib}/lib/components`
+        )
       })
       if (!specifiers.length) return
       const styleImports = specifiers
         .map(s => {
-          const ret = transform(s, source, useSource, lib, prefix)
+          const ret = transform(s, source, useSource, { lib, prefix, format })
           return ret
         })
         .filter(s => s)
