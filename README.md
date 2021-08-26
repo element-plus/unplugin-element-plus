@@ -102,13 +102,13 @@ type Format = 'esm' | 'cjs'
 
 default: 'esm'
 
-**esm** 对应 `[lib]/es/components/*`
-**cjs** 对应 `[lib]/lib/components/*`
+**esm** for `[lib]/es/components/*`
+**cjs** for `[lib]/lib/components/*`
 
-- /es 对应 ES Module 输出
-- /lib 对应 commonJS 的输出
+- /es for ES Module 输出
+- /lib for commonJS 的输出
 
-使用该选项来选择使用哪一个包。
+This option is for which format to use
 
 ```javascript
 // format: 'cjs'
@@ -118,4 +118,15 @@ import { ElButton } from 'element-plus'
 
 import { ElButton } from 'element-plus'
 import 'element-plus/lib/components/button/style/css'
+```
+
+### prefix
+
+```ts
+type Prefix = string
+```
+
+```javascript
+// prefix = Al
+import { AlButton } from 'xx-lib'
 ```

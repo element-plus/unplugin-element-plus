@@ -72,6 +72,7 @@ const defaultOptions = {
   useSource: false,
   defaultLocale: '', // for replacing locale,
   format: 'esm',
+  prefix: 'El',
 }
 
 export default (options: VitePluginElementPlusOptions) => {

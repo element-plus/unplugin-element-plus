@@ -117,3 +117,14 @@ import { ElButton } from 'element-plus'
 import { ElButton } from 'element-plus'
 import 'element-plus/lib/components/button/style/css'
 ```
+
+### prefix
+
+```ts
+type Prefix = string
+```
+
+```javascript
+// prefix = Al
+import { AlButton } from 'xx-lib'
+```

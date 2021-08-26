@@ -8,6 +8,7 @@ export default defineConfig({
     vue(),
     importElementPlus({
       lib: 'element-plus',
+      useSource: true,
     }),
   ],
 })

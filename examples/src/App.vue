@@ -46,7 +46,7 @@ export default defineComponent({
   components: {
     // NButton,
     // ElAvatar,
-    // ElButton,
+    ElButton,
     // ElSwitch,
     ElBreadcrumbItem,
     ElSelect,
