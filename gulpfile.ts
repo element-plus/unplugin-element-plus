@@ -7,14 +7,14 @@ const tsProject = ts.createProject('tsconfig.json')
 
 function compile() {
   return gulp
-    .src(['./src/*.ts'])
+    .src(['./src/**/*.ts'])
     .pipe(tsProject())
     .pipe(gulp.dest(distFolder))
 }
 
 function compileModule() {
   return gulp
-    .src(['./src/*.ts'])
+    .src(['./src/**/*.ts'])
     .pipe(ts.createProject('tsconfig.json', {
       module: 'ESNEXT',
     })())

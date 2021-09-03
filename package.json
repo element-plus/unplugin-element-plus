@@ -1,11 +1,38 @@
 {
-  "name": "vite-plugin-element-plus",
-  "version": "0.0.12",
+  "name": "unplugin-element-plus",
+  "version": "0.0.1",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
   "unpkg": "dist/index.js",
   "jsdelivr": "dist/index.js",
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs"
+    },
+    "./vite": {
+      "require": "./dist/vite.js",
+      "import": "./dist/vite.mjs"
+    },
+    "./webpack": {
+      "require": "./dist/webpack.js",
+      "import": "./dist/webpack.mjs"
+    },
+    "./rollup": {
+      "require": "./dist/rollup.js",
+      "import": "./dist/rollup.mjs"
+    },
+    "./nuxt": {
+      "require": "./dist/nuxt.js",
+      "import": "./dist/nuxt.mjs"
+    },
+    "./types": {
+      "require": "./dist/types.js",
+      "import": "./dist/types.mjs"
+    },
+    "./*": "./*"
+  },
   "scripts": {
     "lint": "eslint src",
     "build": "rm -rf dist && gulp build",
@@ -29,7 +56,8 @@
   "homepage": "https://github.com/element-plus/vite-plugin-element-plus/tree/main/#readme",
   "dependencies": {
     "@rollup/pluginutils": "^4.1.0",
-    "es-module-lexer": "^0.6.0"
+    "es-module-lexer": "^0.6.0",
+    "magic-string": "^0.25.7"
   },
   "peerDependencies": {
     "vite": ">=2.0.0"
@@ -71,6 +99,7 @@
     "ts-node": "^10.1.0",
     "tsup": "^4.11.2",
     "typescript": "^4.3.5",
+    "unplugin": "^0.2.7",
     "vite": "^2.5.0"
   }
 }
