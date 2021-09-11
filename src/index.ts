@@ -1,15 +1,7 @@
 import { createFilter } from '@rollup/pluginutils'
 import { createUnplugin } from 'unplugin'
 import { transform } from './core/transform'
-
-export type VitePluginElementPlusOptions = {
-  useSource?: boolean
-  defaultLocale?: string
-  lib?: string
-  prefix?: string
-  format?: 'cjs' | 'esm'
-  sourceMap?: boolean
-}
+import { Options } from './types'
 
 const defaultOptions = {
   lib: 'element-plus',
@@ -20,12 +12,12 @@ const defaultOptions = {
   sourceMap: false,
 }
 
-export default createUnplugin((options: VitePluginElementPlusOptions = {}) => {
+export default createUnplugin((userOptions: Partial<Options> = {}) => {
   const exclude = 'node_modules/**'
   const include = ['**/*.vue', '**/*.ts', '**/*.js', '**/*.tsx', '**/*.jsx']
 
   const filter = createFilter(include, exclude)
-  options = Object.assign(defaultOptions, options)
+  const options: Options = Object.assign(defaultOptions, userOptions)
 
   return {
     name: 'unplugin-element-plus',
