@@ -1,13 +1,13 @@
 import { init, parse } from 'es-module-lexer'
 import MagicString from 'magic-string'
+
 import type { ImportSpecifier } from 'es-module-lexer'
-import type { VitePluginElementPlusOptions } from '..'
+import type { Options } from '../types'
 
 type FormatType = 'cjs' | 'esm'
 
 const hyphenateRE = /\B([A-Z])/g
-const hyphenate = (str: string) =>
-  str.replace(hyphenateRE, '-$1').toLowerCase()
+const hyphenate = (str: string) => str.replace(hyphenateRE, '-$1').toLowerCase()
 
 const formatMap = {
   cjs: 'lib',
@@ -30,13 +30,10 @@ export const transformImportStyle = (
   if (leftBracket > -1) {
     // remove { } to get raw imported items. Maybe this will fail since there could be
     // special cases
-    const identifiers = statement.slice(
-      leftBracket + 1,
-      statement.indexOf('}')
-    )
+    const identifiers = statement.slice(leftBracket + 1, statement.indexOf('}'))
     const components = identifiers.split(',')
-    const styleImports = []
-    components.forEach(c => {
+    const styleImports: string[] = []
+    components.forEach((c) => {
       const trimmed = c.trim()
       if (trimmed.startsWith(prefix)) {
         const component = trimmed.slice(prefix.length)
@@ -59,7 +56,7 @@ export const transformImportStyle = (
   }
 }
 
-export async function transform(source: string, options: VitePluginElementPlusOptions) {
+export async function transform(source: string, options: Options) {
   const { useSource, lib, prefix, format } = options
 
   if (!source) return
@@ -68,18 +65,20 @@ export async function transform(source: string, options: VitePluginElementPlusOp
 
   const specifiers = parse(source)[0].filter(({ n }) => {
     return (
-      n === lib ||
-      n === `${lib}/es/components` ||
-      n === `${lib}/lib/components`
+      n === lib || n === `${lib}/es/components` || n === `${lib}/lib/components`
     )
   })
   if (!specifiers.length) return
   const styleImports = specifiers
-    .map(s => {
-      const ret = transformImportStyle(s, source, useSource, { lib, prefix, format })
+    .map((s) => {
+      const ret = transformImportStyle(s, source, useSource, {
+        lib,
+        prefix,
+        format,
+      })
       return ret
     })
-    .filter(s => s)
+    .filter((s) => s)
     .join('\n')
 
   const lastSpecifier = specifiers[specifiers.length - 1]

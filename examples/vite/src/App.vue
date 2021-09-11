@@ -18,17 +18,14 @@
 
     <div style="margin-bottom: 8px">
       <el-select>
-        <el-option>
-          test
-        </el-option>
+        <el-option>test</el-option>
       </el-select>
     </div>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
-// import { NButton } from 'naive-ui'
+import { defineComponent } from 'vue'
 import {
   ElButton,
   ElSwitch,
@@ -39,25 +36,29 @@ import {
   ElSelectV2,
   ElRadioButton,
   ElMenuItem,
-} from 'element-plus';
+} from 'element-plus'
 
 export default defineComponent({
   name: 'App',
   components: {
-    // NButton,
-    // ElAvatar,
+    ElAvatar,
     ElButton,
-    // ElSwitch,
+    ElSwitch,
     ElBreadcrumbItem,
     ElSelect,
     ElSelectV2,
     ElRadioButton,
-    // ElMenuItem,
+    ElMenuItem,
   },
   methods: {
     onClick() {
-      ElNotification({ type: 'success', title: '已成功发送邮件', message: '验证码区分大小写，有效期5分钟', duration: 3000 });
-    }
-  }
-});
+      ElNotification({
+        type: 'success',
+        title: '已成功发送邮件',
+        message: '验证码区分大小写，有效期5分钟',
+        duration: 3000,
+      })
+    },
+  },
+})
 </script>

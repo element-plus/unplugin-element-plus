@@ -1,39 +1,108 @@
-# vite-plugin-element-plus
+<p align="center">
+  <img width="300px" src="https://user-images.githubusercontent.com/10731096/95823103-9ce15780-0d5f-11eb-8010-1bd1b5910d4f.png">
+</p>
+
+<p align="center">
+  <a href="https://www.npmjs.org/package/unplugin-element-plus">
+    <img src="https://img.shields.io/npm/v/unplugin-element-plus.svg">
+  </a>
+  <a href="https://npmcharts.com/compare/unplugin-element-plus?minimal=true">
+    <img src="http://img.shields.io/npm/dm/unplugin-element-plus.svg">
+  </a>
+  <br>
+</p>
+
+# unplugin-element-plus
 
 [English](README.md) | [中文](README.zh-CN.md)
 
-这个仓库是用于 `ElementPlus` 相关的 [Vite](https://vitejs.dev/) 插件工具
+这个仓库是用于 `Element Plus` 相关的 [unplugin](https://github.com/unjs/unplugin) 插件工具。感谢 [@antfu](https://github.com/antfu)。
+
+###### 功能
+
+- 💚 为 Element Plus 按需引入样式。
+- ⚡️ 使用 <a href="https://github.com/unjs/unplugin">unplugin</a> 以支持 Vite, Webpack, Vue CLI, Rollup 等。
 
 ## 安装
 
 ```bash
-npm i vite-plugin-element-plus -D
+npm i unplugin-element-plus -D
 ```
 
-## 使用
+<details>
+<summary>Vite</summary><br>
 
-vite.config.js:
-
-```javascript
-import importElementPlus from 'vite-plugin-element-plus'
+```ts
+// vite.config.ts
+import ElementPlus from 'unplugin-element-plus/vite'
 
 export default {
   plugins: [
-    importElementPlus(),
-  ],
-}
-
-// or
-export default {
-  plugins: [
-    importElementPlus({
-      useSource: true
+    ElementPlus({
+      // options
     }),
   ],
 }
 ```
 
-app code:
+<br></details>
+
+<details>
+<summary>Rollup</summary><br>
+
+```ts
+// rollup.config.js
+import ElementPlus from 'unplugin-element-plus/rollup'
+
+export default {
+  plugins: [
+    ElementPlus({
+      // options
+    }),
+  ],
+}
+```
+
+<br></details>
+
+<details>
+<summary>Webpack</summary><br>
+
+```ts
+// webpack.config.js
+module.exports = {
+  /* ... */
+  plugins: [
+    require('unplugin-element-plus/webpack')({
+      // options
+    }),
+  ],
+}
+```
+
+<br></details>
+
+<details>
+<summary>Vue CLI</summary><br>
+
+```ts
+// vue.config.js
+module.exports = {
+  configureWebpack: {
+    plugins: [
+      require('unplugin-element-plus/webpack')({
+        // options
+      }),
+    ],
+  },
+}
+```
+
+<br></details>
+
+## 使用
+
+插件会自动转换：
 
 ```javascript
 import { ElButton } from 'element-plus'
@@ -128,3 +197,7 @@ type Prefix = string
 // prefix = Al
 import { AlButton } from 'xx-lib'
 ```
+
+## 其他插件
+
+- [unplugin-vue-components](https://github.com/antfu/unplugin-vue-components)

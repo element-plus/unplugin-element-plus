@@ -105,5 +105,5 @@ es
 .tern-port
 
 .DS_Store
-lib
-es
+.idea
+.vscode
