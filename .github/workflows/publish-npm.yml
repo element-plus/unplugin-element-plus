@@ -1,0 +1,23 @@
+name: Publish to NPM registry
+
+on:
+  release:
+    types: [created]
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+          registry-url: https://registry.npmjs.com/
+      - name: Gen npmrc
+        run: echo "//registry.npmjs.com/:_authToken=${{ secrets.NPM_PUBLISH_TOKEN }}" > ./.npmrc
+      - name: Build
+        run: yarn build
+      - name: Publish
+        name: npm publish
+        env:
+          REGISTRY: https://registry.npmjs.com/
