@@ -5,5 +5,10 @@
   flex-direction: column;
   justify-content: space-between;
 
-  min-height: 80vh;
+  min-height: 90vh;
+}
+
+a {
+  color: var(--el-color-primary);
+  text-decoration: none;
 }

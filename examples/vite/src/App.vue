@@ -30,6 +30,11 @@
     </div>
 
     <el-slider v-model="sliderVal"></el-slider>
+
+    <p>
+      It is a example built by vite.&nbsp;
+      More info see <a href="https://github.com/element-plus/unplugin-element-plus" target="_blank">unplugin-element-plus</a>.
+    </p>
   </div>
 </template>
 
