@@ -1,64 +1,60 @@
 <template>
   <div class="container">
-    <div style="margin-bottom: 8px">
-      <el-button @click="onClick" type="primary">主要按钮</el-button>
-    </div>
-    <div style="margin-bottom: 8px">
-      <el-switch></el-switch>
-    </div>
-    <div style="margin-bottom: 8px">
-      <el-avatar
-        src="https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg"
-      ></el-avatar>
+    <h1>Custom theme example (on demand)</h1>
+
+    <el-row>
+      <el-button @click="onClick">Default</el-button>
+      <el-button @click="onClick" type="primary">Primary</el-button>
+      <el-button @click="onClick" type="success">Success</el-button>
+      <el-button @click="onClick" type="info">Info</el-button>
+      <el-button @click="onClick" type="warning">Warning</el-button>
+      <el-button @click="onClick" type="danger">Danger</el-button>
+    </el-row>
+
+    <el-radio-group v-model="radioVal">
+      <el-radio-button label="New York"></el-radio-button>
+      <el-radio-button label="Washington"></el-radio-button>
+      <el-radio-button label="Los Angeles"></el-radio-button>
+      <el-radio-button label="Chicago"></el-radio-button>
+    </el-radio-group>
+
+    <div>
+      <el-switch v-model="switchVal"></el-switch>&nbsp;
+      <el-switch v-model="switchVal" active-color="#13ce66" inactive-color="#ff4949" />
     </div>
 
-    <div style="margin-bottom: 8px">
-      <el-transfer />
-    </div>
-
-    <div style="margin-bottom: 8px">
+    <div>
       <el-select>
         <el-option>test</el-option>
       </el-select>
     </div>
+
+    <el-slider v-model="sliderVal"></el-slider>
   </div>
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue'
+<script setup lang="ts">
+import { ref } from 'vue'
 import {
   ElButton,
   ElSwitch,
-  ElAvatar,
-  ElBreadcrumbItem,
   ElNotification,
   ElSelect,
-  ElSelectV2,
+  ElRadioGroup,
   ElRadioButton,
-  ElMenuItem,
+  ElSlider
 } from 'element-plus'
 
-export default defineComponent({
-  name: 'App',
-  components: {
-    ElAvatar,
-    ElButton,
-    ElSwitch,
-    ElBreadcrumbItem,
-    ElSelect,
-    ElSelectV2,
-    ElRadioButton,
-    ElMenuItem,
-  },
-  methods: {
-    onClick() {
-      ElNotification({
-        type: 'success',
-        title: '已成功发送邮件',
-        message: '验证码区分大小写，有效期5分钟',
-        duration: 3000,
-      })
-    },
-  },
-})
+const radioVal = ref('New York')
+const switchVal = ref(true)
+const sliderVal = ref(50)
+
+function onClick() {
+  ElNotification({
+    type: 'success',
+    title: '已成功发送邮件',
+    message: '验证码区分大小写，有效期5分钟',
+    duration: 3000,
+  })
+}
 </script>
