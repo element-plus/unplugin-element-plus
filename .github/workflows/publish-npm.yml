@@ -13,12 +13,18 @@ jobs:
         with:
           node-version: '16'
           registry-url: https://registry.npmjs.com/
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 6.15.1
+
       - name: Gen npmrc
         run: echo "//registry.npmjs.com/:_authToken=${{ secrets.NPM_PUBLISH_TOKEN }}" > ./.npmrc
       - name: Bootstrap
-        run: yarn
+        run: pnpm i
       - name: Build
-        run: yarn build
+        run: pnpm build
       - name: Publish
         run: npm publish
         env:
