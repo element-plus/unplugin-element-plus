@@ -20,20 +20,30 @@
 
     <div>
       <el-switch v-model="switchVal"></el-switch>&nbsp;
-      <el-switch v-model="switchVal" active-color="#13ce66" inactive-color="#ff4949" />
+      <el-switch
+        v-model="switchVal"
+        active-color="#13ce66"
+        inactive-color="#ff4949"
+      />
     </div>
 
     <div>
       <el-select>
         <el-option>test</el-option>
       </el-select>
+      &nbsp;
+      <el-date-picker></el-date-picker>
     </div>
 
     <el-slider v-model="sliderVal"></el-slider>
 
     <p>
-      It is a example built by vite.&nbsp;
-      More info see <a href="https://github.com/element-plus/unplugin-element-plus" target="_blank">unplugin-element-plus</a>.
+      It is a example built by vite.&nbsp; More info see
+      <a
+        href="https://github.com/element-plus/unplugin-element-plus"
+        target="_blank"
+        >unplugin-element-plus</a
+      >.
     </p>
   </div>
 </template>
@@ -47,7 +57,8 @@ import {
   ElSelect,
   ElRadioGroup,
   ElRadioButton,
-  ElSlider
+  ElSlider,
+  ElDatePicker
 } from 'element-plus'
 
 const radioVal = ref('New York')
@@ -59,7 +70,7 @@ function onClick() {
     type: 'success',
     title: '已成功发送邮件',
     message: '验证码区分大小写，有效期5分钟',
-    duration: 3000,
+    duration: 3000
   })
 }
 </script>
