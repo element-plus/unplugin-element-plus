@@ -60,23 +60,23 @@
   "homepage": "https://github.com/element-plus/unplugin-element-plus/tree/main/#readme",
   "dependencies": {
     "@rollup/pluginutils": "^4.1.0",
-    "es-module-lexer": "^0.7.1",
+    "es-module-lexer": "^0.9.3",
     "magic-string": "^0.25.7",
     "unplugin": "^0.2.7"
   },
   "devDependencies": {
-    "@types/node": "^16.9.1",
-    "@typescript-eslint/eslint-plugin": "^4.28.3",
-    "@typescript-eslint/parser": "^4.28.3",
-    "eslint": "^7.30.0",
+    "@types/node": "^16.10.5",
+    "@typescript-eslint/eslint-plugin": "^5.0.0",
+    "@typescript-eslint/parser": "^5.0.0",
+    "eslint": "^8.0.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^4.0.0",
-    "esno": "^0.9.1",
-    "prettier": "^2.3.1",
+    "esno": "^0.10.1",
+    "prettier": "^2.4.1",
     "rimraf": "^3.0.2",
-    "rollup": "^2.55.0",
-    "tsup": "^4.14.0",
-    "typescript": "^4.3.5"
+    "rollup": "^2.58.0",
+    "tsup": "^5.4.0",
+    "typescript": "^4.4.4"
   },
   "peerDependencies": {
     "vue": "2 || 3"
