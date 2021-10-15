@@ -12,11 +12,11 @@ importers:
       eslint: ^8.0.1
       eslint-config-prettier: ^8.3.0
       eslint-plugin-prettier: ^4.0.0
-      esno: ^0.10.1
       magic-string: ^0.25.7
       prettier: ^2.4.1
       rimraf: ^3.0.2
       rollup: ^2.58.0
+      sucrase: ^3.20.2
       tsup: ^5.4.0
       typescript: ^4.4.4
       unplugin: ^0.2.16
@@ -32,10 +32,10 @@ importers:
       eslint: 8.0.1
       eslint-config-prettier: 8.3.0_eslint@8.0.1
       eslint-plugin-prettier: 4.0.0_15313026b01cdd263118061498e273ac
-      esno: 0.10.1
       prettier: 2.4.1
       rimraf: 3.0.2
       rollup: 2.58.0
+      sucrase: 3.20.2
       tsup: 5.4.0_typescript@4.4.4
       typescript: 4.4.4
 
@@ -933,12 +933,6 @@ packages:
     dev: true
     optional: true
 
-  /esbuild-node-loader/0.4.2:
-    resolution: {integrity: sha512-3SieWnHgnhMKwn+qG2AjQq3Yf9RrgHeKGxGLauaLKfBTCpbm4nJbUt4CV3waHcRizILzlpZbESLkY9rnFHr6/w==}
-    dependencies:
-      esbuild: 0.13.6
-    dev: true
-
   /esbuild-openbsd-64/0.13.2:
     resolution: {integrity: sha512-g6AYrjBeV9OK624bw0KQ1TjHJQSW+X1Yicyd1NvDWqSFpMqKAjw7EUX4tA87mOFqv8BflPGr4f43ySgNvSVzIw==}
     cpu: [x64]
@@ -954,15 +948,6 @@ packages:
     requiresBuild: true
     dev: true
     optional: true
-
-  /esbuild-register/3.0.0_esbuild@0.13.6:
-    resolution: {integrity: sha512-No7U3ZUd6gPrrC6gqdb3XFcf2lNqzn8nvQXcgcyOl8szMVuN6YUvOplnmakxWyogI9d8SiJMl0uzBzJck+Aoxw==}
-    peerDependencies:
-      esbuild: '>=0.12 <1'
-    dependencies:
-      esbuild: 0.13.6
-      jsonc-parser: 3.0.0
-    dev: true
 
   /esbuild-sunos-64/0.13.2:
     resolution: {integrity: sha512-hIXvFIyrqwFd6v62XSra0ctCUXDS9Tu5D6QYbvnbhEoBmvD/TmEJRYRH48/+xmRifKJLzu6aegcrjAsDmaww7g==}
@@ -1187,16 +1172,6 @@ packages:
       v8-compile-cache: 2.3.0
     transitivePeerDependencies:
       - supports-color
-    dev: true
-
-  /esno/0.10.1:
-    resolution: {integrity: sha512-wsXUWZxI0O59bvOjggWOGDd6VSwPxG+37Np8aUI1LwORIONN3L2nOOJHT7jZ3xAGkfq/J3YcnZsx+Mmw6BQFmQ==}
-    hasBin: true
-    dependencies:
-      cross-spawn: 7.0.3
-      esbuild: 0.13.6
-      esbuild-node-loader: 0.4.2
-      esbuild-register: 3.0.0_esbuild@0.13.6
     dev: true
 
   /espree/9.0.0:

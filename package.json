@@ -34,7 +34,7 @@
   "scripts": {
     "lint": "eslint ./src --ext .vue,.js,.ts,.jsx,.tsx && prettier --check .",
     "lint:fix": "eslint --fix ./src --ext .vue,.js,.ts,.jsx,.tsx && prettier --write .",
-    "build": "rimraf dist && tsup src/*.ts && esno scripts/postbuild.ts",
+    "build": "rimraf dist && tsup src/*.ts && sucrase-node scripts/postbuild.ts",
     "vite:build": "npm -C examples/vite run build",
     "vite:dev": "npm -C examples/vite run dev"
   },
@@ -71,17 +71,17 @@
     "eslint": "^8.0.1",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^4.0.0",
-    "esno": "^0.10.1",
     "prettier": "^2.4.1",
     "rimraf": "^3.0.2",
     "rollup": "^2.58.0",
+    "sucrase": "^3.20.2",
     "tsup": "^5.4.0",
     "typescript": "^4.4.4"
   },
   "peerDependencies": {
-    "vue": "2 || 3"
+    "vue": "3"
   },
   "engines": {
-    "node": ">=14"
+    "node": ">=16"
   }
 }
