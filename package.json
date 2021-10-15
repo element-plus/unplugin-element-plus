@@ -34,7 +34,7 @@
   "scripts": {
     "lint": "eslint ./src --ext .vue,.js,.ts,.jsx,.tsx && prettier --check .",
     "lint:fix": "eslint --fix ./src --ext .vue,.js,.ts,.jsx,.tsx && prettier --write .",
-    "build": "rimraf dist && tsup src/*.ts --format cjs,esm --dts && esno scripts/postbuild.ts",
+    "build": "rimraf dist && tsup src/*.ts && esno scripts/postbuild.ts",
     "vite:build": "npm -C examples/vite run build",
     "vite:dev": "npm -C examples/vite run dev"
   },
