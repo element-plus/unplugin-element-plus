@@ -59,16 +59,16 @@
   },
   "homepage": "https://github.com/element-plus/unplugin-element-plus/tree/main/#readme",
   "dependencies": {
-    "@rollup/pluginutils": "^4.1.0",
+    "@rollup/pluginutils": "^4.1.1",
     "es-module-lexer": "^0.9.3",
     "magic-string": "^0.25.7",
-    "unplugin": "^0.2.7"
+    "unplugin": "^0.2.16"
   },
   "devDependencies": {
-    "@types/node": "^16.10.5",
+    "@types/node": "^16.11.0",
     "@typescript-eslint/eslint-plugin": "^5.0.0",
     "@typescript-eslint/parser": "^5.0.0",
-    "eslint": "^8.0.0",
+    "eslint": "^8.0.1",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^4.0.0",
     "esno": "^0.10.1",
