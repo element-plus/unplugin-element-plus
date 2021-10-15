@@ -107,7 +107,7 @@ module.exports = {
 ```javascript
 import { ElButton } from 'element-plus'
 
-      ↓ ↓ ↓ ↓ ↓ ↓
+//    ↓ ↓ ↓ ↓ ↓ ↓
 
 import { ElButton } from 'element-plus'
 import 'element-plus/es/components/button/style/css'
@@ -125,7 +125,7 @@ type UseSource = boolean
 // useSource: false
 import { ElButton } from 'element-plus'
 
-      ↓ ↓ ↓ ↓ ↓ ↓
+//    ↓ ↓ ↓ ↓ ↓ ↓
 
 import { ElButton } from 'element-plus'
 import 'element-plus/es/components/button/style/css'
@@ -133,7 +133,7 @@ import 'element-plus/es/components/button/style/css'
 // useSource: true
 import { ElButton } from 'element-plus'
 
-      ↓ ↓ ↓ ↓ ↓ ↓
+//    ↓ ↓ ↓ ↓ ↓ ↓
 
 import { ElButton } from 'element-plus'
 import 'element-plus/es/components/button/style/index'
@@ -154,7 +154,7 @@ default: 'element-plus'
 // lib: 'other-lib'
 import { ElButton } from 'other-lib'
 
-      ↓ ↓ ↓ ↓ ↓ ↓
+//    ↓ ↓ ↓ ↓ ↓ ↓
 
 import { ElButton } from 'other-lib'
 import 'other-lib/es/components/button/style/css'
@@ -168,12 +168,12 @@ type Format = 'esm' | 'cjs'
 
 default: 'esm'
 
-**esm** 对应 `[lib]/es/components/*`
+`esm` 对应 `[lib]/es/components/*`
 
-**cjs** 对应 `[lib]/lib/components/*`
+`cjs` 对应 `[lib]/lib/components/*`
 
-- /es 对应 ES Module 输出
-- /lib 对应 commonJS 的输出
+- `/es` 对应 ES Module 输出
+- `/lib` 对应 CommonJS 的输出
 
 使用该选项来选择使用哪一个包。
 
@@ -181,7 +181,7 @@ default: 'esm'
 // format: 'cjs'
 import { ElButton } from 'element-plus'
 
-      ↓ ↓ ↓ ↓ ↓ ↓
+//    ↓ ↓ ↓ ↓ ↓ ↓
 
 import { ElButton } from 'element-plus'
 import 'element-plus/lib/components/button/style/css'

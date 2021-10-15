@@ -107,7 +107,7 @@ It will automatically transform:
 ```javascript
 import { ElButton } from 'element-plus'
 
-      ↓ ↓ ↓ ↓ ↓ ↓
+//    ↓ ↓ ↓ ↓ ↓ ↓
 
 import { ElButton } from 'element-plus'
 import 'element-plus/es/components/button/style/css'
@@ -127,7 +127,7 @@ default: `false`
 // useSource: false
 import { ElButton } from 'element-plus'
 
-      ↓ ↓ ↓ ↓ ↓ ↓
+//    ↓ ↓ ↓ ↓ ↓ ↓
 
 import { ElButton } from 'element-plus'
 import 'element-plus/es/components/button/style/css'
@@ -135,7 +135,7 @@ import 'element-plus/es/components/button/style/css'
 // useSource: true
 import { ElButton } from 'element-plus'
 
-      ↓ ↓ ↓ ↓ ↓ ↓
+//    ↓ ↓ ↓ ↓ ↓ ↓
 
 import { ElButton } from 'element-plus'
 import 'element-plus/es/components/button/style/index'
@@ -145,7 +145,7 @@ import 'element-plus/es/components/button/style/index'
 
 Normally you wouldn't use this option but as a general option we exposed it anyway.
 When using this your bundle structure should be the same as ElementPlus.
-See [unpkg.com](https://unpkg.com/element-plus) for more information
+See [unpkg.com](https://unpkg.com/element-plus) for more information.
 
 ```ts
 type Lib = string
@@ -157,7 +157,7 @@ default: 'element-plus'
 // lib: 'other-lib'
 import { ElButton } from 'other-lib'
 
-      ↓ ↓ ↓ ↓ ↓ ↓
+//    ↓ ↓ ↓ ↓ ↓ ↓
 
 import { ElButton } from 'other-lib'
 import 'other-lib/es/components/button/style/css'
@@ -171,11 +171,12 @@ type Format = 'esm' | 'cjs'
 
 default: 'esm'
 
-**esm** for `[lib]/es/components/*`
-**cjs** for `[lib]/lib/components/*`
+`esm` for `element-plus/es/components/*`
 
-- /es for ES Module 输出
-- /lib for commonJS 的输出
+`cjs` for `element-plus/lib/components/*`
+
+- `/es` for ES Module
+- `/lib` for CommonJS
 
 This option is for which format to use
 
@@ -183,7 +184,7 @@ This option is for which format to use
 // format: 'cjs'
 import { ElButton } from 'element-plus'
 
-      ↓ ↓ ↓ ↓ ↓ ↓
+//    ↓ ↓ ↓ ↓ ↓ ↓
 
 import { ElButton } from 'element-plus'
 import 'element-plus/lib/components/button/style/css'
