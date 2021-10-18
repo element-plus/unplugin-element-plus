@@ -5,7 +5,7 @@ on:
     branches: [main]
 
 jobs:
-  publish:
+  gh-pages:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -18,8 +18,11 @@ jobs:
         with:
           version: latest
 
+      - name: Install & Build Library
+        run: pnpm install --frozen-lockfile && pnpm build
+
       - name: Install Dependencies & Build
-        run: cd examples/vite && npm install && npm run build
+        run: pnpm -C examples/vite run build
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
