@@ -82,8 +82,5 @@
   },
   "peerDependencies": {
     "vue": "3"
-  },
-  "engines": {
-    "node": ">=16"
   }
 }
