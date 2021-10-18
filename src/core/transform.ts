@@ -41,7 +41,7 @@ export const transformImportStyle = (
           styleImports.push(
             `import '${lib}/${formatMap[format]}/components/${hyphenate(
               component
-            )}/style'`
+            )}/style/index'`
           )
         } else {
           styleImports.push(
