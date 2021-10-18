@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.2](https://github.com/element-plus/unplugin-element-plus/compare/v0.1.1...v0.1.2) (2021-10-18)
+
+
+### Bug Fixes
+
+* remove node version limit ([dc9ae4f](https://github.com/element-plus/unplugin-element-plus/commit/dc9ae4f666b502c6f9c66b3dfaadabd9a4a05832))
+
 ### 0.1.1 (2021-10-15)
 
 
