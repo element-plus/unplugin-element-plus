@@ -66,19 +66,19 @@
     "unplugin": "^0.2.16"
   },
   "devDependencies": {
-    "@types/node": "^16.11.0",
-    "@typescript-eslint/eslint-plugin": "^5.0.0",
-    "@typescript-eslint/parser": "^5.0.0",
-    "eslint": "^8.0.1",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-prettier": "^4.0.0",
-    "prettier": "^2.4.1",
-    "rimraf": "^3.0.2",
-    "rollup": "^2.58.0",
-    "standard-version": "^9.3.1",
-    "sucrase": "^3.20.2",
-    "tsup": "^5.4.0",
-    "typescript": "^4.4.4"
+    "@types/node": "16.11.6",
+    "@typescript-eslint/eslint-plugin": "5.2.0",
+    "@typescript-eslint/parser": "5.2.0",
+    "eslint": "8.1.0",
+    "eslint-config-prettier": "8.3.0",
+    "eslint-plugin-prettier": "4.0.0",
+    "prettier": "2.4.1",
+    "rimraf": "3.0.2",
+    "rollup": "2.58.3",
+    "standard-version": "9.3.2",
+    "sucrase": "3.20.3",
+    "tsup": "5.5.0",
+    "typescript": "4.4.4"
   },
   "peerDependencies": {
     "vue": "3"
