@@ -36,7 +36,7 @@ export const transformImportStyle = (
     components.forEach((c) => {
       const trimmed = c.trim()
       if (trimmed.startsWith(prefix)) {
-        const component = trimmed.slice(prefix.length)
+        const component = trimmed.slice(prefix.length).replace(/\s.*$/, '')
         if (useSource) {
           styleImports.push(
             `import '${lib}/${formatMap[format]}/components/${hyphenate(
