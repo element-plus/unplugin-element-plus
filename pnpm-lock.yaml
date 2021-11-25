@@ -18,7 +18,7 @@ importers:
       rollup: 2.60.1
       standard-version: 9.3.2
       sucrase: 3.20.3
-      tsup: 5.9.1
+      tsup: 5.9.2
       typescript: 4.4.4
       unplugin: ^0.2.16
     dependencies:
@@ -38,7 +38,7 @@ importers:
       rollup: 2.60.1
       standard-version: 9.3.2
       sucrase: 3.20.3
-      tsup: 5.9.1_typescript@4.4.4
+      tsup: 5.9.2_typescript@4.4.4
       typescript: 4.4.4
 
   examples/vite:
@@ -615,8 +615,8 @@ packages:
     resolution: {integrity: sha512-E+XQCRwSbaaiChtv6k6Dwgc+bx+Bs6vuKJHHl5kox/BaKbhiXzqQOwK4cO22yElGp2OCmjwVhT3HmxgyPGnJfQ==}
     dev: true
 
-  /bundle-require/2.1.3_esbuild@0.13.6:
-    resolution: {integrity: sha512-aBLb/RHIZ9l3jAAGCTl/32m6bOQc3bmMbf6hfw+e6kcZnJL1E5i+MhmgBgBWK90CN9XeOBa/1bh6TiSLgk8New==}
+  /bundle-require/2.1.8_esbuild@0.13.6:
+    resolution: {integrity: sha512-oOEg3A0hy/YzvNWNowtKD0pmhZKseOFweCbgyMqTIih4gRY1nJWsvrOCT27L9NbIyL5jMjTFrAUpGxxpW68Puw==}
     peerDependencies:
       esbuild: '>=0.13'
     dependencies:
@@ -3115,8 +3115,8 @@ packages:
     resolution: {integrity: sha512-Xni35NKzjgMrwevysHTCArtLDpPvye8zV/0E4EyYn43P7/7qvQwPh9BGkHewbMulVntbigmcT7rdX3BNo9wRJg==}
     dev: true
 
-  /tsup/5.9.1_typescript@4.4.4:
-    resolution: {integrity: sha512-MWUykojp5MmcewspCLgXHjEdAwJHKbnsRUUfUvU0kxmz8TpspQY1H1TgPoErk0Hu/u9S86rruSfxSiqNEjpmxQ==}
+  /tsup/5.9.2_typescript@4.4.4:
+    resolution: {integrity: sha512-hQdRpkvQyVyqEZXLdUpuAWa8n7OnO9rfOKMXbsPlzcDG6APTpB8RogO6czq2KFZxPvbSus4ODDkpXOYcQS+8/g==}
     hasBin: true
     peerDependencies:
       typescript: ^4.2.3
@@ -3124,7 +3124,7 @@ packages:
       typescript:
         optional: true
     dependencies:
-      bundle-require: 2.1.3_esbuild@0.13.6
+      bundle-require: 2.1.8_esbuild@0.13.6
       cac: 6.7.11
       chokidar: 3.5.2
       debug: 4.3.2
