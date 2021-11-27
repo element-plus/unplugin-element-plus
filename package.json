@@ -63,7 +63,7 @@
     "@rollup/pluginutils": "^4.1.1",
     "es-module-lexer": "^0.9.3",
     "magic-string": "^0.25.7",
-    "unplugin": "^0.2.16"
+    "unplugin": "^0.2.21"
   },
   "devDependencies": {
     "@types/node": "16.11.10",

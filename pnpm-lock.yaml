@@ -20,12 +20,12 @@ importers:
       sucrase: 3.20.3
       tsup: 5.10.0
       typescript: 4.5.2
-      unplugin: ^0.2.16
+      unplugin: ^0.2.21
     dependencies:
       '@rollup/pluginutils': 4.1.1
       es-module-lexer: 0.9.3
       magic-string: 0.25.7
-      unplugin: 0.2.16_rollup@2.60.1
+      unplugin: 0.2.21_rollup@2.60.1
     devDependencies:
       '@types/node': 16.11.10
       '@typescript-eslint/eslint-plugin': 5.4.0_5c8ff4cecd5a55e744866c0654edac32
@@ -1845,7 +1845,7 @@ packages:
       source-map: 0.6.1
       wordwrap: 1.0.0
     optionalDependencies:
-      uglify-js: 3.14.2
+      uglify-js: 3.14.3
     dev: true
 
   /hard-rejection/2.1.0:
@@ -3196,16 +3196,16 @@ packages:
     hasBin: true
     dev: true
 
-  /uglify-js/3.14.2:
-    resolution: {integrity: sha512-rtPMlmcO4agTUfz10CbgJ1k6UAoXM2gWb3GoMPPZB/+/Ackf8lNWk11K4rYi2D0apgoFRLtQOZhb+/iGNJq26A==}
+  /uglify-js/3.14.3:
+    resolution: {integrity: sha512-mic3aOdiq01DuSVx0TseaEzMIVqebMZ0Z3vaeDhFEh9bsc24hV1TFvN74reA2vs08D0ZWfNjAcJ3UbVLaBss+g==}
     engines: {node: '>=0.8.0'}
     hasBin: true
     requiresBuild: true
     dev: true
     optional: true
 
-  /unplugin/0.2.16_rollup@2.60.1:
-    resolution: {integrity: sha512-KkXatHba0baJszSHW+2e8EQU/5Bz7rYwzYXu8wUeq97tE6K3wvub+7OWSuRv04LttvzNLsJ2jXEyR35gofv74Q==}
+  /unplugin/0.2.21_rollup@2.60.1:
+    resolution: {integrity: sha512-IJ15/L5XbhnV7J09Zjk0FT5HEkBjkXucWAXQWRsmEtUxmmxwh23yavrmDbCF6ZPxWiVB28+wnKIHePTRRpQPbQ==}
     peerDependencies:
       rollup: ^2.50.0
       vite: ^2.3.0
