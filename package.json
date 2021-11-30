@@ -74,7 +74,7 @@
     "eslint-plugin-prettier": "4.0.0",
     "prettier": "2.5.0",
     "rimraf": "3.0.2",
-    "rollup": "2.60.1",
+    "rollup": "2.60.2",
     "standard-version": "9.3.2",
     "sucrase": "3.20.3",
     "tsup": "5.10.0",
