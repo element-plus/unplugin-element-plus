@@ -15,7 +15,7 @@ importers:
       magic-string: ^0.25.7
       prettier: 2.5.0
       rimraf: 3.0.2
-      rollup: 2.60.1
+      rollup: 2.60.2
       standard-version: 9.3.2
       sucrase: 3.20.3
       tsup: 5.10.0
@@ -25,7 +25,7 @@ importers:
       '@rollup/pluginutils': 4.1.1
       es-module-lexer: 0.9.3
       magic-string: 0.25.7
-      unplugin: 0.2.21_rollup@2.60.1
+      unplugin: 0.2.21_rollup@2.60.2
     devDependencies:
       '@types/node': 16.11.10
       '@typescript-eslint/eslint-plugin': 5.5.0_2a935f58a3cc0b0f42856ccf18d8367f
@@ -35,7 +35,7 @@ importers:
       eslint-plugin-prettier: 4.0.0_d8c6a2a4ba8850181fffb74d8e835cec
       prettier: 2.5.0
       rimraf: 3.0.2
-      rollup: 2.60.1
+      rollup: 2.60.2
       standard-version: 9.3.2
       sucrase: 3.20.3
       tsup: 5.10.0_typescript@4.5.2
@@ -2820,8 +2820,8 @@ packages:
       fsevents: 2.3.2
     dev: true
 
-  /rollup/2.60.1:
-    resolution: {integrity: sha512-akwfnpjY0rXEDSn1UTVfKXJhPsEBu+imi1gqBA1ZkHGydUnkV/fWCC90P7rDaLEW8KTwBcS1G3N4893Ndz+jwg==}
+  /rollup/2.60.2:
+    resolution: {integrity: sha512-1Bgjpq61sPjgoZzuiDSGvbI1tD91giZABgjCQBKM5aYLnzjq52GoDuWVwT/cm/MCxCMPU8gqQvkj8doQ5C8Oqw==}
     engines: {node: '>=10.0.0'}
     hasBin: true
     optionalDependencies:
@@ -3134,7 +3134,7 @@ packages:
       joycon: 3.0.1
       postcss-load-config: 3.1.0
       resolve-from: 5.0.0
-      rollup: 2.60.1
+      rollup: 2.60.2
       sucrase: 3.20.3
       tree-kill: 1.2.2
       typescript: 4.5.2
@@ -3204,7 +3204,7 @@ packages:
     dev: true
     optional: true
 
-  /unplugin/0.2.21_rollup@2.60.1:
+  /unplugin/0.2.21_rollup@2.60.2:
     resolution: {integrity: sha512-IJ15/L5XbhnV7J09Zjk0FT5HEkBjkXucWAXQWRsmEtUxmmxwh23yavrmDbCF6ZPxWiVB28+wnKIHePTRRpQPbQ==}
     peerDependencies:
       rollup: ^2.50.0
@@ -3218,7 +3218,7 @@ packages:
       webpack:
         optional: true
     dependencies:
-      rollup: 2.60.1
+      rollup: 2.60.2
       webpack-virtual-modules: 0.4.3
     dev: false
 
