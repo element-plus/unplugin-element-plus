@@ -5,7 +5,7 @@ importers:
   .:
     specifiers:
       '@rollup/pluginutils': ^4.1.1
-      '@types/node': 16.11.11
+      '@types/node': 16.11.12
       '@typescript-eslint/eslint-plugin': 5.6.0
       '@typescript-eslint/parser': 5.6.0
       es-module-lexer: ^0.9.3
@@ -27,7 +27,7 @@ importers:
       magic-string: 0.25.7
       unplugin: 0.2.21_rollup@2.60.2
     devDependencies:
-      '@types/node': 16.11.11
+      '@types/node': 16.11.12
       '@typescript-eslint/eslint-plugin': 5.6.0_c73ee81e7e5a72fe329c49340cf4792a
       '@typescript-eslint/parser': 5.6.0_eslint@8.4.0+typescript@4.5.2
       eslint: 8.4.0
@@ -194,8 +194,8 @@ packages:
     resolution: {integrity: sha512-jhuKLIRrhvCPLqwPcx6INqmKeiA5EWrsCOPhrlFSrbrmU4ZMPjj5Ul/oLCMDO98XRUIwVm78xICz4EPCektzeQ==}
     dev: true
 
-  /@types/node/16.11.11:
-    resolution: {integrity: sha512-KB0sixD67CeecHC33MYn+eYARkqTheIRNuu97y2XMjR7Wu3XibO1vaY6VBV6O/a89SPI81cEUIYT87UqUWlZNw==}
+  /@types/node/16.11.12:
+    resolution: {integrity: sha512-+2Iggwg7PxoO5Kyhvsq9VarmPbIelXP070HMImEpbtGCoyWNINQj4wzjbQCXzdHTRXnqufutJb5KAURZANNBAw==}
     dev: true
 
   /@types/normalize-package-data/2.4.1:
