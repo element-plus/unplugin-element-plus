@@ -18,7 +18,7 @@ importers:
       rollup: 2.61.1
       standard-version: 9.3.2
       sucrase: 3.20.3
-      tsup: 5.11.4
+      tsup: 5.11.7
       typescript: 4.5.4
       unplugin: ^0.2.21
     dependencies:
@@ -38,7 +38,7 @@ importers:
       rollup: 2.61.1
       standard-version: 9.3.2
       sucrase: 3.20.3
-      tsup: 5.11.4_typescript@4.5.4
+      tsup: 5.11.7_typescript@4.5.4
       typescript: 4.5.4
 
   examples/vite:
@@ -3120,8 +3120,8 @@ packages:
     resolution: {integrity: sha512-Xni35NKzjgMrwevysHTCArtLDpPvye8zV/0E4EyYn43P7/7qvQwPh9BGkHewbMulVntbigmcT7rdX3BNo9wRJg==}
     dev: true
 
-  /tsup/5.11.4_typescript@4.5.4:
-    resolution: {integrity: sha512-xDpGHCRHn2McoxneCS6ljz2Ab+8vhpF0jpc/LEpA6tzWC347Z3T+zen4de8VanjYpeKUvTrLxrXdzdvd0DAdGQ==}
+  /tsup/5.11.7_typescript@4.5.4:
+    resolution: {integrity: sha512-p3NXi/0TahcvlB6CHgsPQZ179Qx0YYPEn4GEkirDbUT3CifPHO6RtZMmPW2v2IXmWsFMg5ZSqzHRnCGtMnjDWw==}
     hasBin: true
     peerDependencies:
       typescript: ^4.2.3
