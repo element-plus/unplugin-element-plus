@@ -21,7 +21,7 @@ This repo is for element-plus related [unplugin](https://github.com/unjs/unplugi
 ###### Features
 
 - 💚 On-demand import style for Element Plus.
-- ⚡️ Supports Vite, Webpack, Vue CLI, Rollup and more, powered by <a href="https://github.com/unjs/unplugin">unplugin</a>.
+- ⚡️ Supports Vite, Webpack, Vue CLI, Rollup, esbuild and more, powered by <a href="https://github.com/unjs/unplugin">unplugin</a>.
 
 ## Installation
 
@@ -61,6 +61,24 @@ export default {
     }),
   ],
 }
+```
+
+<br></details>
+
+<details>
+<summary>esbuild</summary><br>
+
+```ts
+// esbuild.config.js
+import { build } from 'esbuild'
+
+build({
+  plugins: [
+    require('unplugin-element-plus/esbuild')({
+      // options
+    }),
+  ],
+})
 ```
 
 <br></details>

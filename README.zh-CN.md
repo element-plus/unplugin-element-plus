@@ -21,7 +21,7 @@
 ###### 功能
 
 - 💚 为 Element Plus 按需引入样式。
-- ⚡️ 使用 <a href="https://github.com/unjs/unplugin">unplugin</a> 以支持 Vite, Webpack, Vue CLI, Rollup 等。
+- ⚡️ 使用 <a href="https://github.com/unjs/unplugin">unplugin</a> 以支持 Vite, Webpack, Vue CLI, Rollup, esbuild 等。
 
 ## 安装
 
@@ -61,6 +61,24 @@ export default {
     }),
   ],
 }
+```
+
+<br></details>
+
+<details>
+<summary>esbuild</summary><br>
+
+```ts
+// esbuild.config.js
+import { build } from 'esbuild'
+
+build({
+  plugins: [
+    require('unplugin-element-plus/esbuild')({
+      // options
+    }),
+  ],
+})
 ```
 
 <br></details>
