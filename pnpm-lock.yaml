@@ -20,12 +20,12 @@ importers:
       sucrase: 3.20.3
       tsup: 5.11.9
       typescript: 4.5.4
-      unplugin: ^0.2.21
+      unplugin: ^0.3.0
     dependencies:
       '@rollup/pluginutils': 4.1.1
       es-module-lexer: 0.9.3
       magic-string: 0.25.7
-      unplugin: 0.2.21_rollup@2.62.0
+      unplugin: 0.3.0_rollup@2.62.0
     devDependencies:
       '@types/node': 16.11.17
       '@typescript-eslint/eslint-plugin': 5.8.1_3a47348159e115370aa4cba56aba33b6
@@ -3210,13 +3210,16 @@ packages:
     dev: true
     optional: true
 
-  /unplugin/0.2.21_rollup@2.62.0:
-    resolution: {integrity: sha512-IJ15/L5XbhnV7J09Zjk0FT5HEkBjkXucWAXQWRsmEtUxmmxwh23yavrmDbCF6ZPxWiVB28+wnKIHePTRRpQPbQ==}
+  /unplugin/0.3.0_rollup@2.62.0:
+    resolution: {integrity: sha512-9yLlOo+XC4NdIRgpkDSHOAHkQDq2x4mbuVNO/eKVa3C8WTn5wWGfzEFfRJFL8euqnX3Gf7hEur0AhXxy+WSwkg==}
     peerDependencies:
+      esbuild: '>=0.13'
       rollup: ^2.50.0
       vite: ^2.3.0
       webpack: 4 || 5
     peerDependenciesMeta:
+      esbuild:
+        optional: true
       rollup:
         optional: true
       vite:
