@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.2.0](https://github.com/element-plus/unplugin-element-plus/compare/v0.1.3...v0.2.0) (2021-12-28)
+
+
+### Features
+
+* support esbuild ([8399a9a](https://github.com/element-plus/unplugin-element-plus/commit/8399a9a3d7f8c9f522ff80530c87275478d2c115))
+
+
+### Bug Fixes
+
+* **deps:** update dependency unplugin to ^0.3.0 ([#76](https://github.com/element-plus/unplugin-element-plus/issues/76)) ([9d29b6f](https://github.com/element-plus/unplugin-element-plus/commit/9d29b6f306d81b22d92e8a26f6415b9962e2523d))
+
 ### [0.1.3](https://github.com/element-plus/unplugin-element-plus/compare/v0.1.2...v0.1.3) (2021-10-18)
 
 
