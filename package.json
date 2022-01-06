@@ -38,7 +38,7 @@
   "scripts": {
     "lint": "eslint ./src --ext .vue,.js,.ts,.jsx,.tsx && prettier --check .",
     "lint:fix": "eslint --fix ./src --ext .vue,.js,.ts,.jsx,.tsx && prettier --write .",
-    "build": "rimraf dist && tsup src/*.ts && sucrase-node scripts/postbuild.ts",
+    "build": "tsup && sucrase-node scripts/postbuild.ts",
     "release": "standard-version",
     "vite:build": "npm -C examples/vite run build",
     "vite:dev": "npm -C examples/vite run dev"
@@ -49,6 +49,7 @@
     "vite",
     "webpack",
     "rollup",
+    "esbuild",
     "plugin"
   ],
   "files": [
@@ -64,7 +65,7 @@
   },
   "homepage": "https://github.com/element-plus/unplugin-element-plus/tree/main/#readme",
   "dependencies": {
-    "@rollup/pluginutils": "^4.1.1",
+    "@rollup/pluginutils": "^4.1.2",
     "es-module-lexer": "^0.9.3",
     "magic-string": "^0.25.7",
     "unplugin": "^0.3.0"
@@ -77,7 +78,6 @@
     "eslint-config-prettier": "8.3.0",
     "eslint-plugin-prettier": "4.0.0",
     "prettier": "2.5.1",
-    "rimraf": "3.0.2",
     "rollup": "2.63.0",
     "standard-version": "9.3.2",
     "sucrase": "3.20.3",

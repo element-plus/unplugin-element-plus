@@ -1,4 +1,4 @@
-import { resolve, basename } from 'path'
+import { basename, resolve } from 'path'
 import { promises as fs } from 'fs'
 import fg from 'fast-glob'
 
@@ -19,7 +19,7 @@ async function run() {
     await fs.writeFile(file, code)
     await fs.writeFile(
       `${name}.d.ts`,
-      `export * from './dist/${name}'\nexport { default } from './dist/${name}'\n`
+      `export { default } from './dist/${name}'\n`
     )
   }
 }
