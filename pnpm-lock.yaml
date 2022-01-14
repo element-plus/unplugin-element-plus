@@ -14,7 +14,7 @@ importers:
       eslint-plugin-prettier: 4.0.0
       magic-string: ^0.25.7
       prettier: 2.5.1
-      rollup: 2.63.0
+      rollup: 2.64.0
       standard-version: 9.3.2
       sucrase: 3.20.3
       tsup: 5.11.11
@@ -24,7 +24,7 @@ importers:
       '@rollup/pluginutils': 4.1.2
       es-module-lexer: 0.9.3
       magic-string: 0.25.7
-      unplugin: 0.3.0_rollup@2.63.0
+      unplugin: 0.3.0_rollup@2.64.0
     devDependencies:
       '@types/node': 16.11.19
       '@typescript-eslint/eslint-plugin': 5.9.1_b7b2e42b32ee097737cd3e626b10847b
@@ -33,7 +33,7 @@ importers:
       eslint-config-prettier: 8.3.0_eslint@8.6.0
       eslint-plugin-prettier: 4.0.0_1c588f61426b1faf18812943f1678311
       prettier: 2.5.1
-      rollup: 2.63.0
+      rollup: 2.64.0
       standard-version: 9.3.2
       sucrase: 3.20.3
       tsup: 5.11.11_typescript@4.5.4
@@ -58,7 +58,7 @@ importers:
       '@vue/compiler-sfc': 3.2.20
       sass: 1.43.2
       typescript: 4.4.3
-      unplugin-element-plus: 0.1.3_2e0b54aba376b501a5d2d9282911369c
+      unplugin-element-plus: 0.1.3_0bad603ac52925f8d7098c5642b411e6
       vite: 2.6.7_sass@1.43.2
       vue-tsc: 0.3.0_typescript@4.4.3
 
@@ -2857,8 +2857,8 @@ packages:
       fsevents: 2.3.2
     dev: true
 
-  /rollup/2.63.0:
-    resolution: {integrity: sha512-nps0idjmD+NXl6OREfyYXMn/dar3WGcyKn+KBzPdaLecub3x/LrId0wUcthcr8oZUAcZAR8NKcfGGFlNgGL1kQ==}
+  /rollup/2.64.0:
+    resolution: {integrity: sha512-+c+lbw1lexBKSMb1yxGDVfJ+vchJH3qLbmavR+awDinTDA2C5Ug9u7lkOzj62SCu0PKUExsW36tpgW7Fmpn3yQ==}
     engines: {node: '>=10.0.0'}
     hasBin: true
     optionalDependencies:
@@ -3181,7 +3181,7 @@ packages:
       joycon: 3.1.1
       postcss-load-config: 3.1.1
       resolve-from: 5.0.0
-      rollup: 2.63.0
+      rollup: 2.64.0
       source-map: 0.7.3
       sucrase: 3.20.3
       tree-kill: 1.2.2
@@ -3252,7 +3252,7 @@ packages:
     dev: true
     optional: true
 
-  /unplugin-element-plus/0.1.3_2e0b54aba376b501a5d2d9282911369c:
+  /unplugin-element-plus/0.1.3_0bad603ac52925f8d7098c5642b411e6:
     resolution: {integrity: sha512-6GO1tuDIXcoYFkbL26Mrd84oUOgAHShcwn/xma5bwmBN2O0N0s13RbBDsK53vm4hxRKIVuFSSr659BkpmXWm2w==}
     peerDependencies:
       vue: '3'
@@ -3260,7 +3260,7 @@ packages:
       '@rollup/pluginutils': 4.1.1
       es-module-lexer: 0.9.3
       magic-string: 0.25.7
-      unplugin: 0.2.21_rollup@2.63.0+vite@2.6.7
+      unplugin: 0.2.21_rollup@2.64.0+vite@2.6.7
       vue: 3.2.20
     transitivePeerDependencies:
       - rollup
@@ -3268,7 +3268,7 @@ packages:
       - webpack
     dev: true
 
-  /unplugin/0.2.21_rollup@2.63.0+vite@2.6.7:
+  /unplugin/0.2.21_rollup@2.64.0+vite@2.6.7:
     resolution: {integrity: sha512-IJ15/L5XbhnV7J09Zjk0FT5HEkBjkXucWAXQWRsmEtUxmmxwh23yavrmDbCF6ZPxWiVB28+wnKIHePTRRpQPbQ==}
     peerDependencies:
       rollup: ^2.50.0
@@ -3282,12 +3282,12 @@ packages:
       webpack:
         optional: true
     dependencies:
-      rollup: 2.63.0
+      rollup: 2.64.0
       vite: 2.6.7_sass@1.43.2
       webpack-virtual-modules: 0.4.3
     dev: true
 
-  /unplugin/0.3.0_rollup@2.63.0:
+  /unplugin/0.3.0_rollup@2.64.0:
     resolution: {integrity: sha512-9yLlOo+XC4NdIRgpkDSHOAHkQDq2x4mbuVNO/eKVa3C8WTn5wWGfzEFfRJFL8euqnX3Gf7hEur0AhXxy+WSwkg==}
     peerDependencies:
       esbuild: '>=0.13'
@@ -3304,7 +3304,7 @@ packages:
       webpack:
         optional: true
     dependencies:
-      rollup: 2.63.0
+      rollup: 2.64.0
       webpack-virtual-modules: 0.4.3
     dev: false
 
