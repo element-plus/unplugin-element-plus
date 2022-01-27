@@ -3,7 +3,9 @@ import { createUnplugin } from 'unplugin'
 import { transform } from './core/transform'
 import { Options } from './types'
 
-const defaultOptions = {
+const defaultOptions: Options = {
+  include: ['**/*.vue', '**/*.ts', '**/*.js', '**/*.tsx', '**/*.jsx'],
+  exclude: [/[\\/]node_modules[\\/]/, /[\\/]\.git[\\/]/, /[\\/]\.nuxt[\\/]/],
   lib: 'element-plus',
   useSource: false,
   defaultLocale: '', // for replacing locale,
@@ -13,11 +15,8 @@ const defaultOptions = {
 }
 
 export default createUnplugin((userOptions: Partial<Options> = {}) => {
-  const exclude = 'node_modules/**'
-  const include = ['**/*.vue', '**/*.ts', '**/*.js', '**/*.tsx', '**/*.jsx']
-
-  const filter = createFilter(include, exclude)
   const options: Options = Object.assign(defaultOptions, userOptions)
+  const filter = createFilter(options.include, options.exclude)
 
   return {
     name: 'unplugin-element-plus',
@@ -25,8 +24,8 @@ export default createUnplugin((userOptions: Partial<Options> = {}) => {
     transformInclude(id) {
       return filter(id)
     },
-    async transform(source) {
-      return await transform(source, options)
+    transform(source) {
+      return transform(source, options)
     },
   }
 })
