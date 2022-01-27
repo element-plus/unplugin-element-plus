@@ -1,0 +1,19 @@
+// Vitest Snapshot v1
+
+exports[`transform > fixtures > tests/fixtures/basic.ts > useSource = false 1`] = `
+"import { ElButton, ElCol } from 'element-plus';
+import 'element-plus/es/components/button/style/css';
+import 'element-plus/es/components/col/style/css';
+
+console.log(ElButton, ElCol);
+"
+`;
+
+exports[`transform > fixtures > tests/fixtures/basic.ts > useSource = true 1`] = `
+"import { ElButton, ElCol } from 'element-plus';
+import 'element-plus/es/components/button/style/index';
+import 'element-plus/es/components/col/style/index';
+
+console.log(ElButton, ElCol);
+"
+`;
