@@ -19,7 +19,7 @@ importers:
       rollup: 2.66.1
       standard-version: 9.3.2
       sucrase: 3.20.3
-      tsup: 5.11.11
+      tsup: 5.11.12
       typescript: 4.5.5
       unplugin: ^0.3.0
       vitest: 0.2.4
@@ -41,7 +41,7 @@ importers:
       rollup: 2.66.1
       standard-version: 9.3.2
       sucrase: 3.20.3
-      tsup: 5.11.11_typescript@4.5.5
+      tsup: 5.11.12_typescript@4.5.5
       typescript: 4.5.5
       vitest: 0.2.4_@vitest+ui@0.2.5
 
@@ -671,12 +671,14 @@ packages:
     resolution: {integrity: sha512-E+XQCRwSbaaiChtv6k6Dwgc+bx+Bs6vuKJHHl5kox/BaKbhiXzqQOwK4cO22yElGp2OCmjwVhT3HmxgyPGnJfQ==}
     dev: true
 
-  /bundle-require/2.2.0_esbuild@0.14.10:
-    resolution: {integrity: sha512-JDVxYEAxEX1g8AWtadiIkCkFf42RulEl5AOIvUa4cpuEL/VKpK2lJwogyswHnp+qizNQxM0Ylamw7CjPRaJZuA==}
+  /bundle-require/3.0.2_esbuild@0.14.10:
+    resolution: {integrity: sha512-WLS50LRdi8oAMnQfoxqjI3Fszi0xaI6dJumvtX909u0WREkYCuFGeE2UwMn5H8bSUXWtUB0XeBqNkgpVjMcYyQ==}
+    engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
     peerDependencies:
       esbuild: '>=0.13'
     dependencies:
       esbuild: 0.14.10
+      load-tsconfig: 0.2.2
     dev: true
 
   /cac/6.7.12:
@@ -2383,6 +2385,11 @@ packages:
       strip-bom: 3.0.0
     dev: true
 
+  /load-tsconfig/0.2.2:
+    resolution: {integrity: sha512-9B4XOMjNhphRmXg3YHFnpgEH5fmYKofXJ7M6sLkRcfJ5DcuPiStlQ1Or+1Rv/aML716kQ9Q+C9zJGUcfMYiq4Q==}
+    engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
+    dev: true
+
   /local-pkg/0.4.1:
     resolution: {integrity: sha512-lL87ytIGP2FU5PWwNDo0w3WhIo2gopIAxPg9RxDYF7m4rr5ahuZxP22xnJHIvaLTe4Z9P6uKKY2UHiwyB4pcrw==}
     engines: {node: '>=14'}
@@ -3422,8 +3429,8 @@ packages:
     resolution: {integrity: sha512-Xni35NKzjgMrwevysHTCArtLDpPvye8zV/0E4EyYn43P7/7qvQwPh9BGkHewbMulVntbigmcT7rdX3BNo9wRJg==}
     dev: true
 
-  /tsup/5.11.11_typescript@4.5.5:
-    resolution: {integrity: sha512-rgbTu+KhAI9PdGUS07rKohDXbRLTstBGJaxl75q7RZYRGF+n+kN8L4RlXY5pqYb9Hsq0gEB6nS39v7nSvVBS+g==}
+  /tsup/5.11.12_typescript@4.5.5:
+    resolution: {integrity: sha512-zwOcdMaWKgbcJeWQ654OYdCfcy+dj9d3nzutPPmqiDPeHkmxjovIFX6xqvPTcIkMEuTsUgHuQDoJ0qS3r16zqA==}
     hasBin: true
     peerDependencies:
       typescript: ^4.1.0
@@ -3431,7 +3438,7 @@ packages:
       typescript:
         optional: true
     dependencies:
-      bundle-require: 2.2.0_esbuild@0.14.10
+      bundle-require: 3.0.2_esbuild@0.14.10
       cac: 6.7.12
       chokidar: 3.5.2
       debug: 4.3.3
