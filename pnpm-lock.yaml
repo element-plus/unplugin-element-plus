@@ -22,7 +22,7 @@ importers:
       tsup: 5.11.12
       typescript: 4.5.5
       unplugin: ^0.3.0
-      vitest: 0.2.4
+      vitest: 0.2.5
     dependencies:
       '@rollup/pluginutils': 4.1.2
       es-module-lexer: 0.9.3
@@ -43,7 +43,7 @@ importers:
       sucrase: 3.20.3
       tsup: 5.11.12_typescript@4.5.5
       typescript: 4.5.5
-      vitest: 0.2.4_@vitest+ui@0.2.5
+      vitest: 0.2.5_@vitest+ui@0.2.5
 
   examples/vite:
     specifiers:
@@ -3380,8 +3380,8 @@ packages:
     engines: {node: '>=14.0.0'}
     dev: true
 
-  /tinyspy/0.2.8:
-    resolution: {integrity: sha512-4VXqQzzh9gC5uOLk77cLr9R3wqJq07xJlgM9IUdCNJCet139r+046ETKbU1x7mGs7B0k7eopyH5U6yflbBXNyA==}
+  /tinyspy/0.2.10:
+    resolution: {integrity: sha512-Qij6rGWCDjWIejxCXXVi6bNgvrYBp3PbqC4cBP/0fD6WHDOHCw09Zd13CsxrDqSR5PFq01WeqDws8t5lz5sH0A==}
     engines: {node: '>=14.0.0'}
     dev: true
 
@@ -3663,8 +3663,8 @@ packages:
       fsevents: 2.3.2
     dev: true
 
-  /vitest/0.2.4_@vitest+ui@0.2.5:
-    resolution: {integrity: sha512-QZHT00/6yOMPPGpSxcidgdMrx8xpwPaxt0icQfuhe/c1bTB4Es7THE9c+7HTpAiytlaCty2zSomSiP6Gcnl50Q==}
+  /vitest/0.2.5_@vitest+ui@0.2.5:
+    resolution: {integrity: sha512-QruEhsNxy8ycLxYG9rrGUfHZzJ8A6YvA9ULZ4w/ecvm0Zejm1nxUar/XkRWkL2xzrqA5AjmfqDSQZ8q2bFbA0Q==}
     engines: {node: '>=14.14.0'}
     hasBin: true
     peerDependencies:
@@ -3688,7 +3688,7 @@ packages:
       chai: 4.3.6
       local-pkg: 0.4.1
       tinypool: 0.1.1
-      tinyspy: 0.2.8
+      tinyspy: 0.2.10
       vite: 2.7.13
     transitivePeerDependencies:
       - less
