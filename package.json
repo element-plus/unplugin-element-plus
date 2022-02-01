@@ -72,7 +72,7 @@
     "unplugin": "^0.3.0"
   },
   "devDependencies": {
-    "@types/node": "16.11.21",
+    "@types/node": "16.11.22",
     "@typescript-eslint/eslint-plugin": "5.10.1",
     "@typescript-eslint/parser": "5.10.1",
     "@vitest/ui": "0.2.5",
