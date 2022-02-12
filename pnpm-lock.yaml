@@ -22,7 +22,7 @@ importers:
       tsup: 5.11.13
       typescript: 4.5.5
       unplugin: ^0.3.0
-      vitest: 0.3.2
+      vitest: 0.3.4
     dependencies:
       '@rollup/pluginutils': 4.1.2
       es-module-lexer: 0.9.3
@@ -43,7 +43,7 @@ importers:
       sucrase: 3.20.3
       tsup: 5.11.13_typescript@4.5.5
       typescript: 4.5.5
-      vitest: 0.3.2_@vitest+ui@0.3.2
+      vitest: 0.3.4_@vitest+ui@0.3.2
 
   examples/vite:
     specifiers:
@@ -3663,8 +3663,8 @@ packages:
       fsevents: 2.3.2
     dev: true
 
-  /vitest/0.3.2_@vitest+ui@0.3.2:
-    resolution: {integrity: sha512-Xc0u8BVPBdD029uDcLSYDvy1MFenC6V8WvTJOGdld6NNWgz/swgsMvwZNzftsDohmHLgDyck8A+TaQdDd1tNwA==}
+  /vitest/0.3.4_@vitest+ui@0.3.2:
+    resolution: {integrity: sha512-vP7Z4FoboW1fFSmJlxNB8qmfaJn1YXvZ4/jXhVWoTuVj+7phP9hwmMKS3zazWLs3PWIt35vc7/TBkk1WuffYVQ==}
     engines: {node: '>=14.14.0'}
     hasBin: true
     peerDependencies:
