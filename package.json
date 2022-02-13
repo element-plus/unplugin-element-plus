@@ -75,7 +75,7 @@
     "@types/node": "16.11.24",
     "@typescript-eslint/eslint-plugin": "5.11.0",
     "@typescript-eslint/parser": "5.11.0",
-    "@vitest/ui": "0.3.2",
+    "@vitest/ui": "0.3.4",
     "eslint": "8.9.0",
     "eslint-config-prettier": "8.3.0",
     "eslint-plugin-prettier": "4.0.0",
