@@ -8,6 +8,7 @@ async function getCode(file: string, plugin: any) {
   const bundle = await rollup({
     input: [file],
     plugins: [plugin],
+    external: () => true,
   })
   const output = await bundle.generate({ format: 'esm' })
   return output.output
