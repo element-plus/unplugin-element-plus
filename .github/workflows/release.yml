@@ -1,8 +1,9 @@
-name: Publish to NPM registry
+name: Release
 
 on:
-  release:
-    types: [created]
+  push:
+    tags:
+      - 'v**'
 
 jobs:
   publish:
@@ -19,13 +20,18 @@ jobs:
         with:
           version: latest
 
-      - name: Gen npmrc
-        run: echo "//registry.npmjs.com/:_authToken=${{ secrets.NPM_PUBLISH_TOKEN }}" > ./.npmrc
-      - name: Bootstrap
+      - name: Install dependencies
         run: pnpm i --frozen-lockfile
+
       - name: Build
         run: pnpm build
+
       - name: Publish
         run: npm publish
         env:
           REGISTRY: https://registry.npmjs.com/
+          NODE_AUTH_TOKEN: ${{secrets.NPM_PUBLISH_TOKEN}}
+
+      - run: npx conventional-github-releaser -p angular
+        env:
+          CONVENTIONAL_GITHUB_RELEASER_TOKEN: ${{secrets.GITHUB_TOKEN}}
