@@ -8,7 +8,7 @@ importers:
       '@types/node': 16.11.25
       '@typescript-eslint/eslint-plugin': 5.12.0
       '@typescript-eslint/parser': 5.12.0
-      '@vitest/ui': 0.3.5
+      '@vitest/ui': 0.3.6
       es-module-lexer: ^0.9.3
       eslint: 8.9.0
       eslint-config-prettier: 8.3.0
@@ -32,7 +32,7 @@ importers:
       '@types/node': 16.11.25
       '@typescript-eslint/eslint-plugin': 5.12.0_c467cf9bb49b295941e83ce479a578b7
       '@typescript-eslint/parser': 5.12.0_eslint@8.9.0+typescript@4.5.5
-      '@vitest/ui': 0.3.5
+      '@vitest/ui': 0.3.6
       eslint: 8.9.0
       eslint-config-prettier: 8.3.0_eslint@8.9.0
       eslint-plugin-prettier: 4.0.0_07b422646bb75d3db791621d4fdbc992
@@ -43,7 +43,7 @@ importers:
       sucrase: 3.20.3
       tsup: 5.11.13_typescript@4.5.5
       typescript: 4.5.5
-      vitest: 0.3.6_@vitest+ui@0.3.5
+      vitest: 0.3.6_@vitest+ui@0.3.6
 
   examples/vite:
     specifiers:
@@ -368,8 +368,8 @@ packages:
       vite: 2.6.7_sass@1.43.2
     dev: true
 
-  /@vitest/ui/0.3.5:
-    resolution: {integrity: sha512-OO06tHPDolQpcYWAwU89T4azOTyTi65XxEXwfxrcSvGtMdk++U41D7WSggeOQ4UcbexHTaXeHuEEEZ3IF4W3IA==}
+  /@vitest/ui/0.3.6:
+    resolution: {integrity: sha512-xnU6TJAdvMNQ0GVIxZT4GmlZ3FzgysgpzT93Ym+BKGCJGClzwCl5OwOa9MVLBcB0dC/syZ22wZHxXqJQkMh9/g==}
     dependencies:
       sirv: 2.0.2
     dev: true
@@ -3553,7 +3553,7 @@ packages:
       fsevents: 2.3.2
     dev: true
 
-  /vitest/0.3.6_@vitest+ui@0.3.5:
+  /vitest/0.3.6_@vitest+ui@0.3.6:
     resolution: {integrity: sha512-EzlAmGHDh/sQhzKeqDtEae6nlFM5pJKJefj5P2eUUmg6DcXL2Xj365M7eN29P2tMofzs+qZD/LW+d2wopfNl0g==}
     engines: {node: '>=14.14.0'}
     hasBin: true
@@ -3574,7 +3574,7 @@ packages:
     dependencies:
       '@types/chai': 4.3.0
       '@types/chai-subset': 1.3.3
-      '@vitest/ui': 0.3.5
+      '@vitest/ui': 0.3.6
       chai: 4.3.6
       local-pkg: 0.4.1
       tinypool: 0.1.2
