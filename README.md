@@ -14,6 +14,8 @@
 
 # unplugin-element-plus
 
+[![Unit Test](https://github.com/element-plus/unplugin-element-plus/actions/workflows/unit-test.yml/badge.svg)](https://github.com/element-plus/unplugin-element-plus/actions/workflows/unit-test.yml)
+
 [English](README.md) | [中文](README.zh-CN.md)
 
 This repo is for element-plus related [unplugin](https://github.com/unjs/unplugin). Thanks [@antfu](https://github.com/antfu).

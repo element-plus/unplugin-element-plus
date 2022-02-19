@@ -38,7 +38,8 @@
   "scripts": {
     "lint": "eslint ./src --ext .vue,.js,.ts,.jsx,.tsx && prettier --check .",
     "lint:fix": "eslint --fix ./src --ext .vue,.js,.ts,.jsx,.tsx && prettier --write .",
-    "build": "tsup && sucrase-node scripts/postbuild.ts",
+    "build": "tsup && esno scripts/postbuild.ts",
+    "build:examples": "pnpm build && pnpm --filter ./examples build",
     "release": "standard-version",
     "vite:build": "npm -C examples/vite run build",
     "vite:dev": "npm -C examples/vite run dev",
@@ -72,26 +73,23 @@
     "unplugin": "^0.3.2"
   },
   "devDependencies": {
-    "@types/node": "16.11.25",
-    "@typescript-eslint/eslint-plugin": "5.12.0",
-    "@typescript-eslint/parser": "5.12.0",
-    "@vitest/ui": "0.3.6",
-    "eslint": "8.9.0",
-    "eslint-config-prettier": "8.3.0",
-    "eslint-plugin-prettier": "4.0.0",
-    "fast-glob": "3.2.11",
-    "prettier": "2.5.1",
-    "rollup": "2.67.2",
-    "standard-version": "9.3.2",
-    "sucrase": "3.20.3",
-    "tsup": "5.11.13",
-    "typescript": "4.5.5",
-    "vitest": "0.3.6"
-  },
-  "peerDependencies": {
-    "vue": "3"
+    "@types/node": "^16.11.25",
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "@vitest/ui": "^0.3.6",
+    "eslint": "^8.9.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "esno": "^0.14.1",
+    "fast-glob": "^3.2.11",
+    "prettier": "^2.5.1",
+    "rollup": "^2.67.2",
+    "standard-version": "^9.3.2",
+    "tsup": "^5.11.13",
+    "typescript": "^4.5.5",
+    "vitest": "^0.3.6"
   },
   "engines": {
-    "node": ">=14"
+    "node": ">=12.20.0"
   }
 }

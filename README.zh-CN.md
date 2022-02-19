@@ -14,6 +14,8 @@
 
 # unplugin-element-plus
 
+[![Unit Test](https://github.com/element-plus/unplugin-element-plus/actions/workflows/unit-test.yml/badge.svg)](https://github.com/element-plus/unplugin-element-plus/actions/workflows/unit-test.yml)
+
 [English](README.md) | [中文](README.zh-CN.md)
 
 这个仓库是用于 `Element Plus` 相关的 [unplugin](https://github.com/unjs/unplugin) 插件工具。感谢 [@antfu](https://github.com/antfu)。
