@@ -31,7 +31,7 @@ describe('transform', () => {
     })
 
     for (const file of files) {
-      describe(file.replaceAll('\\', '/'), () => {
+      describe(file.replace(/\\/g, '/'), () => {
         const filepath = resolve(root, file)
 
         for (const useSource of [true, false]) {

@@ -2,7 +2,7 @@
   "compilerOptions": {
     "module": "esnext",
     "target": "es2019",
-    "lib": ["esnext", "DOM"],
+    "lib": ["es2019"],
     "esModuleInterop": true,
     "strict": true,
     "strictNullChecks": true,
@@ -10,5 +10,6 @@
     "resolveJsonModule": true,
     "skipLibCheck": true
   },
-  "exclude": ["**/dist", "**/node_modules"]
+  "include": ["src", "tests"],
+  "exclude": ["tests/fixtures"]
 }

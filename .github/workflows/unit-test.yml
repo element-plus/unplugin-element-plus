@@ -48,7 +48,7 @@ jobs:
 
       - name: Unit Test
         run: pnpm test
-        if: matrix.node-version == '16.x'
+        if: matrix.node-version != '12.20.0'
 
       - name: Build Examples
         run: pnpm build:examples
