@@ -25,7 +25,7 @@ export const transformImportStyle = (
   }
 ) => {
   const { prefix, lib, format } = options
-  const statement = source.substring(specifier.ss, specifier.se)
+  const statement = source.slice(specifier.ss, specifier.se)
   const leftBracket = statement.indexOf('{')
   if (leftBracket > -1) {
     // remove { } to get raw imported items. Maybe this will fail since there could be
@@ -68,7 +68,7 @@ export async function transform(source: string, options: Options) {
       n === lib || n === `${lib}/es/components` || n === `${lib}/lib/components`
     )
   })
-  if (!specifiers.length) return
+  if (specifiers.length === 0) return
   const styleImports = specifiers
     .map((s) => {
       const ret = transformImportStyle(s, source, useSource, {

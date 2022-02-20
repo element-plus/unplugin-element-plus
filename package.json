@@ -1,9 +1,23 @@
 {
   "name": "unplugin-element-plus",
   "version": "0.3.1",
-  "main": "dist/index.js",
-  "module": "dist/index.mjs",
-  "types": "dist/index.d.ts",
+  "keywords": [
+    "element-plus",
+    "unplugin",
+    "vite",
+    "webpack",
+    "rollup",
+    "esbuild",
+    "plugin"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/element-plus/unplugin-element-plus"
+  },
+  "files": [
+    "dist",
+    "*.d.ts"
+  ],
   "exports": {
     ".": {
       "require": "./dist/index.js",
@@ -35,32 +49,18 @@
     },
     "./*": "./*"
   },
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "lint": "eslint ./src --ext .vue,.js,.ts,.jsx,.tsx && prettier --check .",
-    "lint:fix": "eslint --fix ./src --ext .vue,.js,.ts,.jsx,.tsx && prettier --write .",
+    "lint": "eslint . --ext .vue,.js,.ts,.jsx,.tsx",
+    "lint:fix": "eslint . --fix --ext .vue,.js,.ts,.jsx,.tsx",
     "build": "tsup && esno scripts/postbuild.ts",
     "build:examples": "pnpm build && pnpm --filter ./examples build",
     "release": "standard-version",
     "vite:build": "npm -C examples/vite run build",
     "vite:dev": "npm -C examples/vite run dev",
     "test": "vitest"
-  },
-  "keywords": [
-    "element-plus",
-    "unplugin",
-    "vite",
-    "webpack",
-    "rollup",
-    "esbuild",
-    "plugin"
-  ],
-  "files": [
-    "dist",
-    "*.d.ts"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/element-plus/unplugin-element-plus"
   },
   "bugs": {
     "url": "https://github.com/element-plus/unplugin-element-plus/issues"
@@ -73,17 +73,16 @@
     "unplugin": "^0.3.2"
   },
   "devDependencies": {
-    "@types/node": "^16.11.25",
-    "@typescript-eslint/eslint-plugin": "^5.12.0",
-    "@typescript-eslint/parser": "^5.12.0",
+    "@sxzz/eslint-config-prettier": "^1.6.1",
+    "@sxzz/eslint-config-vue": "^1.6.4",
+    "@types/node": "*",
     "@vitest/ui": "0.4.2",
     "eslint": "^8.9.0",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-define-config": "^1.2.5",
     "esno": "^0.14.1",
     "fast-glob": "^3.2.11",
     "prettier": "^2.5.1",
-    "rollup": "^2.67.2",
+    "rollup": "^2.67.3",
     "standard-version": "^9.3.2",
     "tsup": "^5.11.13",
     "typescript": "^4.5.5",

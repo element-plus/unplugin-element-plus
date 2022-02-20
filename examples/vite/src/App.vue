@@ -4,11 +4,11 @@
 
     <el-row>
       <el-button @click="onClick">Default</el-button>
-      <el-button @click="onClick" type="primary">Primary</el-button>
-      <el-button @click="onClick" type="success">Success</el-button>
-      <el-button @click="onClick" type="info">Info</el-button>
-      <el-button @click="onClick" type="warning">Warning</el-button>
-      <el-button @click="onClick" type="danger">Danger</el-button>
+      <el-button type="primary" @click="onClick">Primary</el-button>
+      <el-button type="success" @click="onClick">Success</el-button>
+      <el-button type="info" @click="onClick">Info</el-button>
+      <el-button type="warning" @click="onClick">Warning</el-button>
+      <el-button type="danger" @click="onClick">Danger</el-button>
     </el-row>
 
     <el-radio-group v-model="radioVal">
@@ -58,7 +58,7 @@ import {
   ElRadioGroup,
   ElRadioButton,
   ElSlider,
-  ElDatePicker
+  ElDatePicker,
 } from 'element-plus'
 
 const radioVal = ref('New York')
@@ -70,7 +70,7 @@ function onClick() {
     type: 'success',
     title: '已成功发送邮件',
     message: '验证码区分大小写，有效期5分钟',
-    duration: 3000
+    duration: 3000,
   })
 }
 </script>

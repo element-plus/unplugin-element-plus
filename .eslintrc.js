@@ -1,18 +1,8 @@
-module.exports = {
-  env: {
-    browser: false,
-    node: true,
-  },
-  parserOptions: {
-    parser: '@typescript-eslint/parser',
-    sourceType: 'module',
-  },
-  plugins: ['@typescript-eslint', 'prettier'],
-  extends: ['plugin:@typescript-eslint/recommended', 'prettier'],
-  rules: {
-    camelcase: ['error', { properties: 'never' }],
+const { defineConfig } = require('eslint-define-config')
 
-    '@typescript-eslint/explicit-module-boundary-types': 'off',
-    '@typescript-eslint/no-explicit-any': 'off',
+module.exports = defineConfig({
+  extends: ['@sxzz/eslint-config-vue', '@sxzz/eslint-config-prettier'],
+  rules: {
+    'import/named': 'off',
   },
-}
+})

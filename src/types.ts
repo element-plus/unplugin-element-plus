@@ -1,4 +1,4 @@
-import { FilterPattern } from '@rollup/pluginutils'
+import type { FilterPattern } from '@rollup/pluginutils'
 
 export type Options = {
   /**

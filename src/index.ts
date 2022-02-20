@@ -1,11 +1,11 @@
 import { createFilter } from '@rollup/pluginutils'
 import { createUnplugin } from 'unplugin'
 import { transform } from './core/transform'
-import { Options } from './types'
+import type { Options } from './types'
 
 const defaultOptions: Options = {
   include: ['**/*.vue', '**/*.ts', '**/*.js', '**/*.tsx', '**/*.jsx'],
-  exclude: [/[\\/]node_modules[\\/]/, /[\\/]\.git[\\/]/, /[\\/]\.nuxt[\\/]/],
+  exclude: [/[/\\]node_modules[/\\]/, /[/\\]\.git[/\\]/, /[/\\]\.nuxt[/\\]/],
   lib: 'element-plus',
   useSource: false,
   defaultLocale: '', // for replacing locale,

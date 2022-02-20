@@ -13,15 +13,30 @@ jobs:
         with:
           node-version: '16'
 
+      - name: Cache ~/.pnpm-store
+        uses: actions/cache@v2
+        env:
+          cache-name: cache-pnpm-store
+        with:
+          path: ~/.pnpm-store
+          key: ${{ runner.os }}-${{ matrix.node-version }}-test-${{ env.cache-name }}-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-${{ matrix.node-version }}-test-${{ env.cache-name }}-
+            ${{ runner.os }}-${{ matrix.node-version }}-test-
+            ${{ runner.os }}-
+
       - name: Setup pnpm
         uses: pnpm/action-setup@v2
         with:
           version: latest
 
-      - name: Install & Build Library
-        run: pnpm install --frozen-lockfile && pnpm build
+      - name: Install deps
+        run: pnpm i --frozen-lockfile
 
-      - name: Install Dependencies & Build
+      - name: Build
+        run: pnpm build
+
+      - name: Install Example Dependencies & Build
         run: pnpm -C examples/vite run build
 
       - name: Deploy

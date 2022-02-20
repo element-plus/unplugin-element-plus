@@ -1,3 +1,4 @@
+/* eslint-disable unicorn/prefer-string-replace-all */
 import { resolve } from 'path'
 import glob from 'fast-glob'
 import { describe, it, expect } from 'vitest'

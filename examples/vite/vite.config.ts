@@ -1,14 +1,13 @@
-import path from "path";
+import path from 'path'
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
-
-import ElementPlus from "unplugin-element-plus/vite";
+import ElementPlus from 'unplugin-element-plus/vite'
 
 // https://vitejs.dev/config/
 export default defineConfig({
   resolve: {
     alias: {
-      "~/": `${path.resolve(__dirname, "src")}/`,
+      '~/': `${path.resolve(__dirname, 'src')}/`,
     },
   },
   css: {
@@ -24,4 +23,4 @@ export default defineConfig({
       useSource: true,
     }),
   ],
-});
+})
