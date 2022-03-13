@@ -17,3 +17,21 @@ import 'element-plus/es/components/col/style/index';
 console.log(ElButton, ElCol);
 "
 `;
+
+exports[`transform > fixtures > tests/fixtures/import-alias.ts > useSource = false 1`] = `
+"import { ElButton, ElCard } from 'element-plus';
+import 'element-plus/es/components/button/style/css';
+import 'element-plus/es/components/card/style/css';
+
+console.log(ElButton, ElCard);
+"
+`;
+
+exports[`transform > fixtures > tests/fixtures/import-alias.ts > useSource = true 1`] = `
+"import { ElButton, ElCard } from 'element-plus';
+import 'element-plus/es/components/button/style/index';
+import 'element-plus/es/components/card/style/index';
+
+console.log(ElButton, ElCard);
+"
+`;

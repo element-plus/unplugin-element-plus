@@ -34,7 +34,7 @@ export const transformImportStyle = (
     const components = identifiers.split(',')
     const styleImports: string[] = []
     components.forEach((c) => {
-      const trimmed = c.trim()
+      const trimmed = c.replace(/\sas\s.+/, '').trim()
       if (trimmed.startsWith(prefix)) {
         const component = trimmed.slice(prefix.length)
         if (useSource) {
