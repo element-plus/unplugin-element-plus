@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.3.2](https://github.com/element-plus/unplugin-element-plus/compare/v0.3.1...v0.3.2) (2022-03-13)
+
+
+### Features
+
+* support node 12.20 ([5c9d288](https://github.com/element-plus/unplugin-element-plus/commit/5c9d28881c874bc6c612f9676d541fd3ad3c4fbd))
+
+
+### Bug Fixes
+
+* import alias ([aea9242](https://github.com/element-plus/unplugin-element-plus/commit/aea9242a1c3888e3bd52c673b202de4eb64aa19f))
+
 ### [0.3.1](https://github.com/element-plus/unplugin-element-plus/compare/v0.3.0...v0.3.1) (2022-02-13)
 
 
