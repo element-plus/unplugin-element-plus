@@ -67,26 +67,26 @@
   },
   "homepage": "https://github.com/element-plus/unplugin-element-plus/tree/main/#readme",
   "dependencies": {
-    "@rollup/pluginutils": "^4.1.2",
+    "@rollup/pluginutils": "^4.2.0",
     "es-module-lexer": "^0.10.0",
     "magic-string": "^0.26.1",
-    "unplugin": "^0.3.3"
+    "unplugin": "^0.4.0"
   },
   "devDependencies": {
     "@sxzz/eslint-config-prettier": "^1.7.0",
     "@sxzz/eslint-config-vue": "^1.7.0",
     "@types/node": "*",
-    "@vitest/ui": "0.5.9",
-    "eslint": "^8.10.0",
+    "@vitest/ui": "0.6.1",
+    "eslint": "^8.11.0",
     "eslint-define-config": "^1.2.5",
     "esno": "^0.14.1",
     "fast-glob": "^3.2.11",
     "prettier": "^2.5.1",
-    "rollup": "^2.69.2",
+    "rollup": "^2.70.0",
     "standard-version": "^9.3.2",
-    "tsup": "^5.11.13",
+    "tsup": "^5.12.1",
     "typescript": "^4.6.2",
-    "vitest": "0.5.9"
+    "vitest": "0.6.1"
   },
   "engines": {
     "node": ">=12.20.0"
