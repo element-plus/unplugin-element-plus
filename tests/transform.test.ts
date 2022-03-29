@@ -1,7 +1,7 @@
 /* eslint-disable unicorn/prefer-string-replace-all */
 import { resolve } from 'path'
 import glob from 'fast-glob'
-import { describe, it, expect } from 'vitest'
+import { describe, expect, it } from 'vitest'
 import { rollup } from 'rollup'
 import plugin from '../src/rollup'
 

@@ -29,7 +29,7 @@
 
     <div>
       <el-select>
-        <el-option>test</el-option>
+        <el-option value="test">test</el-option>
       </el-select>
       &nbsp;
       <el-date-picker></el-date-picker>
@@ -52,13 +52,15 @@
 import { ref } from 'vue'
 import {
   ElButton,
-  ElSwitch,
-  ElNotification,
-  ElSelect,
-  ElRadioGroup,
-  ElRadioButton,
-  ElSlider,
   ElDatePicker,
+  ElNotification,
+  ElOption,
+  ElRadioButton,
+  ElRadioGroup,
+  ElRow,
+  ElSelect,
+  ElSlider,
+  ElSwitch,
 } from 'element-plus'
 
 const radioVal = ref('New York')
