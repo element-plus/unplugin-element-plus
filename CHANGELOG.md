@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.3.4](https://github.com/element-plus/unplugin-element-plus/compare/v0.3.3...v0.3.4) (2022-04-02)
+
+
+### Bug Fixes
+
+* import with comments, closes [#140](https://github.com/element-plus/unplugin-element-plus/issues/140) ([9fb6ce8](https://github.com/element-plus/unplugin-element-plus/commit/9fb6ce84824b067eab082159b23d220042226f60))
+
 ### [0.3.3](https://github.com/element-plus/unplugin-element-plus/compare/v0.3.2...v0.3.3) (2022-03-29)
 
 
