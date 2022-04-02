@@ -1,3 +1,5 @@
+/* eslint-disable unicorn/better-regex */
+
 import { init, parse } from 'es-module-lexer'
 import MagicString from 'magic-string'
 
@@ -14,6 +16,13 @@ const formatMap = {
   esm: 'es',
 }
 
+const multilineCommentsRE = /\/\*\s(.|[\r\n])*?\*\//gm
+const singlelineCommentsRE = /\/\/\s.*/g
+
+function stripeComments(code: string) {
+  return code.replace(multilineCommentsRE, '').replace(singlelineCommentsRE, '')
+}
+
 export const transformImportStyle = (
   specifier: ImportSpecifier,
   source: string,
@@ -25,7 +34,7 @@ export const transformImportStyle = (
   }
 ) => {
   const { prefix, lib, format } = options
-  const statement = source.slice(specifier.ss, specifier.se)
+  const statement = stripeComments(source.slice(specifier.ss, specifier.se))
   const leftBracket = statement.indexOf('{')
   if (leftBracket > -1) {
     // remove { } to get raw imported items. Maybe this will fail since there could be
