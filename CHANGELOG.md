@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.4.0](https://github.com/element-plus/unplugin-element-plus/compare/v0.3.4...v0.4.0) (2022-04-13)
+
+
+### Features
+
+* add default locale, closes [#144](https://github.com/element-plus/unplugin-element-plus/issues/144) ([35344a2](https://github.com/element-plus/unplugin-element-plus/commit/35344a297aae73c4bf16b54f4fdcc320c12136ef))
+
+
+### Bug Fixes
+
+* **test:** support node 14 ([3fe20d8](https://github.com/element-plus/unplugin-element-plus/commit/3fe20d8b618cea5cee8669cf666f9bf097f5aea6))
+
 ### [0.3.4](https://github.com/element-plus/unplugin-element-plus/compare/v0.3.3...v0.3.4) (2022-04-02)
 
 
