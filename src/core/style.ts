@@ -65,7 +65,7 @@ export const transformImportStyle = (
   }
 }
 
-export async function transform(source: string, options: Options) {
+export const transformStyle = async (source: string, options: Options) => {
   const { useSource, lib, prefix, format } = options
 
   if (!source) return

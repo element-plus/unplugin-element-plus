@@ -1,6 +1,11 @@
 import { createFilter } from '@rollup/pluginutils'
 import { createUnplugin } from 'unplugin'
-import { transform } from './core/transform'
+import { transformStyle } from './core/style'
+import {
+  getLocaleRE,
+  getViteDepPlugin,
+  transformDefaultLocale,
+} from './core/default-locale'
 import type { Options } from './types'
 
 const defaultOptions: Options = {
@@ -8,7 +13,7 @@ const defaultOptions: Options = {
   exclude: [/[/\\]node_modules[/\\]/, /[/\\]\.git[/\\]/, /[/\\]\.nuxt[/\\]/],
   lib: 'element-plus',
   useSource: false,
-  defaultLocale: '', // for replacing locale,
+  defaultLocale: '',
   format: 'esm',
   prefix: 'El',
   sourceMap: false,
@@ -21,11 +26,31 @@ export default createUnplugin((userOptions: Partial<Options> = {}) => {
   return {
     name: 'unplugin-element-plus',
     enforce: 'post',
+
     transformInclude(id) {
-      return filter(id)
+      return getLocaleRE(options).test(id) || filter(id)
     },
-    transform(source) {
-      return transform(source, options)
+
+    transform(source, id) {
+      if (options.defaultLocale) {
+        const result = transformDefaultLocale(options, source, id)
+        if (result) return result
+      }
+
+      return transformStyle(source, options)
+    },
+
+    vite: {
+      config(config) {
+        if (options.defaultLocale) {
+          config.optimizeDeps ||= {}
+          config.optimizeDeps.esbuildOptions ||= {}
+          config.optimizeDeps.esbuildOptions.plugins ||= []
+          config.optimizeDeps.esbuildOptions.plugins.push(
+            getViteDepPlugin(options)
+          )
+        }
+      },
     },
   }
 })

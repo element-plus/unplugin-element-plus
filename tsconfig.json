@@ -9,7 +9,8 @@
     "skipLibCheck": true,
     "noUnusedLocals": true,
     "resolveJsonModule": true,
-    "types": ["node"]
+    "types": ["node"],
+    "baseUrl": ".."
   },
   "include": ["src", "tests", "scripts"],
   "exclude": ["tests/fixtures"]

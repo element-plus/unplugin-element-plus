@@ -12,7 +12,10 @@ export type Options = {
   exclude: FilterPattern
 
   useSource: boolean
+
+  /** replace default locale */
   defaultLocale: string
+
   lib: string
   prefix: string
   format: 'cjs' | 'esm'
