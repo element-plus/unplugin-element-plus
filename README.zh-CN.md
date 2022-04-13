@@ -23,6 +23,7 @@
 ###### 功能
 
 - 💚 为 Element Plus 按需引入样式。
+- 🌎 替换默认语言。
 - ⚡️ 使用 <a href="https://github.com/unjs/unplugin">unplugin</a> 以支持 Vite, Webpack, Vue CLI, Rollup, esbuild 等。
 
 ## 安装
@@ -217,6 +218,10 @@ type Prefix = string
 // prefix = Al
 import { AlButton } from 'xx-lib'
 ```
+
+### `defaultLocale`
+
+替换默认语言，你可以 [在这](https://github.com/element-plus/element-plus/tree/dev/packages/locale/lang) 查看所有语言列表。
 
 ## 其他插件
 

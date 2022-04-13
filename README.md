@@ -23,6 +23,7 @@ This repo is for element-plus related [unplugin](https://github.com/unjs/unplugi
 ###### Features
 
 - 💚 On-demand import style for Element Plus.
+- 🌎 Replace default locale.
 - ⚡️ Supports Vite, Webpack, Vue CLI, Rollup, esbuild and more, powered by <a href="https://github.com/unjs/unplugin">unplugin</a>.
 
 ## Installation
@@ -183,7 +184,7 @@ import { ElButton } from 'other-lib'
 import 'other-lib/es/components/button/style/css'
 ```
 
-### format
+### `format`
 
 ```ts
 type Format = 'esm' | 'cjs'
@@ -210,7 +211,7 @@ import { ElButton } from 'element-plus'
 import 'element-plus/lib/components/button/style/css'
 ```
 
-### prefix
+### `prefix`
 
 ```ts
 type Prefix = string
@@ -220,6 +221,10 @@ type Prefix = string
 // prefix = Al
 import { AlButton } from 'xx-lib'
 ```
+
+### `defaultLocale`
+
+Replace default locale, you can find locale list [here](https://github.com/element-plus/element-plus/tree/dev/packages/locale/lang).
 
 ## Alternate
 
