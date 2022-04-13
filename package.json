@@ -68,14 +68,14 @@
     "test": "vitest"
   },
   "dependencies": {
-    "@rollup/pluginutils": "^4.2.0",
+    "@rollup/pluginutils": "^4.2.1",
     "es-module-lexer": "^0.10.5",
     "magic-string": "^0.26.1",
     "unplugin": "^0.6.1"
   },
   "devDependencies": {
-    "@sxzz/eslint-config-prettier": "^2.1.0",
-    "@sxzz/eslint-config-vue": "^2.1.0",
+    "@sxzz/eslint-config-prettier": "^2.1.1",
+    "@sxzz/eslint-config-vue": "^2.1.1",
     "@types/node": "*",
     "@vitest/ui": "^0.9.3",
     "esbuild": "^0.14.36",
