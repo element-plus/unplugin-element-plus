@@ -86,7 +86,7 @@
     "prettier": "^2.6.2",
     "rollup": "^2.74.1",
     "rollup-plugin-esbuild": "^4.9.1",
-    "standard-version": "^9.3.2",
+    "standard-version": "^9.5.0",
     "tsup": "^5.12.8",
     "tsx": "^3.4.0",
     "typescript": "^4.6.4",
