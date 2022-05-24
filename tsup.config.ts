@@ -6,5 +6,5 @@ export default defineConfig({
   dts: true,
   entryPoints: ['src/*.ts'],
   format: ['cjs', 'esm'],
-  target: 'node12',
+  target: 'node14',
 })
