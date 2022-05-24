@@ -19,8 +19,7 @@
     "url": "https://github.com/element-plus/unplugin-element-plus"
   },
   "files": [
-    "dist",
-    "*.d.ts"
+    "dist"
   ],
   "main": "dist/index.js",
   "module": "dist/index.mjs",
