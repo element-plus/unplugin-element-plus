@@ -70,27 +70,27 @@
   "dependencies": {
     "@rollup/pluginutils": "^4.2.1",
     "es-module-lexer": "^0.10.5",
-    "magic-string": "^0.26.1",
-    "unplugin": "^0.6.2"
+    "magic-string": "^0.26.2",
+    "unplugin": "^0.6.3"
   },
   "devDependencies": {
-    "@sxzz/eslint-config-prettier": "^2.1.1",
-    "@sxzz/eslint-config-vue": "^2.1.1",
+    "@sxzz/eslint-config-prettier": "^2.2.1",
+    "@sxzz/eslint-config-vue": "^2.2.1",
     "@types/node": "*",
-    "@vitest/ui": "^0.10.0",
-    "esbuild": "^0.14.38",
+    "@vitest/ui": "^0.12.9",
+    "esbuild": "^0.14.39",
     "escape-string-regexp": "^5.0.0",
-    "eslint": "^8.14.0",
-    "eslint-define-config": "^1.4.0",
-    "esno": "^0.14.1",
+    "eslint": "^8.16.0",
+    "eslint-define-config": "^1.4.1",
+    "esno": "^0.16.3",
     "fast-glob": "^3.2.11",
     "prettier": "^2.6.2",
-    "rollup": "^2.71.1",
+    "rollup": "^2.74.1",
     "rollup-plugin-esbuild": "^4.9.1",
     "standard-version": "^9.3.2",
-    "tsup": "^5.12.6",
+    "tsup": "^5.12.8",
     "typescript": "^4.6.4",
-    "vitest": "^0.10.0"
+    "vitest": "^0.12.9"
   },
   "engines": {
     "node": ">=14.19.0"
