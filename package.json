@@ -14,12 +14,17 @@
   "bugs": {
     "url": "https://github.com/element-plus/unplugin-element-plus/issues"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/element-plus/unplugin-element-plus"
+  },
   "files": [
     "dist",
     "*.d.ts"
   ],
   "main": "dist/index.js",
   "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
   "exports": {
     ".": {
       "require": "./dist/index.js",
@@ -51,15 +56,10 @@
     },
     "./*": "./*"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/element-plus/unplugin-element-plus"
-  },
-  "types": "dist/index.d.ts",
   "scripts": {
     "lint": "eslint . --ext .vue,.js,.ts,.jsx,.tsx,.json,.md",
     "lint:fix": "pnpm run lint -- --fix",
-    "build": "tsup && esno scripts/postbuild.ts",
+    "build": "tsup && tsx scripts/postbuild.mts",
     "build:examples": "pnpm build && pnpm --filter ./examples build",
     "dev": "tsup --watch",
     "release": "standard-version",
@@ -82,13 +82,13 @@
     "escape-string-regexp": "^5.0.0",
     "eslint": "^8.16.0",
     "eslint-define-config": "^1.4.1",
-    "esno": "^0.16.3",
     "fast-glob": "^3.2.11",
     "prettier": "^2.6.2",
     "rollup": "^2.74.1",
     "rollup-plugin-esbuild": "^4.9.1",
     "standard-version": "^9.3.2",
     "tsup": "^5.12.8",
+    "tsx": "^3.4.0",
     "typescript": "^4.6.4",
     "vitest": "^0.12.9"
   },

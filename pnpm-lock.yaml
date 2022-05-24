@@ -14,7 +14,6 @@ importers:
       escape-string-regexp: ^5.0.0
       eslint: ^8.16.0
       eslint-define-config: ^1.4.1
-      esno: ^0.16.3
       fast-glob: ^3.2.11
       magic-string: ^0.26.2
       prettier: ^2.6.2
@@ -22,6 +21,7 @@ importers:
       rollup-plugin-esbuild: ^4.9.1
       standard-version: ^9.3.2
       tsup: ^5.12.8
+      tsx: ^3.4.0
       typescript: ^4.6.4
       unplugin: ^0.6.3
       vitest: ^0.12.9
@@ -39,13 +39,13 @@ importers:
       escape-string-regexp: 5.0.0
       eslint: 8.16.0
       eslint-define-config: 1.4.1
-      esno: 0.16.3
       fast-glob: 3.2.11
       prettier: 2.6.2
       rollup: 2.74.1
       rollup-plugin-esbuild: 4.9.1_3pm4nepjd6vnmqn35npt5y2clm
       standard-version: 9.3.2
       tsup: 5.12.8_typescript@4.6.4
+      tsx: 3.4.0
       typescript: 4.6.4
       vitest: 0.12.9_@vitest+ui@0.12.9
 
@@ -579,7 +579,6 @@ packages:
     dependencies:
       '@vue/reactivity': 3.2.32
       '@vue/shared': 3.2.32
-    dev: false
 
   /@vue/runtime-dom/3.2.32:
     resolution: {integrity: sha512-AmlIg+GPqjkNoADLjHojEX5RGcAg+TsgXOOcUrtDHwKvA8mO26EnLQLB8nylDjU6AMJh2CIYn8NEgyOV5ZIScQ==}
@@ -587,7 +586,6 @@ packages:
       '@vue/runtime-core': 3.2.32
       '@vue/shared': 3.2.32
       csstype: 2.6.20
-    dev: false
 
   /@vue/server-renderer/3.2.32_vue@3.2.32:
     resolution: {integrity: sha512-TYKpZZfRJpGTTiy/s6bVYwQJpAUx3G03z4G7/3O18M11oacrMTVHaHjiPuPqf3xQtY8R4LKmQ3EOT/DRCA/7Wg==}
@@ -597,7 +595,6 @@ packages:
       '@vue/compiler-ssr': 3.2.32
       '@vue/shared': 3.2.32
       vue: 3.2.32
-    dev: false
 
   /@vue/shared/3.2.32:
     resolution: {integrity: sha512-bjcixPErUsAnTQRQX4Z5IQnICYjIfNCyCl8p29v1M6kfVzvwOICPw+dz48nNuWlTOOx2RHhzHdazJibE8GSnsw==}
@@ -1137,7 +1134,6 @@ packages:
 
   /csstype/2.6.20:
     resolution: {integrity: sha512-/WwNkdXfckNgw6S5R125rrW8ez139lBHWouiBvX8dfMFtcn6V81REDqnH7+CRpRipfYlyU1CmOnOxrmGcFOjeA==}
-    dev: false
 
   /dargs/7.0.0:
     resolution: {integrity: sha512-2iy1EkLdlBzQGvbweYRFxmFath8+K7+AKB0TlhHWkNuH+TmovaMH/Wp7V7R4u7f4SnX3OgLsU9t1NI9ioDnUpg==}
@@ -1406,7 +1402,6 @@ packages:
     cpu: [x64]
     os: [android]
     requiresBuild: true
-    dev: true
     optional: true
 
   /esbuild-android-arm64/0.14.36:
@@ -1433,7 +1428,6 @@ packages:
     cpu: [arm64]
     os: [android]
     requiresBuild: true
-    dev: true
     optional: true
 
   /esbuild-darwin-64/0.14.36:
@@ -1460,7 +1454,6 @@ packages:
     cpu: [x64]
     os: [darwin]
     requiresBuild: true
-    dev: true
     optional: true
 
   /esbuild-darwin-arm64/0.14.36:
@@ -1487,7 +1480,6 @@ packages:
     cpu: [arm64]
     os: [darwin]
     requiresBuild: true
-    dev: true
     optional: true
 
   /esbuild-freebsd-64/0.14.36:
@@ -1514,7 +1506,6 @@ packages:
     cpu: [x64]
     os: [freebsd]
     requiresBuild: true
-    dev: true
     optional: true
 
   /esbuild-freebsd-arm64/0.14.36:
@@ -1541,7 +1532,6 @@ packages:
     cpu: [arm64]
     os: [freebsd]
     requiresBuild: true
-    dev: true
     optional: true
 
   /esbuild-linux-32/0.14.36:
@@ -1568,7 +1558,6 @@ packages:
     cpu: [ia32]
     os: [linux]
     requiresBuild: true
-    dev: true
     optional: true
 
   /esbuild-linux-64/0.14.36:
@@ -1595,7 +1584,6 @@ packages:
     cpu: [x64]
     os: [linux]
     requiresBuild: true
-    dev: true
     optional: true
 
   /esbuild-linux-arm/0.14.36:
@@ -1622,7 +1610,6 @@ packages:
     cpu: [arm]
     os: [linux]
     requiresBuild: true
-    dev: true
     optional: true
 
   /esbuild-linux-arm64/0.14.36:
@@ -1649,7 +1636,6 @@ packages:
     cpu: [arm64]
     os: [linux]
     requiresBuild: true
-    dev: true
     optional: true
 
   /esbuild-linux-mips64le/0.14.36:
@@ -1676,7 +1662,6 @@ packages:
     cpu: [mips64el]
     os: [linux]
     requiresBuild: true
-    dev: true
     optional: true
 
   /esbuild-linux-ppc64le/0.14.36:
@@ -1703,7 +1688,6 @@ packages:
     cpu: [ppc64]
     os: [linux]
     requiresBuild: true
-    dev: true
     optional: true
 
   /esbuild-linux-riscv64/0.14.36:
@@ -1730,7 +1714,6 @@ packages:
     cpu: [riscv64]
     os: [linux]
     requiresBuild: true
-    dev: true
     optional: true
 
   /esbuild-linux-s390x/0.14.36:
@@ -1757,7 +1740,6 @@ packages:
     cpu: [s390x]
     os: [linux]
     requiresBuild: true
-    dev: true
     optional: true
 
   /esbuild-netbsd-64/0.14.36:
@@ -1784,7 +1766,6 @@ packages:
     cpu: [x64]
     os: [netbsd]
     requiresBuild: true
-    dev: true
     optional: true
 
   /esbuild-openbsd-64/0.14.36:
@@ -1811,7 +1792,6 @@ packages:
     cpu: [x64]
     os: [openbsd]
     requiresBuild: true
-    dev: true
     optional: true
 
   /esbuild-sunos-64/0.14.36:
@@ -1838,7 +1818,6 @@ packages:
     cpu: [x64]
     os: [sunos]
     requiresBuild: true
-    dev: true
     optional: true
 
   /esbuild-windows-32/0.14.36:
@@ -1865,7 +1844,6 @@ packages:
     cpu: [ia32]
     os: [win32]
     requiresBuild: true
-    dev: true
     optional: true
 
   /esbuild-windows-64/0.14.36:
@@ -1892,7 +1870,6 @@ packages:
     cpu: [x64]
     os: [win32]
     requiresBuild: true
-    dev: true
     optional: true
 
   /esbuild-windows-arm64/0.14.36:
@@ -1919,7 +1896,6 @@ packages:
     cpu: [arm64]
     os: [win32]
     requiresBuild: true
-    dev: true
     optional: true
 
   /esbuild/0.14.36:
@@ -2004,7 +1980,6 @@ packages:
       esbuild-windows-32: 0.14.39
       esbuild-windows-64: 0.14.39
       esbuild-windows-arm64: 0.14.39
-    dev: true
 
   /escalade/3.1.1:
     resolution: {integrity: sha512-k0er2gUkLf8O0zKJiAhmkTnJlTvINGv7ygDNPbeIsX/TJjGJZHuh9B2UxbsaEkmlEo9MfhrSzmhIlhRlI2GXnw==}
@@ -2301,13 +2276,6 @@ packages:
       v8-compile-cache: 2.3.0
     transitivePeerDependencies:
       - supports-color
-    dev: true
-
-  /esno/0.16.3:
-    resolution: {integrity: sha512-6slSBEV1lMKcX13DBifvnDFpNno5WXhw4j/ff7RI0y51BZiDqEe5dNhhjhIQ3iCOQuzsm2MbVzmwqbN78BBhPg==}
-    hasBin: true
-    dependencies:
-      tsx: 3.4.0
     dev: true
 
   /espree/9.3.2:
@@ -3756,7 +3724,6 @@ packages:
     hasBin: true
     optionalDependencies:
       fsevents: 2.3.2
-    dev: true
 
   /run-parallel/1.2.0:
     resolution: {integrity: sha512-5l4VyZR86LZ/lDxZTR6jqL8AFE2S0IFLMP26AbjsLVADxHdhB/c0GUsH+y39UfCi3dzz8OlQuPmnaJOMoDHQBA==}
@@ -4437,7 +4404,6 @@ packages:
       '@vue/runtime-dom': 3.2.32
       '@vue/server-renderer': 3.2.32_vue@3.2.32
       '@vue/shared': 3.2.32
-    dev: false
 
   /webidl-conversions/4.0.2:
     resolution: {integrity: sha512-YQ+BmxuTgd6UXZW3+ICGfyqRyHXVlD5GtQr5+qjiNW7bF0cqrzX500HVXPBOvgXb5YnzDd+h0zqyv61KUD7+Sg==}
