@@ -14,7 +14,7 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest, windows-latest, macos-latest]
-        node-version: [16.x, 14.19.0]
+        node-version: [16.x, 14.19.0, 18.x]
       fail-fast: false
 
     runs-on: ${{ matrix.os }}
@@ -40,14 +40,15 @@ jobs:
 
       - name: Setup pnpm
         uses: pnpm/action-setup@v2
-        with:
-          version: latest
 
       - name: Install dependencies
         run: pnpm i --frozen-lockfile
 
       - name: Unit Test
         run: pnpm test
+
+      - name: Build
+        run: pnpm build
 
       - name: Build Examples
         run: pnpm build:examples

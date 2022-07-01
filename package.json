@@ -1,6 +1,7 @@
 {
   "name": "unplugin-element-plus",
   "version": "0.4.0",
+  "packageManager": "pnpm@7.4.1",
   "keywords": [
     "element-plus",
     "unplugin",
@@ -64,9 +65,9 @@
   },
   "scripts": {
     "lint": "eslint . --ext .vue,.js,.ts,.jsx,.tsx,.json,.md",
-    "lint:fix": "pnpm run lint -- --fix",
+    "lint:fix": "pnpm run lint --fix",
     "build": "tsup && tsx scripts/postbuild.mts",
-    "build:examples": "pnpm build && pnpm --filter ./examples build",
+    "build:examples": "pnpm --filter \"./examples/*\" build",
     "dev": "tsup --watch",
     "release": "standard-version",
     "vite:build": "npm -C examples/vite run build",
