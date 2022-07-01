@@ -10,40 +10,26 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
         with:
-          node-version: '16'
+          fetch-depth: 0
+
+      - name: Set node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16.x
           registry-url: https://registry.npmjs.com/
 
-      - name: Cache ~/.pnpm-store
-        uses: actions/cache@v3
-        env:
-          cache-name: cache-pnpm-store
-        with:
-          path: ~/.pnpm-store
-          key: ${{ runner.os }}-${{ matrix.node-version }}-test-${{ env.cache-name }}-${{ hashFiles('**/pnpm-lock.yaml') }}
-          restore-keys: |
-            ${{ runner.os }}-${{ matrix.node-version }}-test-${{ env.cache-name }}-
-            ${{ runner.os }}-${{ matrix.node-version }}-test-
-            ${{ runner.os }}-
-
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v2
-        with:
-          version: latest
-
-      - name: Install deps
-        run: pnpm i --frozen-lockfile
+      - name: Install
+        run: nci
 
       - name: Build
-        run: pnpm build
+        run: nr build
 
       - name: Publish
-        run: npm publish
+        run: pnpm publish
         env:
-          REGISTRY: https://registry.npmjs.com/
           NODE_AUTH_TOKEN: ${{secrets.NPM_PUBLISH_TOKEN}}
 
-      - run: npx conventional-github-releaser -p angular
+      - run: npx changelogithub
         env:
-          CONVENTIONAL_GITHUB_RELEASER_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
