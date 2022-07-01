@@ -4,20 +4,23 @@ on:
   push:
     tags:
       - 'v**'
+  # eslint-disable-next-line yml/no-empty-mapping-value
+  workflow_dispatch:
 
 jobs:
   publish:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
 
       - name: Set node
         uses: actions/setup-node@v3
         with:
           node-version: 16.x
           registry-url: https://registry.npmjs.com/
+
+      - name: Setup
+        run: npm i -g @antfu/ni
 
       - name: Install
         run: nci
@@ -26,7 +29,7 @@ jobs:
         run: nr build
 
       - name: Publish
-        run: pnpm publish
+        run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_PUBLISH_TOKEN}}
 
