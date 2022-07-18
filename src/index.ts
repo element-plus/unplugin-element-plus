@@ -41,14 +41,15 @@ export default createUnplugin((userOptions: Partial<Options> = {}) => {
     },
 
     vite: {
-      config(config) {
+      config() {
         if (options.defaultLocale) {
-          config.optimizeDeps ||= {}
-          config.optimizeDeps.esbuildOptions ||= {}
-          config.optimizeDeps.esbuildOptions.plugins ||= []
-          config.optimizeDeps.esbuildOptions.plugins.push(
-            getViteDepPlugin(options)
-          )
+          return {
+            optimizeDeps: {
+              esbuildOptions: {
+                plugins: [getViteDepPlugin(options)],
+              },
+            },
+          }
         }
       },
     },
