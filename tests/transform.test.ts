@@ -1,5 +1,5 @@
 /* eslint-disable unicorn/prefer-string-replace-all */
-import { resolve } from 'path'
+import { resolve } from 'node:path'
 import glob from 'fast-glob'
 import { describe, expect, it } from 'vitest'
 import { rollup } from 'rollup'
