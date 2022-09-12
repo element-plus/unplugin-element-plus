@@ -12,14 +12,14 @@
     </el-row>
 
     <el-radio-group v-model="radioVal">
-      <el-radio-button label="New York"></el-radio-button>
-      <el-radio-button label="Washington"></el-radio-button>
-      <el-radio-button label="Los Angeles"></el-radio-button>
-      <el-radio-button label="Chicago"></el-radio-button>
+      <el-radio-button label="New York" />
+      <el-radio-button label="Washington" />
+      <el-radio-button label="Los Angeles" />
+      <el-radio-button label="Chicago" />
     </el-radio-group>
 
     <div>
-      <el-switch v-model="switchVal"></el-switch>&nbsp;
+      <el-switch v-model="switchVal" />&nbsp;
       <el-switch
         v-model="switchVal"
         active-color="#13ce66"
@@ -32,10 +32,10 @@
         <el-option value="test">test</el-option>
       </el-select>
       &nbsp;
-      <el-date-picker></el-date-picker>
+      <el-date-picker />
     </div>
 
-    <el-slider v-model="sliderVal"></el-slider>
+    <el-slider v-model="sliderVal" />
 
     <p>
       It is a example built by vite.&nbsp; More info see
