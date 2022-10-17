@@ -1,7 +1,7 @@
 {
   "name": "unplugin-element-plus",
   "version": "0.4.1",
-  "packageManager": "pnpm@7.13.3",
+  "packageManager": "pnpm@7.13.5",
   "keywords": [
     "element-plus",
     "unplugin",
@@ -79,7 +79,7 @@
   },
   "dependencies": {
     "@rollup/pluginutils": "^4.2.1",
-    "es-module-lexer": "^1.0.3",
+    "es-module-lexer": "^1.0.5",
     "magic-string": "^0.26.7",
     "unplugin": "^0.9.6"
   },
@@ -87,9 +87,9 @@
     "@sxzz/eslint-config-prettier": "^2.4.4",
     "@sxzz/eslint-config-vue": "^2.4.4",
     "@types/node": "*",
-    "@vitest/ui": "^0.24.0",
+    "@vitest/ui": "^0.24.3",
     "bumpp": "^8.2.1",
-    "esbuild": "~0.15.10",
+    "esbuild": "~0.15.11",
     "escape-string-regexp": "^5.0.0",
     "eslint": "^8.25.0",
     "eslint-define-config": "^1.7.0",
@@ -100,8 +100,8 @@
     "tsup": "^6.2.3",
     "tsx": "^3.10.1",
     "typescript": "^4.8.4",
-    "vite": "^3.1.6",
-    "vitest": "^0.24.0"
+    "vite": "^3.1.8",
+    "vitest": "^0.24.3"
   },
   "engines": {
     "node": ">=14.19.0"
