@@ -78,7 +78,7 @@
     "test": "vitest"
   },
   "dependencies": {
-    "@rollup/pluginutils": "^4.2.1",
+    "@rollup/pluginutils": "^5.0.2",
     "es-module-lexer": "^1.0.5",
     "magic-string": "^0.26.7",
     "unplugin": "^0.9.6"
