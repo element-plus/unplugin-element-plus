@@ -31,9 +31,10 @@ export const transformImportStyle = (
     prefix: string
     lib: string
     format: FormatType
+    ignoreComponents: string[]
   }
 ) => {
-  const { prefix, lib, format } = options
+  const { prefix, lib, format, ignoreComponents } = options
   const statement = stripeComments(source.slice(specifier.ss, specifier.se))
   const leftBracket = statement.indexOf('{')
   if (leftBracket > -1) {
@@ -46,6 +47,7 @@ export const transformImportStyle = (
       const trimmed = c.replace(/\sas\s.+/, '').trim()
       if (trimmed.startsWith(prefix)) {
         const component = trimmed.slice(prefix.length)
+        if (ignoreComponents.includes(component)) return
         if (useSource) {
           styleImports.push(
             `import '${lib}/${formatMap[format]}/components/${hyphenate(
@@ -66,7 +68,7 @@ export const transformImportStyle = (
 }
 
 export const transformStyle = async (source: string, options: Options) => {
-  const { useSource, lib, prefix, format } = options
+  const { useSource, lib, prefix, format, ignoreComponents } = options
 
   if (!source) return
 
@@ -84,6 +86,7 @@ export const transformStyle = async (source: string, options: Options) => {
         lib,
         prefix,
         format,
+        ignoreComponents,
       })
       return ret
     })

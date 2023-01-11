@@ -41,6 +41,7 @@ describe('transform', () => {
               filepath,
               plugin({
                 useSource,
+                ignoreComponents: ['AutoResizer'],
               })
             )
             expect(code).toMatchSnapshot()

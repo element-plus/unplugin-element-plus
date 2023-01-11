@@ -36,6 +36,22 @@ console.log(ElButton, ElCol);
 "
 `;
 
+exports[`transform > fixtures > tests/fixtures/ignored.ts > useSource = false 1`] = `
+"import { ElAutoResizer } from 'element-plus';
+import 'element-plus/es/components/button/style/css';
+
+console.log(ElAutoResizer);
+"
+`;
+
+exports[`transform > fixtures > tests/fixtures/ignored.ts > useSource = true 1`] = `
+"import { ElAutoResizer } from 'element-plus';
+import 'element-plus/es/components/button/style/index';
+
+console.log(ElAutoResizer);
+"
+`;
+
 exports[`transform > fixtures > tests/fixtures/import-alias.ts > useSource = false 1`] = `
 "import { ElButton, ElCard } from 'element-plus';
 import 'element-plus/es/components/button/style/css';
