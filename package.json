@@ -1,7 +1,7 @@
 {
   "name": "unplugin-element-plus",
   "version": "0.4.1",
-  "packageManager": "pnpm@7.13.5",
+  "packageManager": "pnpm@7.26.1",
   "keywords": [
     "element-plus",
     "unplugin",
@@ -24,47 +24,42 @@
   ],
   "main": "dist/index.js",
   "module": "dist/index.mjs",
-  "types": "index.d.ts",
+  "types": "dist/index.d.ts",
   "exports": {
     ".": {
+      "types": "./dist/index.d.ts",
       "require": "./dist/index.js",
       "import": "./dist/index.mjs"
     },
     "./vite": {
+      "types": "./dist/vite.d.ts",
       "require": "./dist/vite.js",
       "import": "./dist/vite.mjs"
     },
     "./webpack": {
+      "types": "./dist/webpack.d.ts",
       "require": "./dist/webpack.js",
       "import": "./dist/webpack.mjs"
     },
     "./rollup": {
+      "types": "./dist/rollup.d.ts",
       "require": "./dist/rollup.js",
       "import": "./dist/rollup.mjs"
     },
     "./esbuild": {
+      "types": "./dist/esbuild.d.ts",
       "require": "./dist/esbuild.js",
       "import": "./dist/esbuild.mjs"
     },
     "./nuxt": {
+      "types": "./dist/nuxt.d.ts",
       "require": "./dist/nuxt.js",
       "import": "./dist/nuxt.mjs"
-    },
-    "./types": {
-      "require": "./dist/types.js",
-      "import": "./dist/types.mjs"
     },
     "./*": "./*"
   },
   "publishConfig": {
     "access": "public"
-  },
-  "typesVersions": {
-    "*": {
-      "*": [
-        "./dist/*"
-      ]
-    }
   },
   "scripts": {
     "lint": "eslint . --ext .vue,.js,.ts,.jsx,.tsx,.json,.md",

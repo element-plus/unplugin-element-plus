@@ -8,6 +8,8 @@ import {
 } from './core/default-locale'
 import type { Options } from './types'
 
+export type { Options }
+
 const defaultOptions: Options = {
   include: ['**/*.vue', '**/*.ts', '**/*.js', '**/*.tsx', '**/*.jsx'],
   exclude: [/[/\\]node_modules[/\\]/, /[/\\]\.git[/\\]/, /[/\\]\.nuxt[/\\]/],
