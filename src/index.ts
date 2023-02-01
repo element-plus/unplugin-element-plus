@@ -8,6 +8,8 @@ import {
 } from './core/default-locale'
 import type { Options } from './types'
 
+export type { Options }
+
 const defaultOptions: Options = {
   include: ['**/*.vue', '**/*.ts', '**/*.js', '**/*.tsx', '**/*.jsx'],
   exclude: [/[/\\]node_modules[/\\]/, /[/\\]\.git[/\\]/, /[/\\]\.nuxt[/\\]/],
@@ -20,7 +22,7 @@ const defaultOptions: Options = {
   sourceMap: false,
 }
 
-export default createUnplugin((userOptions: Partial<Options> = {}) => {
+export default createUnplugin<Partial<Options>>((userOptions = {}) => {
   const options: Options = Object.assign(defaultOptions, userOptions)
   const filter = createFilter(options.include, options.exclude)
 
@@ -47,7 +49,7 @@ export default createUnplugin((userOptions: Partial<Options> = {}) => {
           return {
             optimizeDeps: {
               esbuildOptions: {
-                plugins: [getViteDepPlugin(options)],
+                plugins: [getViteDepPlugin(options) as any],
               },
             },
           }
