@@ -14,6 +14,7 @@ const defaultOptions: Options = {
   include: ['**/*.vue', '**/*.ts', '**/*.js', '**/*.tsx', '**/*.jsx'],
   exclude: [/[/\\]node_modules[/\\]/, /[/\\]\.git[/\\]/, /[/\\]\.nuxt[/\\]/],
   lib: 'element-plus',
+  ignoreComponents: [],
   useSource: false,
   defaultLocale: '',
   format: 'esm',

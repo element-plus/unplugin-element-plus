@@ -222,6 +222,24 @@ type Prefix = string
 import { AlButton } from 'xx-lib'
 ```
 
+### `ignoreComponents`
+
+```ts
+type IgnoreComponents = string[]
+```
+
+Skip style imports for a list of components. Useful for Element Plus components which do not have a style file.
+At the time of writing, this is only the `AutoResizer` component.
+
+```javascript
+// format: 'cjs'
+import { ElAutoResizer } from 'element-plus'
+
+//    ↓ ↓ ↓ ↓ ↓ ↓
+
+import { ElAutoResizer } from 'element-plus'
+```
+
 ### `defaultLocale`
 
 Replace default locale, you can find locale list [here](https://github.com/element-plus/element-plus/tree/dev/packages/locale/lang).

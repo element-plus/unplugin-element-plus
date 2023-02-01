@@ -16,6 +16,13 @@ export type Options = {
   /** replace default locale */
   defaultLocale: string
 
+  /**
+   * Array of component names that will not be transformed.
+   * Can be useful for components that do not have an associated style file.
+   * Do not include the prefix in the name.
+   */
+  ignoreComponents: string[]
+
   lib: string
   prefix: string
   format: 'cjs' | 'esm'
