@@ -1,6 +1,6 @@
 {
   "name": "unplugin-element-plus",
-  "version": "0.4.1",
+  "version": "0.5.0",
   "packageManager": "pnpm@7.26.1",
   "keywords": [
     "element-plus",
