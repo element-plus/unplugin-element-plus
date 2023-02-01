@@ -21,7 +21,7 @@ const defaultOptions: Options = {
   sourceMap: false,
 }
 
-export default createUnplugin((userOptions: Partial<Options> = {}) => {
+export default createUnplugin<Partial<Options>>((userOptions = {}) => {
   const options: Options = Object.assign(defaultOptions, userOptions)
   const filter = createFilter(options.include, options.exclude)
 
@@ -48,7 +48,7 @@ export default createUnplugin((userOptions: Partial<Options> = {}) => {
           return {
             optimizeDeps: {
               esbuildOptions: {
-                plugins: [getViteDepPlugin(options)],
+                plugins: [getViteDepPlugin(options) as any],
               },
             },
           }
