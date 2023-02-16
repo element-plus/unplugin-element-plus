@@ -24,7 +24,7 @@
   ],
   "main": "dist/index.js",
   "module": "dist/index.mjs",
-  "types": "dist/index.d.ts",
+  "types": "index.d.ts",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
@@ -57,6 +57,13 @@
       "import": "./dist/nuxt.mjs"
     },
     "./*": "./*"
+  },
+  "typesVersions": {
+    "*": {
+      "*": [
+        "./dist/*"
+      ]
+    }
   },
   "publishConfig": {
     "access": "public"
