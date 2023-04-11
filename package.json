@@ -91,7 +91,7 @@
     "@sxzz/eslint-config-vue": "^2.4.4",
     "@types/node": "^18.13.0",
     "@vitest/ui": "^0.28.5",
-    "bumpp": "^8.2.1",
+    "bumpp": "^9.1.0",
     "esbuild": "~0.17.8",
     "escape-string-regexp": "^5.0.0",
     "eslint": "^8.34.0",
