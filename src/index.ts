@@ -11,7 +11,7 @@ import type { Options } from './types'
 export type { Options }
 
 const defaultOptions: Options = {
-  include: ['**/*.vue', '**/*.ts', '**/*.js', '**/*.tsx', '**/*.jsx'],
+  include: ['**/*.vue', '**/*.ts', '**/*.js', '**/*.tsx', '**/*.jsx', '**/*.vue\?vue&type=script*'],
   exclude: [/[/\\]node_modules[/\\]/, /[/\\]\.git[/\\]/, /[/\\]\.nuxt[/\\]/],
   lib: 'element-plus',
   ignoreComponents: [],
