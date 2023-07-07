@@ -1,4 +1,3 @@
-/* eslint-disable unicorn/prefer-string-replace-all */
 import { resolve } from 'node:path'
 import glob from 'fast-glob'
 import { describe, expect, it } from 'vitest'
@@ -42,7 +41,7 @@ describe('transform', () => {
               plugin({
                 useSource,
                 ignoreComponents: ['AutoResizer'],
-              })
+              }),
             )
             expect(code).toMatchSnapshot()
           })

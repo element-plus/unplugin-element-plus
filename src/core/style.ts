@@ -1,5 +1,3 @@
-/* eslint-disable unicorn/better-regex */
-
 import { init, parse } from 'es-module-lexer'
 import MagicString from 'magic-string'
 
@@ -16,7 +14,7 @@ const formatMap = {
   esm: 'es',
 }
 
-const multilineCommentsRE = /\/\*\s(.|[\r\n])*?\*\//gm
+const multilineCommentsRE = /\/\*\s(.|[\n\r])*?\*\//gm
 const singlelineCommentsRE = /\/\/\s.*/g
 
 function stripeComments(code: string) {
@@ -32,7 +30,7 @@ export const transformImportStyle = (
     lib: string
     format: FormatType
     ignoreComponents: string[]
-  }
+  },
 ) => {
   const { prefix, lib, format, ignoreComponents } = options
   const statement = stripeComments(source.slice(specifier.ss, specifier.se))
@@ -51,14 +49,14 @@ export const transformImportStyle = (
         if (useSource) {
           styleImports.push(
             `import '${lib}/${formatMap[format]}/components/${hyphenate(
-              component
-            )}/style/index'`
+              component,
+            )}/style/index'`,
           )
         } else {
           styleImports.push(
             `import '${lib}/${formatMap[format]}/components/${hyphenate(
-              component
-            )}/style/css'`
+              component,
+            )}/style/css'`,
           )
         }
       }
@@ -100,6 +98,8 @@ export const transformStyle = async (source: string, options: Options) => {
 
   return {
     code: s.toString(),
-    map: options.sourceMap ? s.generateMap() : null,
+    get map() {
+      return s.generateMap({ hires: true, includeContent: true })
+    },
   }
 }
