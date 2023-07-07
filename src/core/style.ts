@@ -1,13 +1,12 @@
-import { init, parse } from 'es-module-lexer'
+import { type ImportSpecifier, init, parse } from 'es-module-lexer'
 import MagicString from 'magic-string'
-
-import type { ImportSpecifier } from 'es-module-lexer'
-import type { Options } from '../types'
+import { type Options } from '../types'
 
 type FormatType = 'cjs' | 'esm'
 
 const hyphenateRE = /\B([A-Z])/g
-const hyphenate = (str: string) => str.replace(hyphenateRE, '-$1').toLowerCase()
+const hyphenate = (str: string) =>
+  str.replaceAll(hyphenateRE, '-$1').toLowerCase()
 
 const formatMap = {
   cjs: 'lib',
@@ -18,7 +17,9 @@ const multilineCommentsRE = /\/\*\s(.|[\n\r])*?\*\//gm
 const singlelineCommentsRE = /\/\/\s.*/g
 
 function stripeComments(code: string) {
-  return code.replace(multilineCommentsRE, '').replace(singlelineCommentsRE, '')
+  return code
+    .replaceAll(multilineCommentsRE, '')
+    .replaceAll(singlelineCommentsRE, '')
 }
 
 export const transformImportStyle = (
@@ -30,7 +31,7 @@ export const transformImportStyle = (
     lib: string
     format: FormatType
     ignoreComponents: string[]
-  },
+  }
 ) => {
   const { prefix, lib, format, ignoreComponents } = options
   const statement = stripeComments(source.slice(specifier.ss, specifier.se))
@@ -49,14 +50,14 @@ export const transformImportStyle = (
         if (useSource) {
           styleImports.push(
             `import '${lib}/${formatMap[format]}/components/${hyphenate(
-              component,
-            )}/style/index'`,
+              component
+            )}/style/index'`
           )
         } else {
           styleImports.push(
             `import '${lib}/${formatMap[format]}/components/${hyphenate(
-              component,
-            )}/style/css'`,
+              component
+            )}/style/css'`
           )
         }
       }
@@ -91,7 +92,7 @@ export const transformStyle = async (source: string, options: Options) => {
     .filter((s) => s)
     .join('\n')
 
-  const lastSpecifier = specifiers[specifiers.length - 1]
+  const lastSpecifier = specifiers.at(-1)!
 
   const s = new MagicString(source)
   s.appendLeft(lastSpecifier.se + 1, `\n${styleImports}\n`)

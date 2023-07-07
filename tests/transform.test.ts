@@ -31,7 +31,7 @@ describe('transform', () => {
     })
 
     for (const file of files) {
-      describe(file.replace(/\\/g, '/'), () => {
+      describe(file.replaceAll('\\', '/'), () => {
         const filepath = resolve(root, file)
 
         for (const useSource of [true, false]) {
@@ -41,7 +41,7 @@ describe('transform', () => {
               plugin({
                 useSource,
                 ignoreComponents: ['AutoResizer'],
-              }),
+              })
             )
             expect(code).toMatchSnapshot()
           })

@@ -1,6 +1,7 @@
+import { type Options } from './types'
 import unplugin from '.'
-import type { Options } from './types'
 
+// eslint-disable-next-line import/no-default-export
 export default function (this: any, options: Options) {
   // install webpack plugin
   this.extendBuild((config: any) => {

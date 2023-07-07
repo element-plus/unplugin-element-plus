@@ -1,6 +1,6 @@
 import escapeStringRegexp from 'escape-string-regexp'
-import type { Options } from '../types'
-import type { Plugin } from 'esbuild'
+import { type Plugin } from 'esbuild'
+import { type Options } from '../types'
 
 export const getLocaleRE = (options: Options) =>
   new RegExp(

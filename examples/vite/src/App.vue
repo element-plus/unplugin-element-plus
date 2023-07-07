@@ -1,3 +1,32 @@
+<script setup lang="ts">
+import { ref } from 'vue'
+import {
+  ElButton,
+  ElDatePicker,
+  ElNotification,
+  ElOption,
+  ElRadioButton,
+  ElRadioGroup,
+  ElRow,
+  ElSelect,
+  ElSlider,
+  ElSwitch,
+} from 'element-plus'
+
+const radioVal = ref('New York')
+const switchVal = ref(true)
+const sliderVal = ref(50)
+
+function onClick() {
+  ElNotification({
+    type: 'success',
+    title: '已成功发送邮件',
+    message: '验证码区分大小写，有效期5分钟',
+    duration: 3000,
+  })
+}
+</script>
+
 <template>
   <div class="container">
     <h1>Custom theme example (on demand)</h1>
@@ -47,32 +76,3 @@
     </p>
   </div>
 </template>
-
-<script setup lang="ts">
-import { ref } from 'vue'
-import {
-  ElButton,
-  ElDatePicker,
-  ElNotification,
-  ElOption,
-  ElRadioButton,
-  ElRadioGroup,
-  ElRow,
-  ElSelect,
-  ElSlider,
-  ElSwitch,
-} from 'element-plus'
-
-const radioVal = ref('New York')
-const switchVal = ref(true)
-const sliderVal = ref(50)
-
-function onClick() {
-  ElNotification({
-    type: 'success',
-    title: '已成功发送邮件',
-    message: '验证码区分大小写，有效期5分钟',
-    duration: 3000,
-  })
-}
-</script>

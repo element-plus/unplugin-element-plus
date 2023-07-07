@@ -6,7 +6,7 @@ import {
   getViteDepPlugin,
   transformDefaultLocale,
 } from './core/default-locale'
-import type { Options } from './types'
+import { type Options } from './types'
 
 export type { Options }
 
