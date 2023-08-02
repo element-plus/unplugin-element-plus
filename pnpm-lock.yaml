@@ -58,8 +58,8 @@ importers:
         specifier: ^5.0.0
         version: 5.0.0(esbuild@0.18.11)(rollup@3.26.2)
       tsup:
-        specifier: ^7.1.0
-        version: 7.1.0(typescript@5.1.6)
+        specifier: ^7.2.0
+        version: 7.2.0(typescript@5.1.6)
       tsx:
         specifier: ^3.12.7
         version: 3.12.7
@@ -3898,8 +3898,8 @@ packages:
     resolution: {integrity: sha512-Xni35NKzjgMrwevysHTCArtLDpPvye8zV/0E4EyYn43P7/7qvQwPh9BGkHewbMulVntbigmcT7rdX3BNo9wRJg==}
     dev: true
 
-  /tsup@7.1.0(typescript@5.1.6):
-    resolution: {integrity: sha512-mazl/GRAk70j8S43/AbSYXGgvRP54oQeX8Un4iZxzATHt0roW0t6HYDVZIXMw0ZQIpvr1nFMniIVnN5186lW7w==}
+  /tsup@7.2.0(typescript@5.1.6):
+    resolution: {integrity: sha512-vDHlczXbgUvY3rWvqFEbSqmC1L7woozbzngMqTtL2PGBODTtWlRwGDDawhvWzr5c1QjKe4OAKqJGfE1xeXUvtQ==}
     engines: {node: '>=16.14'}
     hasBin: true
     peerDependencies:
