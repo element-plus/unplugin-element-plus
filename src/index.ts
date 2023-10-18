@@ -30,7 +30,7 @@ const defaultOptions: Options = {
 }
 
 export default createUnplugin<Partial<Options>>((userOptions = {}) => {
-  const options: Options = Object.assign(defaultOptions, userOptions)
+  const options: Options = Object.assign({}, defaultOptions, userOptions)
   const filter = createFilter(options.include, options.exclude)
 
   return {
