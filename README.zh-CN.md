@@ -218,6 +218,23 @@ type Prefix = string
 // prefix = Al
 import { AlButton } from 'xx-lib'
 ```
+### `ignoreComponents`
+
+```ts
+type IgnoreComponents = string[]
+```
+
+跳过组件列表的样式导入。 对于没有样式文件的 Element Plus 组件很有用。
+在编写此文档时，仅有“AutoResizer”组件。
+
+```javascript
+// format: 'cjs'
+import { ElAutoResizer } from 'element-plus'
+
+//    ↓ ↓ ↓ ↓ ↓ ↓
+
+import { ElAutoResizer } from 'element-plus'
+```
 
 ### `defaultLocale`
 
