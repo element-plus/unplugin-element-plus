@@ -1,5 +1,5 @@
 import escapeStringRegexp from 'escape-string-regexp'
-import type { Options } from '../index'
+import type { Options } from './types'
 import type { Plugin } from 'esbuild'
 
 export function getLocaleRE(options: Options): RegExp {

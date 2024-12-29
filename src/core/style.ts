@@ -1,6 +1,6 @@
 import { init, parse, type ImportSpecifier } from 'es-module-lexer'
 import MagicString from 'magic-string'
-import type { Options } from '../index'
+import type { Options } from './types'
 
 type FormatType = 'cjs' | 'esm'
 
