@@ -72,6 +72,7 @@
     "release": "bumpp",
     "vite:build": "npm -C examples/vite run build",
     "vite:dev": "npm -C examples/vite run dev",
+    "typecheck": "tsc --noEmit",
     "test": "vitest"
   },
   "dependencies": {

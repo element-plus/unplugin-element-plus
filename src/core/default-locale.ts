@@ -1,19 +1,20 @@
 import escapeStringRegexp from 'escape-string-regexp'
 import { type Plugin } from 'esbuild'
-import { type Options } from '../types'
+import { type Options } from '../index'
 
-export const getLocaleRE = (options: Options) =>
-  new RegExp(
+export function getLocaleRE(options: Options): RegExp {
+  return new RegExp(
     `${escapeStringRegexp(`${options.lib}/`)}(es|lib)${escapeStringRegexp(
       '/hooks/use-locale/index'
     )}`
   )
+}
 
-export const transformDefaultLocale = (
+export function transformDefaultLocale(
   options: Options,
   source: string,
   id: string
-) => {
+): string | undefined {
   if (!id.match(getLocaleRE(options))) return
   return source.replace(
     'locale/lang/en',
@@ -21,7 +22,7 @@ export const transformDefaultLocale = (
   )
 }
 
-export const getViteDepPlugin = (options: Options): Plugin => {
+export function getViteDepPlugin(options: Options): Plugin {
   const localeImporterRE = new RegExp(
     `${escapeStringRegexp(
       `node_modules/${options.lib}/`

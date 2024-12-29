@@ -1,5 +1,5 @@
 import { createFilter } from '@rollup/pluginutils'
-import { createUnplugin } from 'unplugin'
+import { createUnplugin, type UnpluginInstance } from 'unplugin'
 import { transformStyle } from './core/style'
 import {
   getLocaleRE,
@@ -29,39 +29,45 @@ const defaultOptions: Options = {
   sourceMap: false,
 }
 
-export default createUnplugin<Partial<Options>>((userOptions = {}) => {
-  const options: Options = Object.assign(defaultOptions, userOptions)
-  const filter = createFilter(options.include, options.exclude)
+const unplugin: UnpluginInstance<Partial<Options>, false> = createUnplugin(
+  (userOptions = {}) => {
+    const options: Options = {
+      ...defaultOptions,
+      ...userOptions,
+    }
+    const filter = createFilter(options.include, options.exclude)
 
-  return {
-    name: 'unplugin-element-plus',
-    enforce: 'post',
+    return {
+      name: 'unplugin-element-plus',
+      enforce: 'post',
 
-    transformInclude(id) {
-      return getLocaleRE(options).test(id) || filter(id)
-    },
-
-    transform(source, id) {
-      if (options.defaultLocale) {
-        const result = transformDefaultLocale(options, source, id)
-        if (result) return result
-      }
-
-      return transformStyle(source, options)
-    },
-
-    vite: {
-      config() {
-        if (options.defaultLocale) {
-          return {
-            optimizeDeps: {
-              esbuildOptions: {
-                plugins: [getViteDepPlugin(options) as any],
-              },
-            },
-          }
-        }
+      transformInclude(id) {
+        return getLocaleRE(options).test(id) || filter(id)
       },
-    },
+
+      transform(source, id) {
+        if (options.defaultLocale) {
+          const result = transformDefaultLocale(options, source, id)
+          if (result) return result
+        }
+
+        return transformStyle(source, options)
+      },
+
+      vite: {
+        config() {
+          if (options.defaultLocale) {
+            return {
+              optimizeDeps: {
+                esbuildOptions: {
+                  plugins: [getViteDepPlugin(options) as any],
+                },
+              },
+            }
+          }
+        },
+      },
+    }
   }
-})
+)
+export default unplugin

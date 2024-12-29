@@ -1,6 +1,6 @@
 import { type ImportSpecifier, init, parse } from 'es-module-lexer'
 import MagicString from 'magic-string'
-import { type Options } from '../types'
+import { type Options } from '../index'
 
 type FormatType = 'cjs' | 'esm'
 
@@ -22,7 +22,7 @@ function stripeComments(code: string) {
     .replaceAll(singlelineCommentsRE, '')
 }
 
-export const transformImportStyle = (
+export function transformImportStyle(
   specifier: ImportSpecifier,
   source: string,
   useSource = false,
@@ -32,7 +32,7 @@ export const transformImportStyle = (
     format: FormatType
     ignoreComponents: string[]
   }
-) => {
+): string | undefined {
   const { prefix, lib, format, ignoreComponents } = options
   const statement = stripeComments(source.slice(specifier.ss, specifier.se))
   const leftBracket = statement.indexOf('{')
@@ -66,7 +66,16 @@ export const transformImportStyle = (
   }
 }
 
-export const transformStyle = async (source: string, options: Options) => {
+export async function transformStyle(
+  source: string,
+  options: Options
+): Promise<
+  | {
+      code: string
+      readonly map: import('magic-string').SourceMap
+    }
+  | undefined
+> {
   const { useSource, lib, prefix, format, ignoreComponents } = options
 
   if (!source) return

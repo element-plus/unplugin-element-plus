@@ -2,7 +2,7 @@ import { type Options } from './core/types'
 import unplugin from '.'
 
 // eslint-disable-next-line import/no-default-export
-export default function (this: any, options: Options) {
+export default function (this: any, options: Options): void {
   // install webpack plugin
   this.extendBuild((config: any) => {
     config.plugins = config.plugins || []
