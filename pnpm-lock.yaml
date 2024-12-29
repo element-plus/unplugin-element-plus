@@ -54,9 +54,6 @@ importers:
       rollup:
         specifier: ^4.29.1
         version: 4.29.1
-      rollup-plugin-esbuild:
-        specifier: ^6.1.1
-        version: 6.1.1(esbuild@0.24.2)(rollup@4.29.1)
       tsup:
         specifier: ^8.3.5
         version: 8.3.5(jiti@2.4.2)(postcss@8.4.49)(tsx@4.19.2)(typescript@5.7.2)(yaml@2.6.1)
@@ -2378,13 +2375,6 @@ packages:
   reusify@1.0.4:
     resolution: {integrity: sha512-U9nH88a3fc/ekCF1l0/UP1IosiuIjyTh7hBvXVMHYgVcfGvt897Xguj2UOLDeI5BG2m7/uwyaLVT6fbtCwTyzw==}
     engines: {iojs: '>=1.0.0', node: '>=0.10.0'}
-
-  rollup-plugin-esbuild@6.1.1:
-    resolution: {integrity: sha512-CehMY9FAqJD5OUaE/Mi1r5z0kNeYxItmRO2zG4Qnv2qWKF09J2lTy5GUzjJR354ZPrLkCj4fiBN41lo8PzBUhw==}
-    engines: {node: '>=14.18.0'}
-    peerDependencies:
-      esbuild: '>=0.18.0'
-      rollup: ^1.20.0 || ^2.0.0 || ^3.0.0 || ^4.0.0
 
   rollup@4.29.1:
     resolution: {integrity: sha512-RaJ45M/kmJUzSWDs1Nnd5DdV4eerC98idtUOVr6FfKcgxqvjwHmxc5upLF9qZU9EpsVzzhleFahrT3shLuJzIw==}
@@ -5229,17 +5219,6 @@ snapshots:
       supports-preserve-symlinks-flag: 1.0.0
 
   reusify@1.0.4: {}
-
-  rollup-plugin-esbuild@6.1.1(esbuild@0.24.2)(rollup@4.29.1):
-    dependencies:
-      '@rollup/pluginutils': 5.1.4(rollup@4.29.1)
-      debug: 4.4.0
-      es-module-lexer: 1.6.0
-      esbuild: 0.24.2
-      get-tsconfig: 4.8.1
-      rollup: 4.29.1
-    transitivePeerDependencies:
-      - supports-color
 
   rollup@4.29.1:
     dependencies:
