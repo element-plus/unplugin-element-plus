@@ -48,6 +48,14 @@
       "require": "./dist/esbuild.cjs",
       "import": "./dist/esbuild.js"
     },
+    "./rspack": {
+      "require": "./dist/rspack.cjs",
+      "import": "./dist/rspack.js"
+    },
+    "./rolldown": {
+      "require": "./dist/rolldown.cjs",
+      "import": "./dist/rolldown.js"
+    },
     "./nuxt": {
       "require": "./dist/nuxt.cjs",
       "import": "./dist/nuxt.js"
