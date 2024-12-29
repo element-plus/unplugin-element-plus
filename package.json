@@ -2,6 +2,8 @@
   "name": "unplugin-element-plus",
   "version": "0.8.0",
   "packageManager": "pnpm@9.15.2",
+  "type": "module",
+  "license": "MIT",
   "keywords": [
     "element-plus",
     "unplugin",
@@ -17,38 +19,38 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/element-plus/unplugin-element-plus"
+    "url": "git+https://github.com/element-plus/unplugin-element-plus.git"
   },
   "files": [
     "dist"
   ],
   "main": "dist/index.js",
-  "module": "dist/index.mjs",
+  "module": "dist/index.js",
   "types": "dist/index.d.ts",
   "exports": {
     ".": {
-      "require": "./dist/index.js",
-      "import": "./dist/index.mjs"
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.js"
     },
     "./vite": {
-      "require": "./dist/vite.js",
-      "import": "./dist/vite.mjs"
+      "require": "./dist/vite.cjs",
+      "import": "./dist/vite.js"
     },
     "./webpack": {
-      "require": "./dist/webpack.js",
-      "import": "./dist/webpack.mjs"
+      "require": "./dist/webpack.cjs",
+      "import": "./dist/webpack.js"
     },
     "./rollup": {
-      "require": "./dist/rollup.js",
-      "import": "./dist/rollup.mjs"
+      "require": "./dist/rollup.cjs",
+      "import": "./dist/rollup.js"
     },
     "./esbuild": {
-      "require": "./dist/esbuild.js",
-      "import": "./dist/esbuild.mjs"
+      "require": "./dist/esbuild.cjs",
+      "import": "./dist/esbuild.js"
     },
     "./nuxt": {
-      "require": "./dist/nuxt.js",
-      "import": "./dist/nuxt.mjs"
+      "require": "./dist/nuxt.cjs",
+      "import": "./dist/nuxt.js"
     },
     "./*": "./*"
   },
