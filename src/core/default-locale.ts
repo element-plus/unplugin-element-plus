@@ -1,32 +1,32 @@
 import escapeStringRegexp from 'escape-string-regexp'
-import { type Plugin } from 'esbuild'
-import { type Options } from '../index'
+import type { Options } from '../index'
+import type { Plugin } from 'esbuild'
 
 export function getLocaleRE(options: Options): RegExp {
   return new RegExp(
     `${escapeStringRegexp(`${options.lib}/`)}(es|lib)${escapeStringRegexp(
-      '/hooks/use-locale/index'
-    )}`
+      '/hooks/use-locale/index',
+    )}`,
   )
 }
 
 export function transformDefaultLocale(
   options: Options,
   source: string,
-  id: string
+  id: string,
 ): string | undefined {
-  if (!id.match(getLocaleRE(options))) return
+  if (!getLocaleRE(options).test(id)) return
   return source.replace(
     'locale/lang/en',
-    `locale/lang/${options.defaultLocale}`
+    `locale/lang/${options.defaultLocale}`,
   )
 }
 
 export function getViteDepPlugin(options: Options): Plugin {
   const localeImporterRE = new RegExp(
     `${escapeStringRegexp(
-      `node_modules/${options.lib}/`
-    )}(es|lib)${escapeStringRegexp('/hooks/use-locale/index')}`
+      `node_modules/${options.lib}/`,
+    )}(es|lib)${escapeStringRegexp('/hooks/use-locale/index')}`,
   )
   const localePath = '/locale/lang/en'
   const localePathFixed = `/locale/lang/${options.defaultLocale}`
@@ -46,7 +46,7 @@ export function getViteDepPlugin(options: Options): Plugin {
               kind,
               resolveDir,
             })
-        }
+        },
       )
     },
   }

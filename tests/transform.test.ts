@@ -1,7 +1,7 @@
 import { resolve } from 'node:path'
 import glob from 'fast-glob'
-import { describe, expect, it } from 'vitest'
 import { rollup } from 'rollup'
+import { describe, expect, it } from 'vitest'
 import plugin from '../src/rollup'
 
 async function getCode(file: string, plugin: any) {
@@ -41,7 +41,7 @@ describe('transform', () => {
               plugin({
                 useSource,
                 ignoreComponents: ['AutoResizer'],
-              })
+              }),
             )
             expect(code).toMatchSnapshot()
           })

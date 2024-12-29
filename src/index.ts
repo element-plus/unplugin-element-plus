@@ -1,12 +1,12 @@
 import { createFilter } from '@rollup/pluginutils'
 import { createUnplugin, type UnpluginInstance } from 'unplugin'
-import { transformStyle } from './core/style'
 import {
   getLocaleRE,
   getViteDepPlugin,
   transformDefaultLocale,
 } from './core/default-locale'
-import { type Options } from './core/types'
+import { transformStyle } from './core/style'
+import type { Options } from './core/types'
 
 export type { Options }
 
@@ -68,6 +68,6 @@ const unplugin: UnpluginInstance<Partial<Options>, false> = createUnplugin(
         },
       },
     }
-  }
+  },
 )
 export default unplugin

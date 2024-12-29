@@ -1,6 +1,6 @@
-import { type ImportSpecifier, init, parse } from 'es-module-lexer'
+import { init, parse, type ImportSpecifier } from 'es-module-lexer'
 import MagicString from 'magic-string'
-import { type Options } from '../index'
+import type { Options } from '../index'
 
 type FormatType = 'cjs' | 'esm'
 
@@ -13,7 +13,7 @@ const formatMap = {
   esm: 'es',
 }
 
-const multilineCommentsRE = /\/\*\s(.|[\n\r])*?\*\//gm
+const multilineCommentsRE = /\/\*\s(.|[\n\r])*?\*\//g
 const singlelineCommentsRE = /\/\/\s.*/g
 
 function stripeComments(code: string) {
@@ -31,12 +31,12 @@ export function transformImportStyle(
     lib: string
     format: FormatType
     ignoreComponents: string[]
-  }
+  },
 ): string | undefined {
   const { prefix, lib, format, ignoreComponents } = options
   const statement = stripeComments(source.slice(specifier.ss, specifier.se))
   const leftBracket = statement.indexOf('{')
-  if (leftBracket > -1) {
+  if (leftBracket !== -1) {
     // remove { } to get raw imported items. Maybe this will fail since there could be
     // special cases
     const identifiers = statement.slice(leftBracket + 1, statement.indexOf('}'))
@@ -50,14 +50,14 @@ export function transformImportStyle(
         if (useSource) {
           styleImports.push(
             `import '${lib}/${formatMap[format]}/components/${hyphenate(
-              component
-            )}/style/index'`
+              component,
+            )}/style/index'`,
           )
         } else {
           styleImports.push(
             `import '${lib}/${formatMap[format]}/components/${hyphenate(
-              component
-            )}/style/css'`
+              component,
+            )}/style/css'`,
           )
         }
       }
@@ -68,7 +68,7 @@ export function transformImportStyle(
 
 export async function transformStyle(
   source: string,
-  options: Options
+  options: Options,
 ): Promise<
   | {
       code: string

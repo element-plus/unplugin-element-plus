@@ -3,7 +3,6 @@
   "version": "0.8.0",
   "packageManager": "pnpm@9.15.2",
   "type": "module",
-  "license": "MIT",
   "keywords": [
     "element-plus",
     "unplugin",
@@ -13,6 +12,7 @@
     "esbuild",
     "plugin"
   ],
+  "license": "MIT",
   "homepage": "https://github.com/element-plus/unplugin-element-plus/tree/main/#readme",
   "bugs": {
     "url": "https://github.com/element-plus/unplugin-element-plus/issues"
