@@ -89,7 +89,7 @@
     "@rollup/pluginutils": "^5.1.4",
     "es-module-lexer": "^1.6.0",
     "magic-string": "^0.30.17",
-    "unplugin": "^2.1.0"
+    "unplugin": "^2.1.2"
   },
   "devDependencies": {
     "@sxzz/eslint-config": "^4.5.1",
