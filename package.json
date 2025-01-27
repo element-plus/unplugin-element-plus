@@ -96,7 +96,7 @@
     "@sxzz/prettier-config": "^2.1.0",
     "@types/node": "^22.10.10",
     "@vitest/ui": "^3.0.4",
-    "bumpp": "^9.11.1",
+    "bumpp": "^10.0.1",
     "esbuild": "~0.24.2",
     "escape-string-regexp": "^5.0.0",
     "eslint": "^9.19.0",
