@@ -94,20 +94,20 @@
   "devDependencies": {
     "@sxzz/eslint-config": "^4.6.0",
     "@sxzz/prettier-config": "^2.1.0",
-    "@types/node": "^22.10.7",
-    "@vitest/ui": "^3.0.2",
-    "bumpp": "^9.10.1",
+    "@types/node": "^22.10.10",
+    "@vitest/ui": "^3.0.4",
+    "bumpp": "^9.11.1",
     "esbuild": "~0.24.2",
     "escape-string-regexp": "^5.0.0",
-    "eslint": "^9.18.0",
+    "eslint": "^9.19.0",
     "fast-glob": "^3.3.3",
     "prettier": "^3.4.2",
-    "rollup": "^4.31.0",
-    "tsup": "^8.3.5",
+    "rollup": "^4.32.0",
+    "tsup": "^8.3.6",
     "tsx": "^4.19.2",
     "typescript": "^5.7.3",
-    "vite": "^6.0.7",
-    "vitest": "^3.0.2"
+    "vite": "^6.0.11",
+    "vitest": "^3.0.4"
   },
   "engines": {
     "node": ">=18.12.0"
