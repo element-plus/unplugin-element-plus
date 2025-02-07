@@ -1,5 +1,5 @@
-import { createFilter } from '@rollup/pluginutils'
 import { createUnplugin, type UnpluginInstance } from 'unplugin'
+import { createFilter } from 'unplugin-utils'
 import {
   getLocaleRE,
   getViteDepPlugin,

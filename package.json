@@ -86,10 +86,10 @@
     "test": "vitest"
   },
   "dependencies": {
-    "@rollup/pluginutils": "^5.1.4",
     "es-module-lexer": "^1.6.0",
     "magic-string": "^0.30.17",
-    "unplugin": "^2.1.2"
+    "unplugin": "^2.1.2",
+    "unplugin-utils": "^0.2.3"
   },
   "devDependencies": {
     "@sxzz/eslint-config": "^5.0.1",
