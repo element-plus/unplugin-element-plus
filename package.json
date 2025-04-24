@@ -28,38 +28,14 @@
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
   "exports": {
-    ".": {
-      "require": "./dist/index.cjs",
-      "import": "./dist/index.js"
-    },
-    "./vite": {
-      "require": "./dist/vite.cjs",
-      "import": "./dist/vite.js"
-    },
-    "./webpack": {
-      "require": "./dist/webpack.cjs",
-      "import": "./dist/webpack.js"
-    },
-    "./rollup": {
-      "require": "./dist/rollup.cjs",
-      "import": "./dist/rollup.js"
-    },
-    "./esbuild": {
-      "require": "./dist/esbuild.cjs",
-      "import": "./dist/esbuild.js"
-    },
-    "./rspack": {
-      "require": "./dist/rspack.cjs",
-      "import": "./dist/rspack.js"
-    },
-    "./rolldown": {
-      "require": "./dist/rolldown.cjs",
-      "import": "./dist/rolldown.js"
-    },
-    "./nuxt": {
-      "require": "./dist/nuxt.cjs",
-      "import": "./dist/nuxt.js"
-    },
+    ".": "./dist/index.js",
+    "./vite": "./dist/vite.js",
+    "./webpack": "./dist/webpack.js",
+    "./rollup": "./dist/rollup.js",
+    "./esbuild": "./dist/esbuild.js",
+    "./rspack": "./dist/rspack.js",
+    "./rolldown": "./dist/rolldown.js",
+    "./nuxt": "./dist/nuxt.js",
     "./*": "./*"
   },
   "typesVersions": {
@@ -76,9 +52,9 @@
   "scripts": {
     "lint": "eslint .",
     "lint:fix": "pnpm run lint --fix",
-    "build": "tsup",
+    "build": "tsdown",
     "build:examples": "pnpm --filter \"./examples/*\" build",
-    "dev": "tsup --watch",
+    "dev": "tsdown --watch",
     "release": "bumpp",
     "vite:build": "npm -C examples/vite run build",
     "vite:dev": "npm -C examples/vite run dev",
@@ -103,7 +79,7 @@
     "fast-glob": "^3.3.3",
     "prettier": "^3.5.3",
     "rollup": "^4.40.0",
-    "tsup": "^8.4.0",
+    "tsdown": "^0.9.6",
     "tsx": "^4.19.3",
     "typescript": "^5.8.3",
     "vite": "^6.3.2",
