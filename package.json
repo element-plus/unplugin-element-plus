@@ -1,7 +1,7 @@
 {
   "name": "unplugin-element-plus",
   "version": "0.10.0",
-  "packageManager": "pnpm@10.8.1",
+  "packageManager": "pnpm@10.10.0",
   "type": "module",
   "keywords": [
     "element-plus",
@@ -62,7 +62,7 @@
     "test": "vitest"
   },
   "dependencies": {
-    "es-module-lexer": "^1.6.0",
+    "es-module-lexer": "^1.7.0",
     "magic-string": "^0.30.17",
     "unplugin": "^2.3.2",
     "unplugin-utils": "^0.2.4"
@@ -70,20 +70,20 @@
   "devDependencies": {
     "@sxzz/eslint-config": "^5.3.0",
     "@sxzz/prettier-config": "^2.2.1",
-    "@types/node": "^22.14.1",
-    "@vitest/ui": "^3.1.1",
+    "@types/node": "^22.15.3",
+    "@vitest/ui": "^3.1.2",
     "bumpp": "^10.1.0",
-    "esbuild": "~0.25.2",
+    "esbuild": "~0.25.3",
     "escape-string-regexp": "^5.0.0",
-    "eslint": "^9.25.0",
+    "eslint": "^9.26.0",
     "fast-glob": "^3.3.3",
     "prettier": "^3.5.3",
-    "rollup": "^4.40.0",
-    "tsdown": "^0.9.6",
-    "tsx": "^4.19.3",
+    "rollup": "^4.40.1",
+    "tsdown": "^0.10.2",
+    "tsx": "^4.19.4",
     "typescript": "^5.8.3",
-    "vite": "^6.3.2",
-    "vitest": "^3.1.1"
+    "vite": "^6.3.4",
+    "vitest": "^3.1.2"
   },
   "engines": {
     "node": ">=18.12.0"
