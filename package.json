@@ -68,7 +68,7 @@
     "unplugin-utils": "^0.2.4"
   },
   "devDependencies": {
-    "@sxzz/eslint-config": "^5.3.0",
+    "@sxzz/eslint-config": "^6.2.0",
     "@sxzz/prettier-config": "^2.2.1",
     "@types/node": "^22.15.3",
     "@vitest/ui": "^3.1.2",
