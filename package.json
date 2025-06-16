@@ -70,20 +70,20 @@
   "devDependencies": {
     "@sxzz/eslint-config": "^5.3.0",
     "@sxzz/prettier-config": "^2.2.1",
-    "@types/node": "^22.15.30",
-    "@vitest/ui": "^3.2.2",
+    "@types/node": "^22.15.31",
+    "@vitest/ui": "^3.2.3",
     "bumpp": "^10.1.1",
     "esbuild": "~0.25.5",
     "escape-string-regexp": "^5.0.0",
-    "eslint": "^9.28.0",
+    "eslint": "^9.29.0",
     "fast-glob": "^3.3.3",
     "prettier": "^3.5.3",
-    "rollup": "^4.42.0",
+    "rollup": "^4.43.0",
     "tsdown": "^0.12.7",
-    "tsx": "^4.19.4",
+    "tsx": "^4.20.3",
     "typescript": "^5.8.3",
     "vite": "^6.3.5",
-    "vitest": "^3.2.2"
+    "vitest": "^3.2.3"
   },
   "engines": {
     "node": ">=18.12.0"
