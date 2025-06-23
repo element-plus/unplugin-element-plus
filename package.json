@@ -1,7 +1,7 @@
 {
   "name": "unplugin-element-plus",
   "version": "0.10.0",
-  "packageManager": "pnpm@10.12.1",
+  "packageManager": "pnpm@10.12.2",
   "type": "module",
   "keywords": [
     "element-plus",
@@ -70,20 +70,20 @@
   "devDependencies": {
     "@sxzz/eslint-config": "^5.3.0",
     "@sxzz/prettier-config": "^2.2.1",
-    "@types/node": "^22.15.31",
-    "@vitest/ui": "^3.2.3",
-    "bumpp": "^10.1.1",
+    "@types/node": "^22.15.32",
+    "@vitest/ui": "^3.2.4",
+    "bumpp": "^10.2.0",
     "esbuild": "~0.25.5",
     "escape-string-regexp": "^5.0.0",
     "eslint": "^9.29.0",
     "fast-glob": "^3.3.3",
-    "prettier": "^3.5.3",
-    "rollup": "^4.43.0",
-    "tsdown": "^0.12.7",
+    "prettier": "^3.6.0",
+    "rollup": "^4.44.0",
+    "tsdown": "^0.12.8",
     "tsx": "^4.20.3",
     "typescript": "^5.8.3",
     "vite": "^6.3.5",
-    "vitest": "^3.2.3"
+    "vitest": "^3.2.4"
   },
   "engines": {
     "node": ">=18.12.0"
