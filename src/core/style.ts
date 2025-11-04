@@ -98,7 +98,7 @@ export async function transformStyle(
       })
       return ret
     })
-    .filter((s) => s)
+    .filter(Boolean)
     .join('\n')
 
   const lastSpecifier = specifiers.at(-1)!

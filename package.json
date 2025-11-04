@@ -62,11 +62,13 @@
     "test": "vitest"
   },
   "dependencies": {
+    "@nuxt/kit": "^4.2.0",
     "es-module-lexer": "^1.7.0",
     "magic-string": "^0.30.21",
     "unplugin": "^2.3.10"
   },
   "devDependencies": {
+    "@nuxt/schema": "^4.2.0",
     "@sxzz/eslint-config": "^7.2.8",
     "@sxzz/prettier-config": "^2.2.4",
     "@types/node": "^24.10.0",
