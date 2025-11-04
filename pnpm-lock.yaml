@@ -14,6 +14,9 @@ importers:
       es-module-lexer:
         specifier: ^1.7.0
         version: 1.7.0
+      escape-string-regexp:
+        specifier: ^5.0.0
+        version: 5.0.0
       magic-string:
         specifier: ^0.30.21
         version: 0.30.21
@@ -42,9 +45,6 @@ importers:
       esbuild:
         specifier: ~0.25.12
         version: 0.25.12
-      escape-string-regexp:
-        specifier: ^5.0.0
-        version: 5.0.0
       eslint:
         specifier: ^9.39.1
         version: 9.39.1(jiti@2.6.1)

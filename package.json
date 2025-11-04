@@ -64,6 +64,7 @@
   "dependencies": {
     "@nuxt/kit": "^4.2.0",
     "es-module-lexer": "^1.7.0",
+    "escape-string-regexp": "^5.0.0",
     "magic-string": "^0.30.21",
     "unplugin": "^2.3.10"
   },
@@ -75,7 +76,6 @@
     "@vitest/ui": "^4.0.6",
     "bumpp": "^10.3.1",
     "esbuild": "~0.25.12",
-    "escape-string-regexp": "^5.0.0",
     "eslint": "^9.39.1",
     "fast-glob": "^3.3.3",
     "prettier": "^3.6.2",
