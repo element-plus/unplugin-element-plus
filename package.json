@@ -64,8 +64,7 @@
   "dependencies": {
     "es-module-lexer": "^1.7.0",
     "magic-string": "^0.30.18",
-    "unplugin": "^2.3.10",
-    "unplugin-utils": "^0.3.0"
+    "unplugin": "^2.3.10"
   },
   "devDependencies": {
     "@sxzz/eslint-config": "^5.3.0",

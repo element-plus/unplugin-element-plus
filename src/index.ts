@@ -1,5 +1,4 @@
 import { createUnplugin, type UnpluginInstance } from 'unplugin'
-import { createFilter } from 'unplugin-utils'
 import {
   getLocaleRE,
   getViteDepPlugin,
@@ -29,29 +28,37 @@ const defaultOptions: Options = {
   sourceMap: false,
 }
 
+function toArray<T>(thing: T | T[] | undefined | null): T[] {
+  if (thing == null) return []
+  return Array.isArray(thing) ? thing : [thing]
+}
+
 const unplugin: UnpluginInstance<Partial<Options>, false> = createUnplugin(
   (userOptions = {}) => {
     const options: Options = {
       ...defaultOptions,
       ...userOptions,
     }
-    const filter = createFilter(options.include, options.exclude)
 
     return {
       name: 'unplugin-element-plus',
       enforce: 'post',
 
-      transformInclude(id) {
-        return getLocaleRE(options).test(id) || filter(id)
-      },
+      transform: {
+        filter: {
+          id: {
+            include: [getLocaleRE(options), ...toArray(options.include)],
+            exclude: options.exclude,
+          },
+        },
+        handler(source, id) {
+          if (options.defaultLocale) {
+            const result = transformDefaultLocale(options, source, id)
+            if (result) return result
+          }
 
-      transform(source, id) {
-        if (options.defaultLocale) {
-          const result = transformDefaultLocale(options, source, id)
-          if (result) return result
-        }
-
-        return transformStyle(source, options)
+          return transformStyle(source, options)
+        },
       },
 
       vite: {
