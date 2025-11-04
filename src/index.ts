@@ -17,6 +17,7 @@ const defaultOptions: Options = {
     '**/*.tsx',
     '**/*.jsx',
     '**/*.vue?vue&type=script*',
+    /\.vue\.[tj]sx?\?vue/,
   ],
   exclude: [/[/\\]node_modules[/\\]/, /[/\\]\.git[/\\]/, /[/\\]\.nuxt[/\\]/],
   lib: 'element-plus',
