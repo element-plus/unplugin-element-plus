@@ -8,26 +8,17 @@ jobs:
   gh-pages:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v5
-      - name: Set node
-        uses: actions/setup-node@v6
-        with:
-          node-version: lts/*
-
-      - name: Setup
-        run: npm i -g @antfu/ni
-
-      - name: Install
-        run: nci
+      - name: Setup JS
+        uses: sxzz/workflows/setup-js@v1
 
       - name: Build
-        run: nr build
+        run: pnpm build
 
       - name: Install Example Dependencies & Build
         run: pnpm -C examples/vite run build
 
       - name: Deploy
-        uses: peaceiris/actions-gh-pages@v4
+        uses: peaceiris/actions-gh-pages@4f9cc6602d3f66b9c108549d475ec49e8ef4d45e # v4.0.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./examples/vite/dist
