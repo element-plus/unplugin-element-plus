@@ -1,7 +1,7 @@
 {
   "name": "unplugin-element-plus",
   "version": "0.10.0",
-  "packageManager": "pnpm@10.15.1",
+  "packageManager": "pnpm@10.20.0",
   "type": "module",
   "keywords": [
     "element-plus",
@@ -63,26 +63,26 @@
   },
   "dependencies": {
     "es-module-lexer": "^1.7.0",
-    "magic-string": "^0.30.18",
+    "magic-string": "^0.30.21",
     "unplugin": "^2.3.10"
   },
   "devDependencies": {
-    "@sxzz/eslint-config": "^5.3.0",
+    "@sxzz/eslint-config": "^7.2.8",
     "@sxzz/prettier-config": "^2.2.4",
-    "@types/node": "^22.18.1",
-    "@vitest/ui": "^3.2.4",
-    "bumpp": "^10.2.3",
-    "esbuild": "~0.25.9",
+    "@types/node": "^24.10.0",
+    "@vitest/ui": "^4.0.6",
+    "bumpp": "^10.3.1",
+    "esbuild": "~0.25.12",
     "escape-string-regexp": "^5.0.0",
-    "eslint": "^9.35.0",
+    "eslint": "^9.39.1",
     "fast-glob": "^3.3.3",
     "prettier": "^3.6.2",
-    "rollup": "^4.50.1",
-    "tsdown": "^0.14.2",
-    "tsx": "^4.20.5",
-    "typescript": "^5.9.2",
-    "vite": "^7.1.4",
-    "vitest": "^3.2.4"
+    "rollup": "^4.52.5",
+    "tsdown": "^0.15.12",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3",
+    "vite": "^7.1.12",
+    "vitest": "^4.0.6"
   },
   "engines": {
     "node": ">=18.12.0"
