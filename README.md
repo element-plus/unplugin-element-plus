@@ -69,15 +69,34 @@ export default {
 <br></details>
 
 <details>
+<summary>Rolldown</summary><br>
+
+```ts
+// rolldown.config.js
+import ElementPlus from 'unplugin-element-plus/rolldown'
+
+export default {
+  plugins: [
+    ElementPlus({
+      // options
+    }),
+  ],
+}
+```
+
+<br></details>
+
+<details>
 <summary>esbuild</summary><br>
 
 ```ts
 // esbuild.config.js
 import { build } from 'esbuild'
+import ElementPlus from 'unplugin-element-plus/esbuild'
 
 build({
   plugins: [
-    require('unplugin-element-plus/esbuild')({
+    ElementPlus({
       // options
     }),
   ],
@@ -91,10 +110,12 @@ build({
 
 ```ts
 // webpack.config.js
-module.exports = {
+import ElementPlus from 'unplugin-element-plus/webpack'
+
+export default {
   /* ... */
   plugins: [
-    require('unplugin-element-plus/webpack')({
+    ElementPlus({
       // options
     }),
   ],
@@ -104,18 +125,18 @@ module.exports = {
 <br></details>
 
 <details>
-<summary>Vue CLI</summary><br>
+<summary>Rspack</summary><br>
 
 ```ts
-// vue.config.js
-module.exports = {
-  configureWebpack: {
-    plugins: [
-      require('unplugin-element-plus/webpack')({
-        // options
-      }),
-    ],
-  },
+// rspack.config.js
+import ElementPlus from 'unplugin-element-plus/rspack'
+export default {
+  /* ... */
+  plugins: [
+    ElementPlus({
+      // options
+    }),
+  ],
 }
 ```
 
