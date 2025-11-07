@@ -24,18 +24,18 @@
   "files": [
     "dist"
   ],
-  "main": "./dist/index.js",
-  "module": "./dist/index.js",
-  "types": "./dist/index.d.ts",
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.mts",
   "exports": {
-    ".": "./dist/index.js",
-    "./esbuild": "./dist/esbuild.js",
-    "./nuxt": "./dist/nuxt.js",
-    "./rolldown": "./dist/rolldown.js",
-    "./rollup": "./dist/rollup.js",
-    "./rspack": "./dist/rspack.js",
-    "./vite": "./dist/vite.js",
-    "./webpack": "./dist/webpack.js",
+    ".": "./dist/index.mjs",
+    "./esbuild": "./dist/esbuild.mjs",
+    "./nuxt": "./dist/nuxt.mjs",
+    "./rolldown": "./dist/rolldown.mjs",
+    "./rollup": "./dist/rollup.mjs",
+    "./rspack": "./dist/rspack.mjs",
+    "./vite": "./dist/vite.mjs",
+    "./webpack": "./dist/webpack.mjs",
     "./package.json": "./package.json"
   },
   "typesVersions": {
@@ -59,32 +59,33 @@
     "vite:build": "npm -C examples/vite run build",
     "vite:dev": "npm -C examples/vite run dev",
     "typecheck": "tsc --noEmit",
-    "test": "vitest"
+    "test": "vitest",
+    "prepublishOnly": "pnpm run build"
   },
   "dependencies": {
-    "@nuxt/kit": "^4.2.0",
+    "@nuxt/kit": "^4.2.1",
     "es-module-lexer": "^1.7.0",
     "escape-string-regexp": "^5.0.0",
     "magic-string": "^0.30.21",
     "unplugin": "^2.3.10"
   },
   "devDependencies": {
-    "@nuxt/schema": "^4.2.0",
+    "@nuxt/schema": "^4.2.1",
     "@sxzz/eslint-config": "^7.2.8",
     "@sxzz/prettier-config": "^2.2.4",
     "@types/node": "^24.10.0",
-    "@vitest/ui": "^4.0.6",
+    "@vitest/ui": "^4.0.7",
     "bumpp": "^10.3.1",
     "esbuild": "~0.25.12",
     "eslint": "^9.39.1",
     "fast-glob": "^3.3.3",
     "prettier": "^3.6.2",
     "rollup": "^4.52.5",
-    "tsdown": "^0.15.12",
+    "tsdown": "^0.16.0",
     "tsx": "^4.20.6",
     "typescript": "^5.9.3",
-    "vite": "^7.1.12",
-    "vitest": "^4.0.6"
+    "vite": "^7.2.2",
+    "vitest": "^4.0.7"
   },
   "engines": {
     "node": ">=20.19.0"
