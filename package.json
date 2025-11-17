@@ -1,7 +1,7 @@
 {
   "name": "unplugin-element-plus",
   "version": "0.11.1",
-  "packageManager": "pnpm@10.21.0",
+  "packageManager": "pnpm@10.22.0",
   "description": "Import Element Plus on demand. Support Vite, Webpack, Vue CLI, Rollup and esbuild.",
   "type": "module",
   "keywords": [
@@ -72,21 +72,21 @@
   },
   "devDependencies": {
     "@nuxt/schema": "^4.2.1",
-    "@sxzz/eslint-config": "^7.2.8",
+    "@sxzz/eslint-config": "^7.2.10",
     "@sxzz/prettier-config": "^2.2.4",
-    "@types/node": "^24.10.0",
-    "@vitest/ui": "^4.0.8",
+    "@types/node": "^24.10.1",
+    "@vitest/ui": "^4.0.9",
     "bumpp": "^10.3.1",
     "esbuild": "~0.27.0",
     "eslint": "^9.39.1",
     "fast-glob": "^3.3.3",
     "prettier": "^3.6.2",
-    "rollup": "^4.53.1",
-    "tsdown": "^0.16.1",
+    "rollup": "^4.53.2",
+    "tsdown": "^0.16.5",
     "tsx": "^4.20.6",
     "typescript": "^5.9.3",
     "vite": "^7.2.2",
-    "vitest": "^4.0.8"
+    "vitest": "^4.0.9"
   },
   "engines": {
     "node": ">=20.19.0"
