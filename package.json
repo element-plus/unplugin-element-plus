@@ -1,7 +1,7 @@
 {
   "name": "unplugin-element-plus",
   "version": "0.11.1",
-  "packageManager": "pnpm@10.22.0",
+  "packageManager": "pnpm@10.24.0",
   "description": "Import Element Plus on demand. Support Vite, Webpack, Vue CLI, Rollup and esbuild.",
   "type": "module",
   "keywords": [
@@ -68,25 +68,25 @@
     "es-module-lexer": "^1.7.0",
     "escape-string-regexp": "^5.0.0",
     "magic-string": "^0.30.21",
-    "unplugin": "^2.3.10"
+    "unplugin": "^2.3.11"
   },
   "devDependencies": {
     "@nuxt/schema": "^4.2.1",
-    "@sxzz/eslint-config": "^7.2.10",
-    "@sxzz/prettier-config": "^2.2.4",
+    "@sxzz/eslint-config": "^7.4.0",
+    "@sxzz/prettier-config": "^2.2.6",
     "@types/node": "^24.10.1",
-    "@vitest/ui": "^4.0.9",
-    "bumpp": "^10.3.1",
+    "@vitest/ui": "^4.0.14",
+    "bumpp": "^10.3.2",
     "esbuild": "~0.27.0",
     "eslint": "^9.39.1",
     "fast-glob": "^3.3.3",
-    "prettier": "^3.6.2",
-    "rollup": "^4.53.2",
-    "tsdown": "^0.16.5",
-    "tsx": "^4.20.6",
+    "prettier": "^3.7.3",
+    "rollup": "^4.53.3",
+    "tsdown": "^0.16.8",
+    "tsx": "^4.21.0",
     "typescript": "^5.9.3",
-    "vite": "^7.2.2",
-    "vitest": "^4.0.9"
+    "vite": "^7.2.6",
+    "vitest": "^4.0.14"
   },
   "engines": {
     "node": ">=20.19.0"
