@@ -65,7 +65,7 @@
   },
   "dependencies": {
     "@nuxt/kit": "^4.2.1",
-    "es-module-lexer": "^1.7.0",
+    "es-module-lexer": "^2.0.0",
     "escape-string-regexp": "^5.0.0",
     "magic-string": "^0.30.21",
     "unplugin": "^2.3.11"
