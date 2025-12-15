@@ -1,7 +1,7 @@
 {
   "name": "unplugin-element-plus",
   "version": "0.11.1",
-  "packageManager": "pnpm@10.24.0",
+  "packageManager": "pnpm@10.26.0",
   "description": "Import Element Plus on demand. Support Vite, Webpack, Vue CLI, Rollup and esbuild.",
   "type": "module",
   "keywords": [
@@ -64,29 +64,29 @@
     "prepublishOnly": "pnpm run build"
   },
   "dependencies": {
-    "@nuxt/kit": "^4.2.1",
+    "@nuxt/kit": "^4.2.2",
     "es-module-lexer": "^2.0.0",
     "escape-string-regexp": "^5.0.0",
     "magic-string": "^0.30.21",
     "unplugin": "^2.3.11"
   },
   "devDependencies": {
-    "@nuxt/schema": "^4.2.1",
-    "@sxzz/eslint-config": "^7.4.0",
+    "@nuxt/schema": "^4.2.2",
+    "@sxzz/eslint-config": "^7.4.3",
     "@sxzz/prettier-config": "^2.2.6",
-    "@types/node": "^24.10.1",
-    "@vitest/ui": "^4.0.14",
+    "@types/node": "^25.0.2",
+    "@vitest/ui": "^4.0.15",
     "bumpp": "^10.3.2",
-    "esbuild": "~0.27.0",
-    "eslint": "^9.39.1",
+    "esbuild": "~0.27.1",
+    "eslint": "^9.39.2",
     "fast-glob": "^3.3.3",
-    "prettier": "^3.7.3",
-    "rollup": "^4.53.3",
-    "tsdown": "^0.16.8",
+    "prettier": "^3.7.4",
+    "rollup": "^4.53.4",
+    "tsdown": "^0.18.0",
     "tsx": "^4.21.0",
     "typescript": "^5.9.3",
-    "vite": "^7.2.6",
-    "vitest": "^4.0.14"
+    "vite": "^7.3.0",
+    "vitest": "^4.0.15"
   },
   "engines": {
     "node": ">=20.19.0"
