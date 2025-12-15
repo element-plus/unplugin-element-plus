@@ -1,9 +1,18 @@
 {
   "name": "unplugin-element-plus",
+  "type": "module",
   "version": "0.11.1",
   "packageManager": "pnpm@10.26.0",
   "description": "Import Element Plus on demand. Support Vite, Webpack, Vue CLI, Rollup and esbuild.",
-  "type": "module",
+  "license": "MIT",
+  "homepage": "https://github.com/element-plus/unplugin-element-plus/tree/main/#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/element-plus/unplugin-element-plus.git"
+  },
+  "bugs": {
+    "url": "https://github.com/element-plus/unplugin-element-plus/issues"
+  },
   "keywords": [
     "element-plus",
     "unplugin",
@@ -13,21 +22,6 @@
     "esbuild",
     "plugin"
   ],
-  "license": "MIT",
-  "homepage": "https://github.com/element-plus/unplugin-element-plus/tree/main/#readme",
-  "bugs": {
-    "url": "https://github.com/element-plus/unplugin-element-plus/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/element-plus/unplugin-element-plus.git"
-  },
-  "files": [
-    "dist"
-  ],
-  "main": "./dist/index.mjs",
-  "module": "./dist/index.mjs",
-  "types": "./dist/index.d.mts",
   "exports": {
     ".": "./dist/index.mjs",
     "./esbuild": "./dist/esbuild.mjs",
@@ -39,6 +33,9 @@
     "./webpack": "./dist/webpack.mjs",
     "./package.json": "./package.json"
   },
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.mts",
   "typesVersions": {
     "*": {
       "*": [
@@ -47,8 +44,14 @@
       ]
     }
   },
+  "files": [
+    "dist"
+  ],
   "publishConfig": {
     "access": "public"
+  },
+  "engines": {
+    "node": ">=20.19.0"
   },
   "scripts": {
     "lint": "eslint .",
@@ -59,7 +62,7 @@
     "release": "bumpp",
     "vite:build": "npm -C examples/vite run build",
     "vite:dev": "npm -C examples/vite run dev",
-    "typecheck": "tsc --noEmit",
+    "typecheck": "tsgo --noEmit",
     "test": "vitest",
     "prepublishOnly": "pnpm run build"
   },
@@ -75,6 +78,7 @@
     "@sxzz/eslint-config": "^7.4.3",
     "@sxzz/prettier-config": "^2.2.6",
     "@types/node": "^25.0.2",
+    "@typescript/native-preview": "7.0.0-dev.20251215.1",
     "@vitest/ui": "^4.0.15",
     "bumpp": "^10.3.2",
     "esbuild": "~0.27.1",
@@ -87,9 +91,6 @@
     "typescript": "^5.9.3",
     "vite": "^7.3.0",
     "vitest": "^4.0.15"
-  },
-  "engines": {
-    "node": ">=20.19.0"
   },
   "prettier": "@sxzz/prettier-config"
 }
