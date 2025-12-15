@@ -1,3 +1,4 @@
+import { withMagicString } from 'rolldown-string'
 import { createUnplugin, type UnpluginInstance } from 'unplugin'
 import {
   getLocaleRE,
@@ -52,14 +53,13 @@ const unplugin: UnpluginInstance<Partial<Options>, false> = createUnplugin(
             exclude: options.exclude,
           },
         },
-        handler(source, id) {
+        handler: withMagicString((s, id) => {
           if (options.defaultLocale) {
-            const result = transformDefaultLocale(options, source, id)
-            if (result) return result
+            return transformDefaultLocale(s, id, options)
           }
 
-          return transformStyle(source, options)
-        },
+          return transformStyle(s, options)
+        }),
       },
 
       vite: {

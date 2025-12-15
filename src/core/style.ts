@@ -1,6 +1,6 @@
 import { init, parse, type ImportSpecifier } from 'es-module-lexer'
-import MagicString from 'magic-string'
 import type { Options } from './types'
+import type { RolldownString } from 'rolldown-string'
 
 type FormatType = 'cjs' | 'esm'
 
@@ -66,18 +66,10 @@ export function transformImportStyle(
   }
 }
 
-export async function transformStyle(
-  source: string,
-  options: Options,
-): Promise<
-  | {
-      code: string
-      readonly map: import('magic-string').SourceMap
-    }
-  | undefined
-> {
+export async function transformStyle(s: RolldownString, options: Options) {
   const { useSource, lib, prefix, format, ignoreComponents } = options
 
+  const source = s.toString()
   if (!source) return
 
   await init
@@ -103,13 +95,5 @@ export async function transformStyle(
 
   const lastSpecifier = specifiers.at(-1)!
 
-  const s = new MagicString(source)
   s.appendLeft(lastSpecifier.se + 1, `\n${styleImports}\n`)
-
-  return {
-    code: s.toString(),
-    get map() {
-      return s.generateMap({ hires: true, includeContent: true })
-    },
-  }
 }

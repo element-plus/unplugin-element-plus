@@ -70,7 +70,7 @@
     "@nuxt/kit": "^4.2.2",
     "es-module-lexer": "^2.0.0",
     "escape-string-regexp": "^5.0.0",
-    "magic-string": "^0.30.21",
+    "rolldown-string": "^0.2.1",
     "unplugin": "^2.3.11"
   },
   "devDependencies": {

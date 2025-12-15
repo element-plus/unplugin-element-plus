@@ -1,6 +1,7 @@
 import escapeStringRegexp from 'escape-string-regexp'
 import type { Options } from './types'
 import type { Plugin } from 'esbuild'
+import type { RolldownString } from 'rolldown-string'
 
 export function getLocaleRE(options: Options): RegExp {
   return new RegExp(
@@ -11,15 +12,12 @@ export function getLocaleRE(options: Options): RegExp {
 }
 
 export function transformDefaultLocale(
-  options: Options,
-  source: string,
+  source: RolldownString,
   id: string,
-): string | undefined {
+  options: Options,
+) {
   if (!getLocaleRE(options).test(id)) return
-  return source.replace(
-    'locale/lang/en',
-    `locale/lang/${options.defaultLocale}`,
-  )
+  source.replaceAll('locale/lang/en', `locale/lang/${options.defaultLocale}`)
 }
 
 export function getViteDepPlugin(options: Options): Plugin {
