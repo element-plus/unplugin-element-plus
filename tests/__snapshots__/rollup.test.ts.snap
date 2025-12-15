@@ -1,7 +1,8 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`transform > fixtures > tests/fixtures/basic.ts > useSource = false 1`] = `
-"import { ElButton, ElCol } from 'element-plus';
+exports[`rollup > fixtures/basic.ts > useSource = false 1`] = `
+"// basic.js
+import { ElButton, ElCol } from 'element-plus';
 import 'element-plus/es/components/button/style/css';
 import 'element-plus/es/components/col/style/css';
 
@@ -9,8 +10,9 @@ console.log(ElButton, ElCol);
 "
 `;
 
-exports[`transform > fixtures > tests/fixtures/basic.ts > useSource = true 1`] = `
-"import { ElButton, ElCol } from 'element-plus';
+exports[`rollup > fixtures/basic.ts > useSource = true 1`] = `
+"// basic.js
+import { ElButton, ElCol } from 'element-plus';
 import 'element-plus/es/components/button/style/index';
 import 'element-plus/es/components/col/style/index';
 
@@ -18,8 +20,9 @@ console.log(ElButton, ElCol);
 "
 `;
 
-exports[`transform > fixtures > tests/fixtures/comments.ts > useSource = false 1`] = `
-"import { ElButton, ElCol } from 'element-plus';
+exports[`rollup > fixtures/comments.ts > useSource = false 1`] = `
+"// comments.js
+import { ElButton, ElCol } from 'element-plus';
 import 'element-plus/es/components/button/style/css';
 import 'element-plus/es/components/col/style/css';
 
@@ -27,8 +30,9 @@ console.log(ElButton, ElCol);
 "
 `;
 
-exports[`transform > fixtures > tests/fixtures/comments.ts > useSource = true 1`] = `
-"import { ElButton, ElCol } from 'element-plus';
+exports[`rollup > fixtures/comments.ts > useSource = true 1`] = `
+"// comments.js
+import { ElButton, ElCol } from 'element-plus';
 import 'element-plus/es/components/button/style/index';
 import 'element-plus/es/components/col/style/index';
 
@@ -36,24 +40,27 @@ console.log(ElButton, ElCol);
 "
 `;
 
-exports[`transform > fixtures > tests/fixtures/ignored.ts > useSource = false 1`] = `
-"import { ElAutoResizer } from 'element-plus';
+exports[`rollup > fixtures/ignored.ts > useSource = false 1`] = `
+"// ignored.js
+import { ElAutoResizer } from 'element-plus';
 import 'element-plus/es/components/button/style/css';
 
 console.log(ElAutoResizer);
 "
 `;
 
-exports[`transform > fixtures > tests/fixtures/ignored.ts > useSource = true 1`] = `
-"import { ElAutoResizer } from 'element-plus';
+exports[`rollup > fixtures/ignored.ts > useSource = true 1`] = `
+"// ignored.js
+import { ElAutoResizer } from 'element-plus';
 import 'element-plus/es/components/button/style/index';
 
 console.log(ElAutoResizer);
 "
 `;
 
-exports[`transform > fixtures > tests/fixtures/import-alias.ts > useSource = false 1`] = `
-"import { ElButton, ElCard } from 'element-plus';
+exports[`rollup > fixtures/import-alias.ts > useSource = false 1`] = `
+"// import-alias.js
+import { ElButton, ElCard } from 'element-plus';
 import 'element-plus/es/components/button/style/css';
 import 'element-plus/es/components/card/style/css';
 
@@ -61,8 +68,9 @@ console.log(ElButton, ElCard);
 "
 `;
 
-exports[`transform > fixtures > tests/fixtures/import-alias.ts > useSource = true 1`] = `
-"import { ElButton, ElCard } from 'element-plus';
+exports[`rollup > fixtures/import-alias.ts > useSource = true 1`] = `
+"// import-alias.js
+import { ElButton, ElCard } from 'element-plus';
 import 'element-plus/es/components/button/style/index';
 import 'element-plus/es/components/card/style/index';
 
