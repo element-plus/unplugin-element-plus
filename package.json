@@ -75,20 +75,20 @@
   },
   "devDependencies": {
     "@nuxt/schema": "^4.2.2",
-    "@sxzz/eslint-config": "^7.4.4",
+    "@sxzz/eslint-config": "^7.4.5",
     "@sxzz/prettier-config": "^2.2.6",
     "@sxzz/test-utils": "^0.5.15",
-    "@types/node": "^25.0.6",
-    "@typescript/native-preview": "7.0.0-dev.20260111.1",
-    "@vitest/ui": "^4.0.16",
-    "bumpp": "^10.3.2",
+    "@types/node": "^25.0.9",
+    "@typescript/native-preview": "7.0.0-dev.20260118.1",
+    "@vitest/ui": "^4.0.17",
+    "bumpp": "^10.4.0",
     "esbuild": "~0.27.2",
     "eslint": "^9.39.2",
-    "prettier": "^3.7.4",
+    "prettier": "^3.8.0",
     "tsdown": "^0.19.0",
     "typescript": "^5.9.3",
     "vite": "^7.3.1",
-    "vitest": "^4.0.16"
+    "vitest": "^4.0.17"
   },
   "prettier": "@sxzz/prettier-config"
 }
