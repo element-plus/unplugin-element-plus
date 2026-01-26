@@ -71,7 +71,7 @@
     "es-module-lexer": "^2.0.0",
     "escape-string-regexp": "^5.0.0",
     "rolldown-string": "^0.2.1",
-    "unplugin": "^2.3.11"
+    "unplugin": "^3.0.0"
   },
   "devDependencies": {
     "@nuxt/schema": "^4.2.2",
