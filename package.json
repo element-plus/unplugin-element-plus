@@ -81,7 +81,7 @@
     "@types/node": "^25.0.9",
     "@typescript/native-preview": "7.0.0-dev.20260118.1",
     "@vitest/ui": "^4.0.17",
-    "bumpp": "^10.4.0",
+    "bumpp": "^11.0.0",
     "esbuild": "~0.27.2",
     "eslint": "^9.39.2",
     "prettier": "^3.8.0",
