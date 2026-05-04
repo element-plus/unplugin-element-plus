@@ -75,7 +75,7 @@
   },
   "devDependencies": {
     "@nuxt/schema": "^4.2.2",
-    "@sxzz/eslint-config": "^7.4.5",
+    "@sxzz/eslint-config": "^8.0.0",
     "@sxzz/prettier-config": "^2.2.6",
     "@sxzz/test-utils": "^0.5.15",
     "@types/node": "^25.0.9",
