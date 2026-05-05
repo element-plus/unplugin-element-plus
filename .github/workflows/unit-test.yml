@@ -10,6 +10,6 @@ permissions: {}
 
 jobs:
   unit-test:
-    uses: sxzz/workflows/.github/workflows/unit-test.yml@v1
+    uses: sxzz/workflows/.github/workflows/unit-test.yml@main
     with:
       test: pnpm run test && pnpm build:examples
