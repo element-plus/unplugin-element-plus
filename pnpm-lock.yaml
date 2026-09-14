@@ -12,8 +12,8 @@ importers:
         specifier: ^4.2.2
         version: 4.2.2
       es-module-lexer:
-        specifier: ^2.0.0
-        version: 2.3.2
+        specifier: ^3.0.0
+        version: 3.0.2
       escape-string-regexp:
         specifier: ^5.0.0
         version: 5.0.0
@@ -1506,6 +1506,9 @@ packages:
 
   es-module-lexer@2.3.2:
     resolution: {integrity: sha512-poHGpORABojJJucnV9KbOavETW8lBVnphkW77ER5/BQ5Fz7oXSoCNek7IH3vR5nRjdsEz926ibFYX8KtLQmdyw==}
+
+  es-module-lexer@3.0.2:
+    resolution: {integrity: sha512-BuIB67FngDSyQ/dpQNOZybwdEBDUGJQvOqwWr4ha/ufYiqzuEwPkKO2zLhRAgay28tStRIHUeWmszZAJo3GCOg==}
 
   esbuild@0.27.2:
     resolution: {integrity: sha512-HyNQImnsOC7X9PMNaCIeAm4ISCQXs5a5YasTXVliKv4uuBo1dKrG0A+uQS8M5eXjVMnLg3WgXaKvprHlFJQffw==}
@@ -4084,6 +4087,8 @@ snapshots:
   errx@0.1.0: {}
 
   es-module-lexer@2.3.2: {}
+
+  es-module-lexer@3.0.2: {}
 
   esbuild@0.27.2:
     optionalDependencies:
