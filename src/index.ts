@@ -54,7 +54,7 @@ const unplugin: UnpluginInstance<Partial<Options>, false> = createUnplugin(
           },
         },
         handler: withMagicString((s, id) => {
-          if (options.defaultLocale) {
+          if (options.defaultLocale && getLocaleRE(options).test(id)) {
             return transformDefaultLocale(s, id, options)
           }
 
