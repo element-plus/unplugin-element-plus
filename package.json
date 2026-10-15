@@ -68,7 +68,7 @@
   },
   "dependencies": {
     "@nuxt/kit": "^4.2.2",
-    "es-module-lexer": "^2.0.0",
+    "es-module-lexer": "^3.0.0",
     "escape-string-regexp": "^5.0.0",
     "rolldown-string": "^0.2.1",
     "unplugin": "^3.0.0"
